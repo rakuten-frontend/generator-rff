@@ -1,0 +1,12 @@
+{
+  "generator-rff": {
+    "markup": "html",
+    "script": "js",
+    "utility": [],
+    "verification": [],
+    "server": [],
+    "library": [],
+    "optimization": [],
+    "distribution": []
+  }
+}

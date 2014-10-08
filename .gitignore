@@ -1,0 +1,10 @@
+# OS/Editor
+.DS_Store
+.idea/
+
+# Node.js
+node_modules/
+npm-debug.log
+
+# Excluded Files
+temp/

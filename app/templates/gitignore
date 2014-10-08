@@ -1,0 +1,25 @@
+# OS/Editor
+.DS_Store
+Thumbs.db
+.idea/
+
+# Node.js
+node_modules/
+npm-debug.log
+
+# Bower
+bower_components/<% if (cfg.sass) { %>
+
+# SASS
+.sass-cache/<% } %><% if (cfg.validation) { %>
+
+# grunt-html-validation
+validation-status.json
+validation-report.json<% } %><% if (cfg.ftp) { %>
+
+# grunt-ftp-deploy
+.ftppass<% } %>
+
+# Excluded Files
+dist/
+.tmp/

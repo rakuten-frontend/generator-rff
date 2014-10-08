@@ -1,0 +1,24 @@
+doctype html
+html<% if (cfg.modernizr) { %>.no-js<% } %>
+  head
+    meta(charset='UTF-8')
+    title <%= cfg.name %>
+    // build:css /css/app.css
+    // bower:css
+    // endbower<% if (cfg.css) { %><% if (cfg.sprite) { %>
+    link(rel='stylesheet', href='/css/sprites.css')<% } %>
+    link(rel='stylesheet', href='/css/main.css')<% } else { %>
+    // bower:css
+    // endbower
+    link(rel='stylesheet', href='/css/app.css')<% } %>
+    // endbuild<% if (cfg.modernizr) { %>
+    // build:js /js/modernizr.js
+    script(src='/bower_components/modernizr/modernizr.js')
+    // endbuild<% } %>
+  body
+    h1 <%= cfg.name %>
+    // build:js /js/app.js
+    // bower:js
+    // endbower
+    script(src='/js/main.js')
+    // endbuild

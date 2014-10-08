@@ -1,0 +1,23 @@
+{
+  "camelcase": true,
+  "curly": true,
+  "eqeqeq": true,
+  "immed": true<% if (cfg.js) { %>,
+  "indent": 4<% } %>,
+  "latedef": true,
+  "newcap": true,
+  "noarg": true,
+  "quotmark": "single",
+  "undef": true,
+  "unused": true,
+  "strict": false,
+  "trailing": true,
+  "browser": true,
+  "devel": true,
+  "jquery": true,
+  "globals": {
+    "module": false,
+    "require": false,
+    "define": false
+  }
+}

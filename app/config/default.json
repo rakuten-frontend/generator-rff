@@ -1,0 +1,26 @@
+{
+  "generator-rff": {
+    "name": "",
+    "markup": "html",
+    "style": "sass",
+    "script": "js",
+    "utility": [
+      "autoprefixer",
+      "sprite"
+    ],
+    "verification": [
+      "validation",
+      "csslint"
+    ],
+    "server": [],
+    "library": [],
+    "optimization": [
+      "htmlmin",
+      "cssmin",
+      "uglify",
+      "svgo",
+      "rev"
+    ],
+    "distribution": []
+  }
+}

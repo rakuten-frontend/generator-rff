@@ -1,0 +1,40 @@
+Description:
+  Yeoman generator for scaffolding structural and high performance
+  web site.
+
+Generator Options:
+  -s, --skip-install
+    Skips the automatic execution of `bower` and `npm` after
+    scaffolding has finished.
+
+  --config=<type>
+    Setup type. If specified, the first prompt will be skipped.
+    You can set `standard`, `minimum`, `user` or `custom`.
+
+  --skip-welcome-message
+    Skips app welcome message.
+
+  --skip-install-message
+    Skips app installation message.
+
+Example:
+  yo rff
+
+  This will create:
+    package.json    # Development packages installed by npm.
+    bower.json      # Front-end packages installed by bower.
+    README.md       # Readme document for the project.
+    Gruntfile.js    # Base Grunt config.
+
+    .gitignore      # Git ignoring setting.
+    .gitattributes  # Git attributes setting.
+    .yo-rc.json     # Yeoman generator config.
+    .npmrc          # npm config.
+    .bowerrc        # Bower config.
+    .editorconfig   # General editor config.
+    .csslintrc      # CSS Lint config.
+    .jshintrc       # JSHint config.
+
+    src/            # Your application files.
+    grunt/          # Grunt config scripts.
+    test/           # Unit tests for your application.
