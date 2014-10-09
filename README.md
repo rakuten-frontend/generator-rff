@@ -1,4 +1,4 @@
-# generator-rff
+# generator-rff [![Build Status][travis-image]][travis-url]
 
 > Yeoman generator for scaffolding structural and high performance web site.
 
@@ -70,3 +70,6 @@ $ yo rff
 
 ## License
 Copyright (c) 2014 Rakuten, Inc. Licensed under the [MIT License](http://opensource.org/licenses/MIT).
+
+[travis-image]: https://img.shields.io/travis/rakuten-frontend/generator-rff/master.svg?style=flat
+[travis-url]: https://travis-ci.org/rakuten-frontend/generator-rff
