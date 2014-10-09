@@ -1,0 +1,59 @@
+v0.3.2:
+  date: 2014-07-17
+  changes:
+    - Switch to BrowserSync server.
+    - Improve grunt watch task.
+    - Upgrade Autoprefixer to v2.1.
+    - Upgrade grunt-spritesmith to v2.1.
+    - Support git management in the dist directory. e.g. grunt-build-control.
+    - Add .gitattributes.
+v0.3.1:
+  date: 2014-07-02
+  changes:
+    - Prevent unexpected copy to the dist directory.
+    - Improve the performance of usemin task.
+    - Prevent error in case of no sprite image.
+    - Insert `~` instead of `^` when npm install --save, --save-dev.
+    - Update text in readme/help/prompt.
+v0.3.0:
+  date: 2014-05-21
+  changes:
+    - Support Bower.
+    - Support testing frameworks.
+    - Make configurable using .yo-rc.json.
+    - Include CSS/JS concatenation task as built-in.
+    - Separate minify options of CSS and JavaScript.
+    - Discard support of `grunt server` alias.
+    - Update dependent packages.
+v0.2.2:
+  date: 2014-04-11
+  changes:
+    - Define `grunt build` as pure build task.
+    - Update dependent packages.
+v0.2.1:
+  date: 2014-04-04
+  changes:
+    - Support Stylus and *.sass files.
+    - Rename grunt alias `grunt server` to `grunt serve`.
+    - Separate all kinds of vendor libraries into "vendor" directory.
+    - Use absolute URI reference for all assets.
+v0.2.0:
+  date: 2014-03-31
+  changes:
+    - Support more languages: Jade, Less, CoffeeScript.
+    - Update directory and build structure.
+    - Add example pages and readme content.
+    - Update CLI prompt.
+v0.1.2:
+  date: 2014-03-19
+  changes:
+    - Optimize grunt performance using grunt-newer and time-grunt.
+    - Improve CLI messages.
+v0.1.1:
+  date: 2014-03-18
+  changes:
+    - Fix bug of grunt script.
+v0.1.0:
+  date: 2014-03-18
+  changes:
+    - Initial release.
