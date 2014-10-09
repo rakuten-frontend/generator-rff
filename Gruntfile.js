@@ -28,21 +28,24 @@ module.exports = function (grunt) {
             }
         },
 
-        shell: {
+        mochaTest: {
             test: {
                 options: {
-                    stdout: true,
-                    stderr: true
+                    reporter: 'spec'
                 },
-                command: 'npm test'
+                src: ['test/*.js']
             }
         }
 
     });
 
-    grunt.registerTask('default', [
+    grunt.registerTask('test', [
         'jshint',
-        'shell'
+        'mochaTest'
+    ]);
+
+    grunt.registerTask('default', [
+        'test'
     ]);
 
 };
