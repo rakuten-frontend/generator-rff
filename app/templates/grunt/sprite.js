@@ -10,7 +10,6 @@ module.exports = {<% if (cfg.css) { %>
         src: '<%%= path.sprites %>/*.png',
         destImg: '<%%= path.images %>/sprites.png',
         destCSS: '<%%= path.styles %>/sprites.css',
-        imgPath: '/img/sprites.png',                // Use absolute URI.
         algorithm: 'binary-tree',
         padding: 2,
         cssOpts: {
@@ -25,7 +24,6 @@ module.exports = {<% if (cfg.css) { %>
         src: '<%%= path.sprites %>/*.png',
         destImg: '<%%= path.images %>/sprites.png',
         destCSS: '<%%= path.styles %>/_sprites.scss',
-        imgPath: '/img/sprites.png',                // Use absolute URI.
         algorithm: 'binary-tree',
         padding: 2,
         cssFormat: 'css',                           // Remove this line to generate a mixin file instead.
@@ -44,7 +42,6 @@ module.exports = {<% if (cfg.css) { %>
         src: '<%%= path.sprites %>/*.png',
         destImg: '<%%= path.images %>/sprites.png',
         destCSS: '<%%= path.styles %>/_sprites.less',
-        imgPath: '/img/sprites.png',                // Use absolute URI.
         algorithm: 'binary-tree',
         padding: 2,
         cssFormat: 'css',                           // Remove this line to generate a mixin file instead.
@@ -63,7 +60,6 @@ module.exports = {<% if (cfg.css) { %>
         src: '<%%= path.sprites %>/*.png',
         destImg: '<%%= path.images %>/sprites.png',
         destCSS: '<%%= path.styles %>/_sprites.styl',
-        imgPath: '/img/sprites.png',                // Use absolute URI.
         algorithm: 'binary-tree',
         padding: 2,
         cssFormat: 'css',                           // Remove this line to generate a mixin file instead.
