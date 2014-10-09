@@ -3,29 +3,23 @@
 
 'use strict';
 
-module.exports = {<% if (cfg.css) { %>
+module.exports = {
 
-    // Generate a CSS file and spritesheet
-    css: {
+    // Generate stylesheet and sprite image
+    compile: {
         src: '<%%= path.sprites %>/*.png',
-        destImg: '<%%= path.images %>/sprites.png',
-        destCSS: '<%%= path.styles %>/sprites.css',
+        destImg: '<%%= path.images %>/sprites.png'<% if (cfg.css) { %>,
+        destCSS: '<%%= path.styles %>/sprites.css'<% } %><% if (cfg.sass || cfg.libsass) { %>,
+        destCSS: '<%%= path.styles %>/_sprites.scss'<% } %><% if (cfg.less) { %>,
+        destCSS: '<%%= path.styles %>/_sprites.less'<% } %><% if (cfg.stylus) { %>,
+        destCSS: '<%%= path.styles %>/_sprites.styl'<% } %>,
         algorithm: 'binary-tree',
-        padding: 2,
+        padding: 2<% if (cfg.css) { %>,
         cssOpts: {
             cssClass: function (item) {
                 return '.sprite-' + item.name;      // Define prefix for sprite classes.
             }
-        }
-    }<% } %><% if (cfg.sass || cfg.libsass) { %>
-
-    // Generate a Sass file and spritesheet
-    sass: {
-        src: '<%%= path.sprites %>/*.png',
-        destImg: '<%%= path.images %>/sprites.png',
-        destCSS: '<%%= path.styles %>/_sprites.scss',
-        algorithm: 'binary-tree',
-        padding: 2,
+        }<% } else { %>,
         cssFormat: 'css',                           // Remove this line to generate a mixin file instead.
         cssVarMap: function (sprite) {
             sprite.name = 'sprite-' + sprite.name;  // Define prefix for variables.
@@ -34,43 +28,7 @@ module.exports = {<% if (cfg.css) { %>
             cssClass: function (item) {
                 return '.' + item.name;
             }
-        }
-    }<% } %><% if (cfg.less) { %>
-
-    // Generate a Less file and spritesheet
-    less: {
-        src: '<%%= path.sprites %>/*.png',
-        destImg: '<%%= path.images %>/sprites.png',
-        destCSS: '<%%= path.styles %>/_sprites.less',
-        algorithm: 'binary-tree',
-        padding: 2,
-        cssFormat: 'css',                           // Remove this line to generate a mixin file instead.
-        cssVarMap: function (sprite) {
-            sprite.name = 'sprite-' + sprite.name;  // Define prefix for variables.
-        },
-        cssOpts: {
-            cssClass: function (item) {
-                return '.' + item.name;
-            }
-        }
-    }<% } %><% if (cfg.stylus) { %>
-
-    // Generate a Stylus file and spritesheet
-    stylus: {
-        src: '<%%= path.sprites %>/*.png',
-        destImg: '<%%= path.images %>/sprites.png',
-        destCSS: '<%%= path.styles %>/_sprites.styl',
-        algorithm: 'binary-tree',
-        padding: 2,
-        cssFormat: 'css',                           // Remove this line to generate a mixin file instead.
-        cssVarMap: function (sprite) {
-            sprite.name = 'sprite-' + sprite.name;  // Define prefix for variables.
-        },
-        cssOpts: {
-            cssClass: function (item) {
-                return '.' + item.name;
-            }
-        }
-    }<% } %>
+        }<% } %>
+    }
 
 };
