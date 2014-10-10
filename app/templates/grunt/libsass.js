@@ -7,6 +7,9 @@ module.exports = {
 
     // Compile styles
     compile: {
+        options: {
+            includePaths: ['bower_components']
+        },
         files: [{
             expand: true,
             cwd: '<%%= path.styles %>',

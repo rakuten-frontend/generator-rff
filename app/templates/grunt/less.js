@@ -8,7 +8,7 @@ module.exports = {
     // Compile styles
     compile: {
         options: {
-            paths: ['<%%= path.styles %>'],
+            paths: ['bower_components'],
             compress: false
         },
         files: [{
