@@ -8,7 +8,7 @@ module.exports = {
 
     // Base options
     options: {
-        root: ['<%%= path.tmp %>', '<%%= path.src %>'],
+        root: ['<%%= path.tmp %>', '<%%= path.app %>'],
         dest: '<%%= path.dist %>',
         flow: {
             steps: {

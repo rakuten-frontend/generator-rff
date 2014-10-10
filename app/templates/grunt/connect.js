@@ -14,7 +14,7 @@ module.exports = {
             base: [
                 '<%%= path.test %>',
                 '<%%= path.tmp %>',
-                '<%%= path.src %>'
+                '<%%= path.app %>'
             ]
         }
     }

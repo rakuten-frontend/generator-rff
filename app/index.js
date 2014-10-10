@@ -253,8 +253,8 @@ var Generator = yeoman.generators.Base.extend({
         },
 
         app: function () {
-            this.dest.mkdir('src');
-            this.dest.mkdir('src/img');
+            this.dest.mkdir('app');
+            this.dest.mkdir('app/img');
         },
 
         options: function () {

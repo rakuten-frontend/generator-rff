@@ -77,11 +77,11 @@ describe('Generator', function () {
                 'grunt/rev.js',
                 'grunt/sass.js',
                 'grunt/autoprefixer.js',
-                'src/index.html',
-                'src/_sass/',
-                'src/js/',
-                'src/img/',
-                'src/img/_sprites/'
+                'app/index.html',
+                'app/_sass/',
+                'app/js/',
+                'app/img/',
+                'app/img/_sprites/'
             ],
             unexpected = [
                 'grunt/less.js',
@@ -90,12 +90,12 @@ describe('Generator', function () {
                 'grunt/mocha.js',
                 'grunt/jasmine.js',
                 'grunt/ssi.js',
-                'src/index.jade',
-                'src/css/',
-                'src/_less/',
-                'src/_stylus/',
-                'src/_coffee/',
-                'src/inc/'
+                'app/index.jade',
+                'app/css/',
+                'app/_less/',
+                'app/_stylus/',
+                'app/_coffee/',
+                'app/inc/'
             ],
             unexpectedContent = [
                 ['grunt/aliases.js', /'(.*:)?(jade|less|stylus|coffee|connect|mocha|jasmine|ssi)(:.*)?'/]
@@ -126,10 +126,10 @@ describe('Generator', function () {
                 'grunt/watch.js',
                 'grunt/newer.js',
                 'grunt/sass.js',
-                'src/index.html',
-                'src/_sass/',
-                'src/js/',
-                'src/img/'
+                'app/index.html',
+                'app/_sass/',
+                'app/js/',
+                'app/img/'
             ],
             unexpected = [
                 '.csslintrc',
@@ -145,13 +145,13 @@ describe('Generator', function () {
                 'grunt/autoprefixer.js',
                 'grunt/sprite.js',
                 'grunt/ssi.js',
-                'src/index.jade',
-                'src/css/',
-                'src/_less/',
-                'src/_stylus/',
-                'src/_coffee/',
-                'src/inc/',
-                'src/img/_sprites/'
+                'app/index.jade',
+                'app/css/',
+                'app/_less/',
+                'app/_stylus/',
+                'app/_coffee/',
+                'app/inc/',
+                'app/img/_sprites/'
             ],
             unexpectedContent = [
                 ['grunt/aliases.js', /'(.*:)?(jade|less|stylus|coffee|validation|csslint|connect|mocha|jasmine|autoprefixer|sprite|htmlmin|cssmin|uglify|rev|ssi)(:.*)?'/]
@@ -174,10 +174,10 @@ describe('Generator', function () {
                 ['package.json', /"grunt-contrib-jade"/],
                 ['grunt/aliases.js', /'(.*:)?jade(:.*)?'/],
                 'grunt/jade.js',
-                'src/index.jade'
+                'app/index.jade'
             ],
             unexpected = [
-                'src/index.html'
+                'app/index.html'
             ];
 
         helpers.mockPrompt(this.app, {
@@ -194,11 +194,11 @@ describe('Generator', function () {
 
     it('creates expected files with "css" option', function (done) {
         var expected = [
-                'src/css/'
+                'app/css/'
             ],
             unexpected = [
                 'grunt/sass.js',
-                'src/_sass/'
+                'app/_sass/'
             ],
             unexpectedContent = [
                 ['package.json', /"grunt-contrib-sass"/],
@@ -223,10 +223,10 @@ describe('Generator', function () {
                 ['package.json', /"grunt-sass"/],
                 ['grunt/aliases.js', /'(.*:)?sass(:.*)?'/],
                 'grunt/sass.js',
-                'src/_sass/'
+                'app/_sass/'
             ],
             unexpected = [
-                'src/css/'
+                'app/css/'
             ];
 
         helpers.mockPrompt(this.app, {
@@ -246,10 +246,10 @@ describe('Generator', function () {
                 ['package.json', /"grunt-contrib-less"/],
                 ['grunt/aliases.js', /'(.*:)?less(:.*)?'/],
                 'grunt/less.js',
-                'src/_less/'
+                'app/_less/'
             ],
             unexpected = [
-                'src/css/'
+                'app/css/'
             ];
 
         helpers.mockPrompt(this.app, {
@@ -269,10 +269,10 @@ describe('Generator', function () {
                 ['package.json', /"grunt-contrib-stylus"/],
                 ['grunt/aliases.js', /'(.*:)?stylus(:.*)?'/],
                 'grunt/stylus.js',
-                'src/_stylus/'
+                'app/_stylus/'
             ],
             unexpected = [
-                'src/css/'
+                'app/css/'
             ];
 
         helpers.mockPrompt(this.app, {
@@ -292,10 +292,10 @@ describe('Generator', function () {
                 ['package.json', /"grunt-contrib-coffee"/],
                 ['grunt/aliases.js', /'(.*:)?coffee(:.*)?'/],
                 'grunt/coffee.js',
-                'src/_coffee/'
+                'app/_coffee/'
             ],
             unexpected = [
-                'src/js/'
+                'app/js/'
             ],
             unexpectedContent = [
                 ['.editorconfig', /\[\*\.js\]/],
@@ -414,7 +414,7 @@ describe('Generator', function () {
                 ['package.json', /"grunt-spritesmith"/],
                 ['grunt/aliases.js', /'(.*:)?sprite(:.*)?'/],
                 'grunt/sprite.js',
-                'src/img/_sprites/'
+                'app/img/_sprites/'
             ];
 
         helpers.mockPrompt(this.app, {
@@ -433,7 +433,7 @@ describe('Generator', function () {
                 ['package.json', /"grunt-webfont"/],
                 ['grunt/aliases.js', /'(.*:)?webfont(:.*)?'/],
                 'grunt/webfont.js',
-                'src/img/_glyphs/'
+                'app/img/_glyphs/'
             ];
 
         helpers.mockPrompt(this.app, {
@@ -452,7 +452,7 @@ describe('Generator', function () {
                 ['package.json', /"grunt-ssi"/],
                 ['grunt/aliases.js', /'(.*:)?ssi(:.*)?'/],
                 'grunt/ssi.js',
-                'src/inc/'
+                'app/inc/'
             ];
 
         helpers.mockPrompt(this.app, {

@@ -8,12 +8,12 @@
 module.exports = {
 
     // Dev server
-    src: {
+    app: {
         options: {
             server: {
                 baseDir: [
                     '<%%= path.tmp %>',          // Refer compiled files at first,
-                    '<%%= path.src %>'           // And then, look for other files in source direcotry.
+                    '<%%= path.app %>'           // And then, look for other files in source direcotry.
                 ]
             },
             port: 9000,
@@ -21,7 +21,7 @@ module.exports = {
             watchTask: true
         },
         src: [
-            '<%%= path.src %>/**',
+            '<%%= path.app %>/**',
             '<%%= path.tmp %>/**',
             '!<%%= path.distIgnore %>'
         ]

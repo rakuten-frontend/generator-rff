@@ -17,29 +17,29 @@ module.exports = function (grunt) {
         // Define variables for grunt config here.
         config: {
             path: {
-                src:        'src',
+                app:        'app',
                 dist:       'dist',
                 distIgnore: '**/_*/**',     // Excluded directories or files of distribution, e.g. Sass directory.
                 tmp:        '.tmp/dist'<% if (cfg.testing) { %>,
                 test:       'test'<% } %>,
-                markups:    'src'<% if (cfg.ssi) { %>,
-                includes:   'src/inc'<% } %><% if (cfg.css) { %>,
-                styles:     'src/css'<% } %><% if (cfg.sass || cfg.libsass) { %>,
-                styles:     'src/_sass'<% } %><% if (cfg.less) { %>,
-                styles:     'src/_less'<% } %><% if (cfg.stylus) { %>,
-                styles:     'src/_stylus'<% } %><% if (cfg.js) { %>,
-                scripts:    'src/js'<% } %><% if (cfg.coffee) { %>,
-                scripts:    'src/_coffee'<% } %>,
-                images:     'src/img'<% if (cfg.sprite) { %>,
-                sprites:    'src/img/_sprites'<% } %><% if (cfg.webfont) { %>,
-                glyphs:     'src/img/_glyphs'<% } %><% if (cfg.html) { %>,
-                html:       'src'<% } else { %>,
+                markups:    'app'<% if (cfg.ssi) { %>,
+                includes:   'app/inc'<% } %><% if (cfg.css) { %>,
+                styles:     'app/css'<% } %><% if (cfg.sass || cfg.libsass) { %>,
+                styles:     'app/_sass'<% } %><% if (cfg.less) { %>,
+                styles:     'app/_less'<% } %><% if (cfg.stylus) { %>,
+                styles:     'app/_stylus'<% } %><% if (cfg.js) { %>,
+                scripts:    'app/js'<% } %><% if (cfg.coffee) { %>,
+                scripts:    'app/_coffee'<% } %>,
+                images:     'app/img'<% if (cfg.sprite) { %>,
+                sprites:    'app/img/_sprites'<% } %><% if (cfg.webfont) { %>,
+                glyphs:     'app/img/_glyphs'<% } %><% if (cfg.html) { %>,
+                html:       'app'<% } else { %>,
                 html:       '.tmp/dist'<% } %><% if (cfg.css && !cfg.autoprefixer ) { %>,
-                css:        'src/css'<% } else { %>,
+                css:        'app/css'<% } else { %>,
                 css:        '.tmp/dist/css'<% } %><% if (cfg.js) { %>,
-                js:         'src/js'<% } else { %>,
+                js:         'app/js'<% } else { %>,
                 js:         '.tmp/dist/js'<% } %><% if (cfg.webfont) { %>,
-                fonts:      'src/fonts'<% } %>
+                fonts:      'app/fonts'<% } %>
             }
         }
 

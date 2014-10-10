@@ -12,7 +12,7 @@ module.exports = {
             {
                 expand: true,
                 dot: true,
-                cwd: '<%%= path.src %>',
+                cwd: '<%%= path.app %>',
                 dest: '<%%= path.dist %>',
                 filter: 'isFile',               // Ignore empty folders.
                 src: [

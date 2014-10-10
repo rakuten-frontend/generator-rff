@@ -35,6 +35,6 @@ Example:
     .csslintrc      # CSS Lint config.
     .jshintrc       # JSHint config.
 
-    src/            # Your application files.
+    app/            # Your application files.
     grunt/          # Grunt config scripts.
     test/           # Unit tests for your application.

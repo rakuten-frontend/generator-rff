@@ -9,14 +9,14 @@ var options = [
             {
                 name: 'HTML',
                 value: 'html',
-                templates: ['src/index.html'],
+                templates: ['app/index.html'],
                 directories: [],
                 packages: {}
             },
             {
                 name: 'Jade',
                 value: 'jade',
-                templates: ['grunt/jade.js', 'src/index.jade'],
+                templates: ['grunt/jade.js', 'app/index.jade'],
                 directories: [],
                 packages: {'grunt-contrib-jade': '~0.11.0'}
             }
@@ -31,35 +31,35 @@ var options = [
                 name: 'CSS',
                 value: 'css',
                 templates: [],
-                directories: ['src/css'],
+                directories: ['app/css'],
                 packages: {}
             },
             {
                 name: 'Sass (Ruby)',
                 value: 'sass',
                 templates: ['grunt/sass.js'],
-                directories: ['src/_sass'],
+                directories: ['app/_sass'],
                 packages: {'grunt-contrib-sass': '~0.7.3'}
             },
             {
                 name: 'Sass (Libsass)',
                 value: 'libsass',
                 templates: [['grunt/libsass.js', 'grunt/sass.js']],
-                directories: ['src/_sass'],
+                directories: ['app/_sass'],
                 packages: {'grunt-sass': '~0.14.2'}
             },
             {
                 name: 'Less',
                 value: 'less',
                 templates: ['grunt/less.js'],
-                directories: ['src/_less'],
+                directories: ['app/_less'],
                 packages: {'grunt-contrib-less': '~0.11.0'}
             },
             {
                 name: 'Stylus',
                 value: 'stylus',
                 templates: ['grunt/stylus.js'],
-                directories: ['src/_stylus'],
+                directories: ['app/_stylus'],
                 packages: {'grunt-contrib-stylus': '~0.16.0'}
             }
         ]
@@ -73,14 +73,14 @@ var options = [
                 name: 'JavaScript',
                 value: 'js',
                 templates: [],
-                directories: ['src/js'],
+                directories: ['app/js'],
                 packages: {}
             },
             {
                 name: 'CoffeeScript',
                 value: 'coffee',
                 templates: ['grunt/coffee.js'],
-                directories: ['src/_coffee'],
+                directories: ['app/_coffee'],
                 packages: {'grunt-contrib-coffee': '~0.10.1'}
             }
         ]
@@ -101,14 +101,14 @@ var options = [
                 name: 'CSS Sprites Generator',
                 value: 'sprite',
                 templates: ['grunt/sprite.js'],
-                directories: ['src/img/_sprites'],
+                directories: ['app/img/_sprites'],
                 packages: {'grunt-spritesmith': '~2.1.1'}
             },
             {
                 name: 'Web Fonts Generator',
                 value: 'webfont',
                 templates: ['grunt/webfont.js'],
-                directories: ['src/img/_glyphs'],
+                directories: ['app/img/_glyphs'],
                 packages: {'grunt-webfont': '~0.4.8'}
             }
         ]
@@ -161,7 +161,7 @@ var options = [
                 name: 'SSI Support',
                 value: 'ssi',
                 templates: ['grunt/ssi.js'],
-                directories: ['src/inc'],
+                directories: ['app/inc'],
                 packages: {'grunt-ssi': '~0.2.1'}
             }
         ]

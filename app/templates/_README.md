@@ -6,7 +6,7 @@ Structure
 
 ```
 <%= cfg.slugName %>/
-├── src/                   : Source files<% if (cfg.html) { %>
+├── app/                   : Application files<% if (cfg.html) { %>
 │   ├── index.html<% } %><% if (cfg.jade) { %>
 │   ├── index.jade<% } %><% if (cfg.ssi) { %>
 │   ├── inc/               : SSI partials<% } %><% if (cfg.css) { %>

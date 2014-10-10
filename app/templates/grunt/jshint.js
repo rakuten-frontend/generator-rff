@@ -7,7 +7,7 @@
 module.exports = {
 
     // Target JavaScript files
-    src: {
+    app: {
         options: {
             // Indicate config file.
             // JSHint Options: <http://www.jshint.com/docs/options/>

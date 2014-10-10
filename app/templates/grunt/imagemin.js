@@ -14,7 +14,7 @@ module.exports = {
         },<% } %>
         files: [{
             expand: true,
-            cwd: '<%%= path.src %>',
+            cwd: '<%%= path.app %>',
             dest: '<%%= path.dist %>',
             src: [
                 '**/*.{png,jpg,gif<% if (cfg.svgo) { %>,svg<% } %>}',
