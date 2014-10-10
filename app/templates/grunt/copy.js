@@ -30,8 +30,8 @@ module.exports = {
                 dest: '<%%= path.dist %>',
                 src: [<% if (!cfg.html) { %>
                     '**/*.html',<% } %><% if (cfg.sprite) { %>
-                    'img/sprites.png',<% } %><% if (cfg.webfont) { %>
-                    '**/*.{eot,woff,ttf,svg}',<% } %>
+                    'img/*.png',<% } %><% if (cfg.webfont) { %>
+                    'fonts/*.{eot,woff,ttf,svg}',<% } %>
                     '!<%%= path.distIgnore %>'
                 ]
             }<% } %>
