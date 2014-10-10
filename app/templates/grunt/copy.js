@@ -20,17 +20,17 @@ module.exports = {
                     '!<%%= path.distIgnore %>',<% if (cfg.jade) { %>
                     '!**/*.jade',<% } %>
                     '!**/.DS_Store',
-                    '!**/*.{css,js}',           // Ignore CSS and JavaScript because they are compiled in usemin task.
-                    '!**/*.{png,jpg,gif<% if (cfg.svgo) { %>,svg<% } %>}'   // Ignore images because they are copied in imagemin task.
+                    '!**/*.{css,js}'            // Ignore CSS and JavaScript because they are compiled in usemin task.
                 ]
-            }<% if (!cfg.html) { %>,
-            // Copy compiled source codes.
+            }<% if (!cfg.html || cfg.webfont) { %>,
+            // Copy precompiled resources.
             {
                 expand: true,
                 cwd: '<%%= path.tmp %>',
                 dest: '<%%= path.dist %>',
-                src: [
-                    '**/*.html',
+                src: [<% if (!cfg.html) { %>
+                    '**/*.html',<% } %><% if (cfg.webfont) { %>
+                    '**/*.{eot,woff,ttf,svg}',<% } %>
                     '!<%%= path.distIgnore %>'
                 ]
             }<% } %>

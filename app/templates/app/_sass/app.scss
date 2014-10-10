@@ -1,3 +1,2 @@
 <% if (cfg.sprite) { %>@import "sprites";
-<% } %><% if (cfg.webfont) { %>@import "glyphs";
 <% } %>@import "main";

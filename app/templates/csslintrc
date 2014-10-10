@@ -2,7 +2,6 @@
   "adjoining-classes": false,
   "box-sizing": false,
   "box-model": false,
-  "bulletproof-font-face": false,
   "compatible-vendor-prefixes": false,
   "duplicate-background-images": false,
   "floats": false,

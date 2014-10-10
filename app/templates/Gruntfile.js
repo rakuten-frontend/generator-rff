@@ -38,8 +38,7 @@ module.exports = function (grunt) {
                 css:        'app/css'<% } else { %>,
                 css:        '.tmp/dist/css'<% } %><% if (cfg.js) { %>,
                 js:         'app/js'<% } else { %>,
-                js:         '.tmp/dist/js'<% } %><% if (cfg.webfont) { %>,
-                fonts:      'app/fonts'<% } %>
+                js:         '.tmp/dist/js'<% } %>
             }
         }
 

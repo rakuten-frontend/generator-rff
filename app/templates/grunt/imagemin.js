@@ -1,8 +1,9 @@
 // Minify PNG, JPEG and GIF images
 // grunt-contrib-imagemin: <https://github.com/gruntjs/grunt-contrib-imagemin>
 
-'use strict';<% if (cfg.svgo) { %>
+'use strict';
 
+var fs = require('fs');<% if (cfg.svgo) { %>
 var svgo = require('imagemin-svgo');<% } %>
 
 module.exports = {
@@ -14,14 +15,13 @@ module.exports = {
         },<% } %>
         files: [{
             expand: true,
-            cwd: '<%%= path.app %>',
+            cwd: '<%%= path.dist %>',
             dest: '<%%= path.dist %>',
             src: [
-                '**/*.{png,jpg,gif<% if (cfg.svgo) { %>,svg<% } %>}',
-                '!<%%= path.distIgnore %>'
+                '**/*.{png,jpg,gif<% if (cfg.svgo) { %>,svg<% } %>}'
             ],
-            filter: function(filepath) {
-                return require('fs').readFileSync(filepath).length > 0;
+            filter: function (filepath) {
+                return fs.readFileSync(filepath).length > 0;
             }
         }]
     }

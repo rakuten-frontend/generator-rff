@@ -17,8 +17,7 @@ module.exports = {
             dest: '<%%= path.css %>',
             src: [
                 '**/*.less',
-                '!**/_*.less'<% if (cfg.webfont) { %>,
-                '!glyphs.less'<% } %>
+                '!**/_*.less'
             ],
             ext: '.css'
         }]
