@@ -30,7 +30,6 @@ Example:
     .gitattributes  # Git attributes setting.
     .yo-rc.json     # Yeoman generator config.
     .npmrc          # npm config.
-    .bowerrc        # Bower config.
     .editorconfig   # General editor config.
     .csslintrc      # CSS Lint config.
     .jshintrc       # JSHint config.

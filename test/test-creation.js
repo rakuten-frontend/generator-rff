@@ -34,7 +34,6 @@ describe('Generator', function () {
                 ['package.json', /"name":\s+"test-project"/],
                 ['bower.json', /"name":\s+"test-project"/],
                 '.npmrc',
-                '.bowerrc',
                 '.gitignore',
                 '.gitattributes',
                 '.editorconfig',

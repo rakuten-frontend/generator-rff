@@ -19,7 +19,6 @@ module.exports = {
                     '**',
                     '!<%%= path.distIgnore %>',<% if (cfg.jade) { %>
                     '!**/*.jade',<% } %>
-                    '!bower_components/**',
                     '!**/.DS_Store',
                     '!**/*.{css,js}',           // Ignore CSS and JavaScript because they are compiled in usemin task.
                     '!**/*.{png,jpg,gif<% if (cfg.svgo) { %>,svg<% } %>}'   // Ignore images because they are copied in imagemin task.

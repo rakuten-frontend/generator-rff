@@ -18,8 +18,7 @@ module.exports = {
             dest: '<%%= path.dist %>',
             src: [
                 '**/*.{png,jpg,gif<% if (cfg.svgo) { %>,svg<% } %>}',
-                '!<%%= path.distIgnore %>',
-                '!bower_components/**'
+                '!<%%= path.distIgnore %>'
             ],
             filter: function(filepath) {
                 return require('fs').readFileSync(filepath).length > 0;

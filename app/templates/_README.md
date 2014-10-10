@@ -16,9 +16,8 @@ Structure
 │   ├── _stylus/<% } %><% if (cfg.js) { %>
 │   ├── js/<% } %><% if (cfg.coffee) { %>
 │   ├── _coffee/<% } %>
-│   ├── img/<% if (cfg.sprite) { %>
-│   │   └── _sprites/      : Base images for spritesheet<% } %>
-│   └── bower_components/  : Libraries installed by Bower
+│   └── img/<% if (cfg.sprite) { %>
+│       └── _sprites/      : Base images for spritesheet<% } %>
 ├── dist/                  : Distributed files
 │   ├── index.html
 │   ├── css/
@@ -38,7 +37,6 @@ Structure
 ├── .gitattributes         : Git attributes setting
 ├── .npmrc                 : npm config<% if (cfg.store) { %>
 ├── .yo-rc.json            : Yeoman generator config<% } %>
-├── .bowerrc               : Bower config
 ├── .editorconfig          : General editor config<% if (cfg.csslint) { %>
 ├── .csslintrc             : CSS Lint config<% } %>
 └── .jshintrc              : JSHint config

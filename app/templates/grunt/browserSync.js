@@ -12,9 +12,12 @@ module.exports = {
         options: {
             server: {
                 baseDir: [
-                    '<%%= path.tmp %>',          // Refer compiled files at first,
-                    '<%%= path.app %>'           // And then, look for other files in source direcotry.
-                ]
+                    '<%%= path.tmp %>',
+                    '<%%= path.app %>'
+                ],
+                routes: {
+                    '/bower_components': 'bower_components'
+                }
             },
             port: 9000,
             notify: false,

@@ -7,7 +7,7 @@ module.exports = {
 
     // Distribution
     dist: {
-        devFile: '<%%= path.app %>/bower_components/modernizr/modernizr.js',
+        devFile: 'bower_components/modernizr/modernizr.js',
         outputFile: '<%%= path.dist %>/js/modernizr.js',
         files: {
             src: [
