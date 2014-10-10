@@ -8,7 +8,7 @@ var grunt = require('grunt');
 
 module.exports = {
 
-    // Generate source codes<% if (cfg.sprite) { %> and spritesheet images<% } %>
+    // Generate precompiled resources
     compile: [
         'clean:tmp',
         'wiredep'<% if (cfg.sprite) { %>,
@@ -21,34 +21,6 @@ module.exports = {
         'newer:coffee'<% } %><% if (cfg.autoprefixer) { %>,
         'autoprefixer'<% } %>
     ],
-
-    // Validation and lint
-    lint: function (target) {
-        if (target !== 'skip-compile') {
-            grunt.task.run([
-                'compile'
-            ]);
-        }
-        grunt.task.run([<% if (cfg.validation) { %>
-            'newer:validation',<% } %><% if (cfg.csslint) { %>
-            'newer:csslint',<% } %>
-            'newer:jshint'
-        ]);
-    }<% if (cfg.testing) { %>,
-
-    // Run testing framework
-    test: function (target) {
-        if (target !== 'skip-compile') {
-            grunt.task.run([
-                'compile'
-            ]);
-        }
-        grunt.task.run([<% if (cfg.mocha) { %>
-            'connect:test',
-            'mocha'<% } %><% if (cfg.jasmine) { %>
-            'jasmine'<% } %>
-        ]);
-    }<% } %>,
 
     // Start localhost server
     serve: function (target) {
@@ -67,33 +39,50 @@ module.exports = {
         }
     },
 
-    // Distribute. This is a part of build task.
-    _dist: [
-        'clean:dist',
-        'copy:dist',
-        'imagemin',
-        'useminPrepare',
-        'concat'<% if (cfg.cssmin) { %>,
-        'cssmin'<% } %><% if (cfg.uglify) { %>,
-        'uglify'<% } %><% if (cfg.modernizr) { %>,
-        'modernizr'<% } %><% if (cfg.rev) { %>,
-        'rev'<% } %>,
-        'usemin'<% if (cfg.htmlmin) { %>,
-        'htmlmin'<% } %>
-    ],
+    // Validate and test
+    test: function (target) {
+        if (target !== 'skip-compile') {
+            grunt.task.run([
+                'compile'
+            ]);
+        }
+        grunt.task.run([<% if (cfg.validation) { %>
+            'newer:validation',<% } %><% if (cfg.csslint) { %>
+            'newer:csslint',<% } %>
+            'newer:jshint'<% if (cfg.mocha) { %>,
+            'connect:test',
+            'mocha'<% } %><% if (cfg.jasmine) { %>,
+            'jasmine'<% } %>
+        ]);
+    },
 
-    // Build
-    build: [
-        'compile',
-        '_dist'
-    ],
+    // Build and distribute files
+    build: function (target) {
+        if (target !== 'skip-compile') {
+            grunt.task.run([
+                'compile'
+            ]);
+        }
+        grunt.task.run([
+            'clean:dist',
+            'copy:dist',
+            'imagemin',
+            'useminPrepare',
+            'concat'<% if (cfg.cssmin) { %>,
+            'cssmin'<% } %><% if (cfg.uglify) { %>,
+            'uglify'<% } %><% if (cfg.modernizr) { %>,
+            'modernizr'<% } %><% if (cfg.rev) { %>,
+            'rev'<% } %>,
+            'usemin'<% if (cfg.htmlmin) { %>,
+            'htmlmin'<% } %>
+        ]);
+    },
 
-    // Define default `grunt` alias
+    // Default `grunt` alias
     default: [
         'compile',
-        'lint:skip-compile'<% if (cfg.testing) { %>,
-        'test:skip-compile'<% } %>,
-        '_dist'
+        'test:skip-compile',
+        'build:skip-compile'
     ]
 
 };

@@ -79,27 +79,21 @@ After that, you can use `grunt` and `bower` commands in the project root directo
 Build Tasks
 -----------
 
-### Supported Tasks
-
 * `grunt`  
-  Distribute files for deployment/delivery.
-  This task includes lint<% if (cfg.testing) { %>, test<% }%> and build.
+  Distribute files after testing.
 
 * `grunt serve`  
   Start localhost server with BrowserSync.
   Type [Cntl + C] to exit.
 
 * `grunt serve:dist`  
-  Start localhost server using distributed files.
-  This task doesn't contain build task. Run `grunt` at first as needed.
-
-* `grunt lint`  
-  Validate HTML, CSS and JavaScript files.<% if (cfg.testing) { %>
+  Start localhost server using distributed files.  
+  This task doesn't contain the build task. Run `grunt` at first as needed.
 
 * `grunt test`  
-  Run the unit tests.<% } %>
+  Validate source codes and run unit testing.
 
-For more details or customizing the tasks, please refer [grunt/aliases.js](browse/grunt/aliases.js).
+See "grunt/aliases.js" for more details or customizing the tasks.
 
 Library Management
 ------------------
