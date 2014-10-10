@@ -5,9 +5,9 @@ html<% if (cfg.modernizr) { %>.no-js<% } %>
     title <%= cfg.name %>
     // build:css /css/app.css
     // bower:css
-    // endbower<% if (cfg.webfont) { %>
-    link(rel='stylesheet', href='/css/glyphs.css')<% } %><% if (cfg.css) { %><% if (cfg.sprite) { %>
-    link(rel='stylesheet', href='/css/sprites.css')<% } %>
+    // endbower<% if (cfg.sprite) { %>
+    link(rel='stylesheet', href='/css/sprites.css')<% } %><% if (cfg.webfont) { %>
+    link(rel='stylesheet', href='/css/glyphs.css')<% } %><% if (cfg.css) { %>
     link(rel='stylesheet', href='/css/main.css')<% } else { %>
     link(rel='stylesheet', href='/css/app.css')<% } %>
     // endbuild<% if (cfg.modernizr) { %>

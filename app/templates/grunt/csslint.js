@@ -18,7 +18,8 @@ module.exports = {
     // Refer: <https://github.com/tschaub/grunt-newer/issues/19#issuecomment-29224364>
     app: {
         src: [
-            '<%%= path.css %>/**/*.css'<% if (cfg.webfont) { %>,
+            '<%%= path.css %>/**/*.css'<% if (cfg.sprite) { %>,
+            '!<%%= path.tmp %>/css/sprites.css'<% } %><% if (cfg.webfont) { %>,
             '!<%%= path.tmp %>/css/glyphs.css'<% } %>
         ]
     }

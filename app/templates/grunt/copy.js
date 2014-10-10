@@ -22,14 +22,15 @@ module.exports = {
                     '!**/.DS_Store',
                     '!**/*.{css,js}'            // Ignore CSS and JavaScript because they are compiled in usemin task.
                 ]
-            }<% if (!cfg.html || cfg.webfont) { %>,
+            }<% if (!cfg.html || cfg.sprite || cfg.webfont) { %>,
             // Copy precompiled resources.
             {
                 expand: true,
                 cwd: '<%%= path.tmp %>',
                 dest: '<%%= path.dist %>',
                 src: [<% if (!cfg.html) { %>
-                    '**/*.html',<% } %><% if (cfg.webfont) { %>
+                    '**/*.html',<% } %><% if (cfg.sprite) { %>
+                    'img/sprites.png',<% } %><% if (cfg.webfont) { %>
                     '**/*.{eot,woff,ttf,svg}',<% } %>
                     '!<%%= path.distIgnore %>'
                 ]

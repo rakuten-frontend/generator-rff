@@ -13,6 +13,5 @@
   "overqualified-elements": false,
   "qualified-headings": false,
   "text-indent": false,
-  "unique-headings": false,
-  "zero-units": false
+  "unique-headings": false
 }
