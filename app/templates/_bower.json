@@ -4,6 +4,5 @@
   "dependencies": {
     "jquery": "~1.11.1"<% if (cfg.modernizr) { %>,
     "modernizr": "~2.8.3"<% } %>
-  },
-  "devDependencies": {}
+  }
 }
