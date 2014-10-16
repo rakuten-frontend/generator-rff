@@ -323,7 +323,7 @@ describe('Generator', function () {
 
         helpers.mockPrompt(this.app, {
             configType: 'custom',
-            verification: ['validation']
+            testing: ['validation']
         });
 
         this.app.run({}, function () {
@@ -342,7 +342,7 @@ describe('Generator', function () {
 
         helpers.mockPrompt(this.app, {
             configType: 'custom',
-            verification: ['csslint']
+            testing: ['csslint']
         });
 
         this.app.run({}, function () {
@@ -363,7 +363,7 @@ describe('Generator', function () {
 
         helpers.mockPrompt(this.app, {
             configType: 'custom',
-            verification: ['mocha']
+            testing: ['mocha']
         });
 
         this.app.run({}, function () {
@@ -381,7 +381,7 @@ describe('Generator', function () {
 
         helpers.mockPrompt(this.app, {
             configType: 'custom',
-            verification: ['jasmine']
+            testing: ['jasmine']
         });
 
         this.app.run({}, function () {
@@ -399,7 +399,7 @@ describe('Generator', function () {
 
         helpers.mockPrompt(this.app, {
             configType: 'custom',
-            utility: ['autoprefixer']
+            utilities: ['autoprefixer']
         });
 
         this.app.run({}, function () {
@@ -418,7 +418,7 @@ describe('Generator', function () {
 
         helpers.mockPrompt(this.app, {
             configType: 'custom',
-            utility: ['sprite']
+            utilities: ['sprite']
         });
 
         this.app.run({}, function () {
@@ -437,7 +437,7 @@ describe('Generator', function () {
 
         helpers.mockPrompt(this.app, {
             configType: 'custom',
-            utility: ['webfont']
+            utilities: ['webfont']
         });
 
         this.app.run({}, function () {
@@ -475,7 +475,7 @@ describe('Generator', function () {
 
         helpers.mockPrompt(this.app, {
             configType: 'custom',
-            library: ['modernizr']
+            libraries: ['modernizr']
         });
 
         this.app.run({}, function () {

@@ -4,16 +4,16 @@
     "markup": "html",
     "style": "sass",
     "script": "js",
-    "utility": [
+    "utilities": [
       "autoprefixer",
       "sprite"
     ],
-    "verification": [
+    "testing": [
       "validation",
       "csslint"
     ],
     "server": [],
-    "library": [],
+    "libraries": [],
     "optimization": [
       "htmlmin",
       "cssmin",

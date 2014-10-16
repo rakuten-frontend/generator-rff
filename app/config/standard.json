@@ -2,16 +2,16 @@
   "generator-rff": {
     "markup": "html",
     "script": "js",
-    "utility": [
+    "utilities": [
       "autoprefixer",
       "sprite"
     ],
-    "verification": [
+    "testing": [
       "validation",
       "csslint"
     ],
     "server": [],
-    "library": [],
+    "libraries": [],
     "optimization": [
       "htmlmin",
       "cssmin",

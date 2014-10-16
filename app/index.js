@@ -155,7 +155,7 @@ var Generator = yeoman.generators.Base.extend({
                 questions.push({
                     type: 'confirm',
                     name: 'store',
-                    message: 'Do you want to save this config?',
+                    message: 'Do you want to save this config to .yo-rc.json?',
                     default: false
                 });
             }

@@ -2,10 +2,10 @@
   "generator-rff": {
     "markup": "html",
     "script": "js",
-    "utility": [],
-    "verification": [],
+    "utilities": [],
+    "testing": [],
     "server": [],
-    "library": [],
+    "libraries": [],
     "optimization": [],
     "distribution": []
   }

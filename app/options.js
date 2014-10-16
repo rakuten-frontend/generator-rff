@@ -86,12 +86,12 @@ var options = [
         ]
     },
     {
-        name: 'utility',
+        name: 'utilities',
         message: 'Utilities',
         type: 'checkbox',
         choices: [
             {
-                name: 'CSS Autoprefixing',
+                name: 'CSS Autoprefixer',
                 value: 'autoprefixer',
                 templates: ['grunt/autoprefixer.js'],
                 directories: [],
@@ -105,7 +105,7 @@ var options = [
                 packages: {'grunt-spritesmith': '~2.1.1'}
             },
             {
-                name: 'Web Fonts Generator',
+                name: 'Icon Fonts Generator',
                 value: 'webfont',
                 templates: ['grunt/webfont.js'],
                 directories: ['app/img/_glyphs'],
@@ -114,8 +114,8 @@ var options = [
         ]
     },
     {
-        name: 'verification',
-        message: 'Verification',
+        name: 'testing',
+        message: 'Testing',
         type: 'checkbox',
         choices: [
             {
@@ -133,14 +133,14 @@ var options = [
                 packages: {'grunt-contrib-csslint': '~0.2.0'}
             },
             {
-                name: 'Mocha Test',
+                name: 'Mocha',
                 value: 'mocha',
                 templates: ['grunt/mocha.js', 'grunt/connect.js'],
                 directories: [],
                 packages: {'grunt-mocha': '~0.4.10', 'grunt-contrib-connect': '~0.7.1'}
             },
             {
-                name: 'Jasmine Test',
+                name: 'Jasmine',
                 value: 'jasmine',
                 templates: ['grunt/jasmine.js'],
                 directories: [],
@@ -167,7 +167,7 @@ var options = [
         ]
     },
     {
-        name: 'library',
+        name: 'libraries',
         message: 'Libraries',
         type: 'checkbox',
         choices: [
