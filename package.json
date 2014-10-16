@@ -33,9 +33,9 @@
     "LICENSE-MIT"
   ],
   "dependencies": {
-    "lodash": "~2.4.1",
-    "yeoman-generator": "~0.17.1",
-    "yosay": "~1.0.0"
+    "lodash": "^2.4.1",
+    "yeoman-generator": "^0.17.1",
+    "yosay": "^1.0.0"
   },
   "peerDependencies": {
     "yo": ">=1.0.0",
