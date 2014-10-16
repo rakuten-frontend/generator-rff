@@ -3,10 +3,11 @@
   "version": "0.0.0",
   "engines": {
     "node": ">=0.10.0"
-  }<% if (cfg.testing) { %>,
+  },
   "scripts": {
-    "postinstall": "cd test && bower install"
-  }<% } %>,
+    "test": "grunt test"<% if (cfg.testing) { %>,
+    "postinstall": "cd test && bower install"<% } %>
+  },
   "devDependencies": {
     "grunt": "~0.4.5",
     "grunt-browser-sync": "~1.5.3",
