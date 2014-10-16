@@ -207,7 +207,7 @@ var options = [
                 packages: {'grunt-contrib-uglify': '~0.4.0'}
             },
             {
-                name: 'SVG Optinization',
+                name: 'SVG Optimization',
                 value: 'svgo',
                 templates: [],
                 directories: [],

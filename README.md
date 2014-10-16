@@ -1,28 +1,51 @@
 # generator-rff [![Build Status][travis-image]][travis-url]
 
-> Yeoman generator for scaffolding structural and high performance web site.
+> Fully customizable [Yeoman](http://yeoman.io/) generator for scaffolding a front-end web app.
 
-## Overview
+## Features
 
-### Built-in Features
-* Preview Server with BrowserSync
-* Validations (W3C HTML Validation, CSS Lint, JSHint)
-* Concatenation of CSS/JS Files
-* Image Optimization
-* CSS Sprites Generator
-* Library Management with Bower
+### Supported Languages
+* **Markup**
+  * HTML
+  * Jade
+* **Stylesheet**
+  * CSS
+  * Sass (Ruby)
+  * Sass (Libsass)
+  * Less
+  * Stylus
+* **Script**
+  * JavaScript
+  * CoffeeScript
 
-### Supported Languages and Frameworks
-* **Markup:** HTML, Jade
-* **Stylesheet:** CSS, Sass, Less, Stylus
-* **Script:** JavaScript, CoffeeScript
-* **Test:** Mocha, Jasmine
+### Tasks and Functions
 
-### Optional Features
-* Minification of CSS and JavaScript
-* CSS Autoprefixing
-* Static Assets Revisioning
-* SSI Support in Preview Server
+* **Utilities**
+  * Wiring up Bower Components (Built-in)
+  * CSS Autoprefixer
+  * CSS Sprites Generator
+  * Icon Fonts Generator
+* **Testing**
+  * JSHint (Built-in)
+  * W3C HTML Validation
+  * CSS Lint
+  * Mocha
+  * Jasmine
+* **Preview Server**
+  * BrowserSync (Built-in)
+  * SSI Support
+* **Support Libraries**
+  * Modernizr
+* **Optimization**
+  * Image Optimization (Built-in)
+  * HTML Minification
+  * CSS Minification
+  * JavaScript Minification
+  * SVG Optimization
+  * Static Assets Revisioning
+* **Distribution**
+  * Deployment to Git Repository
+  * Deployment over FTP
 
 ## Getting Started
 Make sure you have [Node.js](http://nodejs.org/) and [yo](https://github.com/yeoman/yo) installed:
