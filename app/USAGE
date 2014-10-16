@@ -1,6 +1,5 @@
 Description:
-  Yeoman generator for scaffolding structural and high performance
-  web site.
+  Scaffold a new front-end web app.
 
 Generator Options:
   -s, --skip-install
@@ -25,14 +24,6 @@ Example:
     bower.json      # Front-end packages installed by bower.
     README.md       # Readme document for the project.
     Gruntfile.js    # Base Grunt config.
-
-    .gitignore      # Git ignoring setting.
-    .gitattributes  # Git attributes setting.
-    .yo-rc.json     # Yeoman generator config.
-    .npmrc          # npm config.
-    .editorconfig   # General editor config.
-    .csslintrc      # CSS Lint config.
-    .jshintrc       # JSHint config.
 
     app/            # Your application files.
     grunt/          # Grunt config scripts.
