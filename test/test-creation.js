@@ -38,7 +38,6 @@ describe('Generator', function () {
                 '.gitignore',
                 '.gitattributes',
                 '.editorconfig',
-                '.jshintrc',
                 'README.md'
             ],
             unexpected = [
@@ -59,6 +58,7 @@ describe('Generator', function () {
     it('creates expected application files in default', function (done) {
         var expected = [
                 '.csslintrc',
+                '.jshintrc',
                 'Gruntfile.js',
                 'grunt/aliases.js',
                 'grunt/browserSync.js',
@@ -119,7 +119,6 @@ describe('Generator', function () {
                 'grunt/browserSync.js',
                 'grunt/clean.js',
                 'grunt/copy.js',
-                'grunt/jshint.js',
                 'grunt/imagemin.js',
                 'grunt/usemin.js',
                 'grunt/useminPrepare.js',
@@ -133,6 +132,7 @@ describe('Generator', function () {
             ],
             unexpected = [
                 '.csslintrc',
+                '.jshintrc',
                 'grunt/htmlmin.js',
                 'grunt/rev.js',
                 'grunt/less.js',
@@ -304,7 +304,8 @@ describe('Generator', function () {
 
         helpers.mockPrompt(this.app, {
             configType: 'custom',
-            script: 'coffee'
+            script: 'coffee',
+            testing: ['jshint']
         });
 
         this.app.run({}, function () {
@@ -344,6 +345,25 @@ describe('Generator', function () {
         helpers.mockPrompt(this.app, {
             configType: 'custom',
             testing: ['csslint']
+        });
+
+        this.app.run({}, function () {
+            helpers.assertFiles(expected);
+            done();
+        });
+    });
+
+    it('creates expected files with "jshint" option', function (done) {
+        var expected = [
+                ['package.json', /"grunt-contrib-jshint"/],
+                ['grunt/aliases.js', /'(.*:)?jshint(:.*)?'/],
+                'grunt/jshint.js',
+                '.jshintrc'
+            ];
+
+        helpers.mockPrompt(this.app, {
+            configType: 'custom',
+            testing: ['jshint']
         });
 
         this.app.run({}, function () {

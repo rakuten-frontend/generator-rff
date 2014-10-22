@@ -226,7 +226,6 @@ var Generator = yeoman.generators.Base.extend({
             this.src.copy('npmrc', '.npmrc');
             this.src.copy('bowerrc', '.bowerrc');
             this.template('editorconfig', '.editorconfig');
-            this.template('jshintrc', '.jshintrc');
             this.template('_README.md', 'README.md');
         },
 
@@ -244,7 +243,6 @@ var Generator = yeoman.generators.Base.extend({
             this.template('grunt/browserSync.js', 'grunt/browserSync.js');
             this.template('grunt/clean.js', 'grunt/clean.js');
             this.template('grunt/copy.js', 'grunt/copy.js');
-            this.template('grunt/jshint.js', 'grunt/jshint.js');
             this.template('grunt/imagemin.js', 'grunt/imagemin.js');
             this.template('grunt/usemin.js', 'grunt/usemin.js');
             this.template('grunt/useminPrepare.js', 'grunt/useminPrepare.js');

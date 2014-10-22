@@ -133,6 +133,13 @@ var options = [
                 packages: {'grunt-contrib-csslint': '~0.2.0'}
             },
             {
+                name: 'JSHint',
+                value: 'jshint',
+                templates: ['grunt/jshint.js', ['jshintrc', '.jshintrc']],
+                directories: [],
+                packages: {'grunt-contrib-jshint': '~0.10.0'}
+            },
+            {
                 name: 'Mocha',
                 value: 'mocha',
                 templates: ['grunt/mocha.js', 'grunt/connect.js'],

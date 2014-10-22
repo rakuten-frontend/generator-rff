@@ -26,19 +26,19 @@ module.exports = {
     html: {
         files: ['<%%= path.html %>/**/*.html'],
         tasks: ['newer:validation']
-    }<% } %>,
+    }<% } %><% if (cfg.jshint) { %>,
 
     // JSHint
     js: {
         files: ['<%%= path.js %>/**/*.js'],
         tasks: ['newer:jshint']
-    },
+    }<% } %><% if (cfg.testing) { %>,
 
     // Unit testing
     test: {
         files: ['test/spec/*.js'],
         tasks: ['test:skip-compile']
-    }<% if (cfg.autoprefixer || cfg.csslint) { %>,
+    }<% } %><% if (cfg.autoprefixer || cfg.csslint) { %>,
 
     // Styles
     css: {<% if (cfg.css) { %>
