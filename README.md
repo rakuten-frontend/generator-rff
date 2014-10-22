@@ -26,9 +26,9 @@
   * CSS Sprites Generator
   * Icon Fonts Generator
 * **Testing**
-  * JSHint (Built-in)
   * W3C HTML Validation
   * CSS Lint
+  * JSHint
   * Mocha
   * Jasmine
 * **Preview Server**
