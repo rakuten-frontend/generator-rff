@@ -1,6 +1,6 @@
 # generator-rff [![NPM Version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url]
 
-> Fully customizable [Yeoman](http://yeoman.io/) generator for scaffolding a front-end web app.
+> Fully customizable [Yeoman](http://yeoman.io/) generator for scaffolding a front-end web app, developed in Rakuten Front-end Framework project.
 
 ## Features
 
