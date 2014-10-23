@@ -18,7 +18,7 @@ var options = [
                 value: 'jade',
                 templates: ['grunt/jade.js', 'app/index.jade'],
                 directories: [],
-                packages: {'grunt-contrib-jade': '~0.11.0'}
+                packages: {'grunt-contrib-jade': '~0.13.0'}
             }
         ]
     },
@@ -39,7 +39,7 @@ var options = [
                 value: 'sass',
                 templates: ['grunt/sass.js'],
                 directories: ['app/_sass'],
-                packages: {'grunt-contrib-sass': '~0.7.3'}
+                packages: {'grunt-contrib-sass': '~0.8.1'}
             },
             {
                 name: 'Sass (Libsass)',
@@ -60,7 +60,7 @@ var options = [
                 value: 'stylus',
                 templates: ['grunt/stylus.js'],
                 directories: ['app/_stylus'],
-                packages: {'grunt-contrib-stylus': '~0.16.0'}
+                packages: {'grunt-contrib-stylus': '~0.20.0'}
             }
         ]
     },
@@ -81,7 +81,7 @@ var options = [
                 value: 'coffee',
                 templates: ['grunt/coffee.js'],
                 directories: ['app/_coffee'],
-                packages: {'grunt-contrib-coffee': '~0.10.1'}
+                packages: {'grunt-contrib-coffee': '~0.12.0'}
             }
         ]
     },
@@ -95,7 +95,7 @@ var options = [
                 value: 'autoprefixer',
                 templates: ['grunt/autoprefixer.js'],
                 directories: [],
-                packages: {'grunt-autoprefixer': '~0.8.1'}
+                packages: {'grunt-autoprefixer': '~1.0.1'}
             },
             {
                 name: 'CSS Sprites Generator',
@@ -130,7 +130,7 @@ var options = [
                 value: 'csslint',
                 templates: ['grunt/csslint.js', ['csslintrc', '.csslintrc']],
                 directories: [],
-                packages: {'grunt-contrib-csslint': '~0.2.0'}
+                packages: {'grunt-contrib-csslint': '~0.3.1'}
             },
             {
                 name: 'JSHint',
@@ -144,14 +144,14 @@ var options = [
                 value: 'mocha',
                 templates: ['grunt/mocha.js', 'grunt/connect.js'],
                 directories: [],
-                packages: {'grunt-mocha': '~0.4.10', 'grunt-contrib-connect': '~0.7.1'}
+                packages: {'grunt-mocha': '~0.4.10', 'grunt-contrib-connect': '~0.8.0'}
             },
             {
                 name: 'Jasmine',
                 value: 'jasmine',
                 templates: ['grunt/jasmine.js'],
                 directories: [],
-                packages: {'grunt-contrib-jasmine': '~0.6.4'}
+                packages: {'grunt-contrib-jasmine': '~0.8.1'}
             }
         ],
         validate: function (answer) {
@@ -204,14 +204,14 @@ var options = [
                 value: 'cssmin',
                 templates: [],
                 directories: [],
-                packages: {'grunt-contrib-cssmin': '~0.9.0'}
+                packages: {'grunt-contrib-cssmin': '~0.10.0'}
             },
             {
                 name: 'JavaScript Minification',
                 value: 'uglify',
                 templates: [],
                 directories: [],
-                packages: {'grunt-contrib-uglify': '~0.4.0'}
+                packages: {'grunt-contrib-uglify': '~0.6.0'}
             },
             {
                 name: 'SVG Optimization',
@@ -246,7 +246,7 @@ var options = [
                 value: 'ftp',
                 templates: ['grunt/ftp-deploy.js', ['ftppass', '.ftppass']],
                 directories: [],
-                packages: {'grunt-ftp-deploy': '~0.1.7'}
+                packages: {'grunt-ftp-deploy': '~0.1.9'}
             }
         ]
     }
