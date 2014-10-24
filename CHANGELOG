@@ -70,7 +70,10 @@ v0.2.1:
 v0.2.0:
   date: 2014-03-31
   changes:
-    - Support more languages: Jade, Less, CoffeeScript.
+    - Support more languages.:
+      - Jade
+      - Less
+      - CoffeeScript
     - Update directory and build structure.
     - Add example pages and readme content.
     - Update CLI prompt.
