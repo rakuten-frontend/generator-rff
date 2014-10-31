@@ -93,7 +93,7 @@ module.exports = {
 
     // SSI simulation
     ssi: {
-        files: ['<%%= path.markups %>/**/*.html'],
+        files: ['<%%= path.html %>/**/*.html'],
         tasks: ['ssi']
     }<% } %>
 

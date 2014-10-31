@@ -9,12 +9,12 @@ module.exports = {
     compile: {
         options: {
             cache: 'all',
-            baseDir: '<%%= path.markups %>',
+            baseDir: '<%%= path.html %>',
             encoding: 'utf8'
         },
         files: [{
             expand: true,
-            cwd: '<%%= path.markups %>',
+            cwd: '<%%= path.html %>',
             dest: '<%%= path.tmp %>',
             src: ['**/*.html']
         }]
