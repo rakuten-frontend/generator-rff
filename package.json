@@ -8,7 +8,7 @@
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/rakuten-frontend/generator-rff/blob/master/LICENSE-MIT"
+      "url": "https://github.com/rakuten-frontend/generator-rff/blob/master/LICENSE"
     }
   ],
   "repository": {
@@ -36,7 +36,7 @@
   "main": "app/index.js",
   "files": [
     "app",
-    "LICENSE-MIT"
+    "LICENSE"
   ],
   "dependencies": {
     "lodash": "^2.4.1",
