@@ -8,6 +8,136 @@ var assert = require('yeoman-generator').assert;
 describe('Generator', function () {
 
     var generator;
+    var baseFiles = [
+        'package.json',
+        'bower.json',
+        'README.md',
+        '.gitignore',
+        '.gitattributes',
+        '.editorconfig',
+        '.npmrc',
+        '.bowerrc',
+        'Gruntfile.js',
+        'grunt/aliases.js',
+        'grunt/browserSync.js',
+        'grunt/clean.js',
+        'grunt/copy.js',
+        'grunt/imagemin.js',
+        'grunt/newer.js',
+        'grunt/sass.js',
+        'grunt/usemin.js',
+        'grunt/useminPrepare.js',
+        'grunt/watch.js',
+        'grunt/wiredep.js',
+        'app/index.html',
+        'app/_sass/',
+        'app/js/',
+        'app/img/'
+    ];
+    var optionFiles = [
+        '.csslintrc',
+        '.jshintrc',
+        '.ftppass',
+        '.yo-rc.json',
+        'grunt/autoprefixer.js',
+        'grunt/buildcontrol.js',
+        'grunt/coffee.js',
+        'grunt/connect.js',
+        'grunt/csslint.js',
+        'grunt/ftp-deploy.js',
+        'grunt/htmlmin.js',
+        'grunt/jade.js',
+        'grunt/jasmine.js',
+        'grunt/jshint.js',
+        'grunt/less.js',
+        'grunt/mocha.js',
+        'grunt/modernizr.js',
+        'grunt/rev.js',
+        'grunt/sprite.js',
+        'grunt/ssi.js',
+        'grunt/stylus.js',
+        'grunt/validation.js',
+        'grunt/webfont.js',
+        'app/index.jade',
+        'app/css/',
+        'app/_less/',
+        'app/_stylus/',
+        'app/_coffee/',
+        'app/inc/',
+        'app/img/_sprites/',
+        'app/img/_glyphs/'
+    ];
+    var baseFileContents = [
+        ['package.json', /"name": "temp"/],
+        ['package.json', /"grunt-contrib-sass"/],
+        ['bower.json', /"name": "temp"/],
+        ['README.md', /Temp/],
+        ['.gitignore', /\.sass-cache/],
+        ['.editorconfig', /\[\*\.js\]/],
+        ['grunt/aliases.js', /'(.*:)?sass(:.*)?'/],
+        ['grunt/watch.js', /'(.*:)?sass(:.*)?'/]
+    ];
+    var optionFileContents = [
+        ['package.json', /"grunt-autoprefixer"/],
+        ['package.json', /"grunt-build-control"/],
+        ['package.json', /"grunt-contrib-coffee"/],
+        ['package.json', /"grunt-contrib-connect"/],
+        ['package.json', /"grunt-contrib-csslint"/],
+        ['package.json', /"grunt-contrib-cssmin"/],
+        ['package.json', /"grunt-contrib-htmlmin"/],
+        ['package.json', /"grunt-contrib-jade"/],
+        ['package.json', /"grunt-contrib-jasmine"/],
+        ['package.json', /"grunt-contrib-jshint"/],
+        ['package.json', /"grunt-contrib-less"/],
+        ['package.json', /"grunt-contrib-stylus"/],
+        ['package.json', /"grunt-contrib-uglify"/],
+        ['package.json', /"grunt-ftp-deploy"/],
+        ['package.json', /"grunt-html-validation"/],
+        ['package.json', /"grunt-mocha"/],
+        ['package.json', /"grunt-modernizr"/],
+        ['package.json', /"grunt-rev"/],
+        ['package.json', /"grunt-sass"/],
+        ['package.json', /"grunt-spritesmith"/],
+        ['package.json', /"grunt-ssi"/],
+        ['package.json', /"grunt-webfont"/],
+        ['package.json', /"imagemin-svgo"/],
+        ['bower.json', /"modernizr"/],
+        ['.gitignore', /validation-status\.json/],
+        ['.gitignore', /validation-report\.json/],
+        ['.gitignore', /\.ftppass/],
+        ['grunt/aliases.js', /'(.*:)?autoprefixer(:.*)?'/],
+        ['grunt/aliases.js', /'(.*:)?coffee(:.*)?'/],
+        ['grunt/aliases.js', /'(.*:)?connect(:.*)?'/],
+        ['grunt/aliases.js', /'(.*:)?csslint(:.*)?'/],
+        ['grunt/aliases.js', /'(.*:)?htmlmin(:.*)?'/],
+        ['grunt/aliases.js', /'(.*:)?jade(:.*)?'/],
+        ['grunt/aliases.js', /'(.*:)?jasmine(:.*)?'/],
+        ['grunt/aliases.js', /'(.*:)?jshint(:.*)?'/],
+        ['grunt/aliases.js', /'(.*:)?less(:.*)?'/],
+        ['grunt/aliases.js', /'(.*:)?mocha(:.*)?'/],
+        ['grunt/aliases.js', /'(.*:)?modernizr(:.*)?'/],
+        ['grunt/aliases.js', /'(.*:)?rev(:.*)?'/],
+        ['grunt/aliases.js', /'(.*:)?sprite(:.*)?'/],
+        ['grunt/aliases.js', /'(.*:)?ssi(:.*)?'/],
+        ['grunt/aliases.js', /'(.*:)?stylus(:.*)?'/],
+        ['grunt/aliases.js', /'(.*:)?validation(:.*)?'/],
+        ['grunt/aliases.js', /'(.*:)?webfont(:.*)?'/],
+        ['grunt/watch.js', /'(.*:)?autoprefixer(:.*)?'/],
+        ['grunt/watch.js', /'(.*:)?csslint(:.*)?'/],
+        ['grunt/watch.js', /'(.*:)?coffee(:.*)?'/],
+        ['grunt/watch.js', /'(.*:)?jade(:.*)?'/],
+        ['grunt/watch.js', /'(.*:)?jshint(:.*)?'/],
+        ['grunt/watch.js', /'(.*:)?less(:.*)?'/],
+        ['grunt/watch.js', /'(.*:)?sprites(:.*)?'/],
+        ['grunt/watch.js', /'(.*:)?ssi(:.*)?'/],
+        ['grunt/watch.js', /'(.*:)?stylus(:.*)?'/],
+        ['grunt/watch.js', /'(.*:)?test(:.*)?'/],
+        ['grunt/watch.js', /'(.*:)?validation(:.*)?'/],
+        ['grunt/watch.js', /'(.*:)?webfont(:.*)?'/],
+        ['app/index.html', /sprites\.css/],
+        ['app/index.html', /glyphs\.css/],
+        ['app/index.html', /modernizr\.js/]
+    ];
 
     beforeEach(function () {
         generator = helpers
@@ -24,135 +154,52 @@ describe('Generator', function () {
             });
     });
 
-    it('creates expected project files', function (done) {
+    it('creates expected package files', function (done) {
         generator
             .withPrompt({
                 name: 'Test Project'
             })
             .on('end', function () {
-                assert.file([
-                    'package.json',
-                    'bower.json',
-                    '.npmrc',
-                    '.bowerrc',
-                    '.gitignore',
-                    '.gitattributes',
-                    '.editorconfig',
-                    'README.md'
-                ]);
-                assert.noFile([
-                    '.yo-rc.json',
-                ]);
                 assert.fileContent([
-                    ['package.json', /"name":\s+"test-project"/],
-                    ['bower.json', /"name":\s+"test-project"/]
+                    ['package.json', /"name": "test-project"/],
+                    ['bower.json', /"name": "test-project"/],
+                    ['README.md', /Test Project/]
                 ]);
                 done();
             });
     });
 
-    it('creates expected application files in default', function (done) {
-        generator
-            .withPrompt({
-            })
-            .on('end', function () {
-                assert.file([
-                    '.csslintrc',
-                    '.jshintrc',
-                    'Gruntfile.js',
-                    'grunt/aliases.js',
-                    'grunt/browserSync.js',
-                    'grunt/clean.js',
-                    'grunt/copy.js',
-                    'grunt/validation.js',
-                    'grunt/csslint.js',
-                    'grunt/jshint.js',
-                    'grunt/imagemin.js',
-                    'grunt/sprite.js',
-                    'grunt/usemin.js',
-                    'grunt/useminPrepare.js',
-                    'grunt/watch.js',
-                    'grunt/newer.js',
-                    'grunt/htmlmin.js',
-                    'grunt/rev.js',
-                    'grunt/sass.js',
-                    'grunt/autoprefixer.js',
-                    'app/index.html',
-                    'app/_sass/',
-                    'app/js/',
-                    'app/img/',
-                    'app/img/_sprites/'
-                ]);
-                assert.noFile([
-                    'grunt/less.js',
-                    'grunt/stylus.js',
-                    'grunt/coffee.js',
-                    'grunt/mocha.js',
-                    'grunt/jasmine.js',
-                    'grunt/ssi.js',
-                    'app/index.jade',
-                    'app/css/',
-                    'app/_less/',
-                    'app/_stylus/',
-                    'app/_coffee/',
-                    'app/inc/'
-                ]);
-                assert.noFileContent([
-                    ['grunt/aliases.js', /'(.*:)?(jade|less|stylus|coffee|connect|mocha|jasmine|ssi)(:.*)?'/]
-                ]);
-                done();
-            });
-    });
-
-    it('creates expected application files with minimum options', function (done) {
+    it('creates expected files in minimum preset', function (done) {
         generator
             .withPrompt({
                 configType: 'minimum'
             })
             .on('end', function () {
-                assert.file([
-                    'Gruntfile.js',
-                    'grunt/aliases.js',
-                    'grunt/browserSync.js',
-                    'grunt/clean.js',
-                    'grunt/copy.js',
-                    'grunt/imagemin.js',
-                    'grunt/usemin.js',
-                    'grunt/useminPrepare.js',
-                    'grunt/watch.js',
-                    'grunt/newer.js',
-                    'grunt/sass.js',
-                    'app/index.html',
-                    'app/_sass/',
-                    'app/js/',
-                    'app/img/'
-                ]);
-                assert.noFile([
+                assert.file(baseFiles);
+                assert.noFile(optionFiles);
+                assert.fileContent(baseFileContents);
+                assert.noFileContent(optionFileContents);
+                done();
+            });
+    });
+
+    it('creates expected files in standard preset', function (done) {
+        generator
+            .withPrompt({
+            })
+            .on('end', function () {
+                assert.file(baseFiles.concat([
                     '.csslintrc',
                     '.jshintrc',
-                    'grunt/htmlmin.js',
-                    'grunt/rev.js',
-                    'grunt/less.js',
-                    'grunt/stylus.js',
-                    'grunt/coffee.js',
-                    'grunt/validation.js',
-                    'grunt/csslint.js',
-                    'grunt/mocha.js',
-                    'grunt/jasmine.js',
                     'grunt/autoprefixer.js',
+                    'grunt/csslint.js',
+                    'grunt/htmlmin.js',
+                    'grunt/jshint.js',
+                    'grunt/rev.js',
                     'grunt/sprite.js',
-                    'grunt/ssi.js',
-                    'app/index.jade',
-                    'app/css/',
-                    'app/_less/',
-                    'app/_stylus/',
-                    'app/_coffee/',
-                    'app/inc/',
+                    'grunt/validation.js',
                     'app/img/_sprites/'
-                ]);
-                assert.noFileContent([
-                    ['grunt/aliases.js', /'(.*:)?(jade|less|stylus|coffee|validation|csslint|connect|mocha|jasmine|autoprefixer|sprite|htmlmin|cssmin|uglify|rev|ssi)(:.*)?'/]
-                ]);
+                ]));
                 done();
             });
     });
@@ -173,7 +220,31 @@ describe('Generator', function () {
                 ]);
                 assert.fileContent([
                     ['package.json', /"grunt-contrib-jade"/],
-                    ['grunt/aliases.js', /'(.*:)?jade(:.*)?'/]
+                    ['grunt/aliases.js', /'(.*:)?jade(:.*)?'/],
+                    ['grunt/watch.js', /'(.*:)?jade(:.*)?'/]
+                ]);
+                assert.noFileContent([
+                    ['app/index.jade', /sprites\.css/],
+                    ['app/index.jade', /glyphs\.css/],
+                    ['app/index.jade', /modernizr\.js/]
+                ]);
+                done();
+            });
+    });
+
+    it('creates expected files with "jade" + assets option', function (done) {
+        generator
+            .withPrompt({
+                configType: 'custom',
+                markup: 'jade',
+                utilities: ['sprite', 'webfont'],
+                libraries: ['modernizr']
+            })
+            .on('end', function () {
+                assert.fileContent([
+                    ['app/index.jade', /sprites\.css/],
+                    ['app/index.jade', /glyphs\.css/],
+                    ['app/index.jade', /modernizr\.js/]
                 ]);
                 done();
             });
@@ -195,7 +266,9 @@ describe('Generator', function () {
                 ]);
                 assert.noFileContent([
                     ['package.json', /"grunt-contrib-sass"/],
-                    ['grunt/aliases.js', /'(.*:)?sass(:.*)?'/]
+                    ['.gitignore', /\.sass-cache/],
+                    ['grunt/aliases.js', /'(.*:)?sass(:.*)?'/],
+                    ['grunt/watch.js', /'(.*:)?sass(:.*)?'/]
                 ]);
                 done();
             });
@@ -217,7 +290,12 @@ describe('Generator', function () {
                 ]);
                 assert.fileContent([
                     ['package.json', /"grunt-sass"/],
-                    ['grunt/aliases.js', /'(.*:)?sass(:.*)?'/]
+                    ['grunt/aliases.js', /'(.*:)?sass(:.*)?'/],
+                    ['grunt/watch.js', /'(.*:)?sass(:.*)?'/]
+                ]);
+                assert.noFileContent([
+                    ['package.json', /"grunt-contrib-sass"/],
+                    ['.gitignore', /\.sass-cache/]
                 ]);
                 done();
             });
@@ -239,7 +317,8 @@ describe('Generator', function () {
                 ]);
                 assert.fileContent([
                     ['package.json', /"grunt-contrib-less"/],
-                    ['grunt/aliases.js', /'(.*:)?less(:.*)?'/]
+                    ['grunt/aliases.js', /'(.*:)?less(:.*)?'/],
+                    ['grunt/watch.js', /'(.*:)?less(:.*)?'/]
                 ]);
                 done();
             });
@@ -261,7 +340,8 @@ describe('Generator', function () {
                 ]);
                 assert.fileContent([
                     ['package.json', /"grunt-contrib-stylus"/],
-                    ['grunt/aliases.js', /'(.*:)?stylus(:.*)?'/]
+                    ['grunt/aliases.js', /'(.*:)?stylus(:.*)?'/],
+                    ['grunt/watch.js', /'(.*:)?stylus(:.*)?'/]
                 ]);
                 done();
             });
@@ -284,109 +364,12 @@ describe('Generator', function () {
                 ]);
                 assert.fileContent([
                     ['package.json', /"grunt-contrib-coffee"/],
-                    ['grunt/aliases.js', /'(.*:)?coffee(:.*)?'/]
+                    ['grunt/aliases.js', /'(.*:)?coffee(:.*)?'/],
+                    ['grunt/watch.js', /'(.*:)?coffee(:.*)?'/],
                 ]);
                 assert.noFileContent([
                     ['.editorconfig', /\[\*\.js\]/],
                     ['.jshintrc', /"indent"/]
-                ]);
-                done();
-            });
-    });
-
-    it('creates expected files with "validation" option', function (done) {
-        generator
-            .withPrompt({
-                configType: 'custom',
-                testing: ['validation']
-            })
-            .on('end', function () {
-                assert.file([
-                    'grunt/validation.js'
-                ]);
-                assert.fileContent([
-                    ['package.json', /"grunt-html-validation"/],
-                    ['grunt/aliases.js', /'(.*:)?validation(:.*)?'/]
-                ]);
-                done();
-            });
-    });
-
-    it('creates expected files with "csslint" option', function (done) {
-        generator
-            .withPrompt({
-                configType: 'custom',
-                testing: ['csslint']
-            })
-            .on('end', function () {
-                assert.file([
-                    'grunt/csslint.js',
-                    '.csslintrc'
-                ]);
-                assert.fileContent([
-                    ['package.json', /"grunt-contrib-csslint"/],
-                    ['grunt/aliases.js', /'(.*:)?csslint(:.*)?'/]
-                ]);
-                done();
-            });
-    });
-
-    it('creates expected files with "jshint" option', function (done) {
-        generator
-            .withPrompt({
-                configType: 'custom',
-                testing: ['jshint']
-            })
-            .on('end', function () {
-                assert.file([
-                    'grunt/jshint.js',
-                    '.jshintrc'
-                ]);
-                assert.fileContent([
-                    ['package.json', /"grunt-contrib-jshint"/],
-                    ['grunt/aliases.js', /'(.*:)?jshint(:.*)?'/]
-                ]);
-                done();
-            });
-    });
-
-    it('creates expected files with "mocha" option', function (done) {
-        generator
-            .withPrompt({
-                configType: 'custom',
-                testing: ['mocha']
-            })
-            .on('end', function () {
-                assert.file([
-                    'grunt/mocha.js',
-                    'grunt/connect.js'
-                ]);
-                assert.noFile([
-
-                ]);
-                assert.fileContent([
-                    ['package.json', /"grunt-mocha"/],
-                    ['package.json', /"grunt-contrib-connect"/],
-                    ['grunt/aliases.js', /'(.*:)?mocha(:.*)?'/],
-                    ['grunt/aliases.js', /'(.*:)?connect(:.*)?'/]
-                ]);
-                done();
-            });
-    });
-
-    it('creates expected files with "jasmine" option', function (done) {
-        generator
-            .withPrompt({
-                configType: 'custom',
-                testing: ['jasmine']
-            })
-            .on('end', function () {
-                assert.file([
-                    'grunt/jasmine.js'
-                ]);
-                assert.fileContent([
-                    ['package.json', /"grunt-contrib-jasmine"/],
-                    ['grunt/aliases.js', /'(.*:)?jasmine(:.*)?'/]
                 ]);
                 done();
             });
@@ -404,7 +387,8 @@ describe('Generator', function () {
                 ]);
                 assert.fileContent([
                     ['package.json', /"grunt-autoprefixer"/],
-                    ['grunt/aliases.js', /'(.*:)?autoprefixer(:.*)?'/]
+                    ['grunt/aliases.js', /'(.*:)?autoprefixer(:.*)?'/],
+                    ['grunt/watch.js', /'(.*:)?autoprefixer(:.*)?'/]
                 ]);
                 done();
             });
@@ -423,7 +407,9 @@ describe('Generator', function () {
                 ]);
                 assert.fileContent([
                     ['package.json', /"grunt-spritesmith"/],
-                    ['grunt/aliases.js', /'(.*:)?sprite(:.*)?'/]
+                    ['grunt/aliases.js', /'(.*:)?sprite(:.*)?'/],
+                    ['grunt/watch.js', /'(.*:)?sprite(:.*)?'/],
+                    ['app/index.html', /sprites\.css/]
                 ]);
                 done();
             });
@@ -442,7 +428,111 @@ describe('Generator', function () {
                 ]);
                 assert.fileContent([
                     ['package.json', /"grunt-webfont"/],
-                    ['grunt/aliases.js', /'(.*:)?webfont(:.*)?'/]
+                    ['grunt/aliases.js', /'(.*:)?webfont(:.*)?'/],
+                    ['grunt/watch.js', /'(.*:)?webfont(:.*)?'/],
+                    ['app/index.html', /glyphs\.css/]
+                ]);
+                done();
+            });
+    });
+
+    it('creates expected files with "validation" option', function (done) {
+        generator
+            .withPrompt({
+                configType: 'custom',
+                testing: ['validation']
+            })
+            .on('end', function () {
+                assert.file([
+                    'grunt/validation.js'
+                ]);
+                assert.fileContent([
+                    ['package.json', /"grunt-html-validation"/],
+                    ['.gitignore', /validation-status\.json/],
+                    ['.gitignore', /validation-report\.json/],
+                    ['grunt/aliases.js', /'(.*:)?validation(:.*)?'/],
+                    ['grunt/watch.js', /'(.*:)?validation(:.*)?'/]
+                ]);
+                done();
+            });
+    });
+
+    it('creates expected files with "csslint" option', function (done) {
+        generator
+            .withPrompt({
+                configType: 'custom',
+                testing: ['csslint']
+            })
+            .on('end', function () {
+                assert.file([
+                    'grunt/csslint.js',
+                    '.csslintrc'
+                ]);
+                assert.fileContent([
+                    ['package.json', /"grunt-contrib-csslint"/],
+                    ['grunt/aliases.js', /'(.*:)?csslint(:.*)?'/],
+                    ['grunt/watch.js', /'(.*:)?csslint(:.*)?'/]
+                ]);
+                done();
+            });
+    });
+
+    it('creates expected files with "jshint" option', function (done) {
+        generator
+            .withPrompt({
+                configType: 'custom',
+                testing: ['jshint']
+            })
+            .on('end', function () {
+                assert.file([
+                    'grunt/jshint.js',
+                    '.jshintrc'
+                ]);
+                assert.fileContent([
+                    ['package.json', /"grunt-contrib-jshint"/],
+                    ['grunt/aliases.js', /'(.*:)?jshint(:.*)?'/],
+                    ['grunt/watch.js', /'(.*:)?jshint(:.*)?'/]
+                ]);
+                done();
+            });
+    });
+
+    it('creates expected files with "mocha" option', function (done) {
+        generator
+            .withPrompt({
+                configType: 'custom',
+                testing: ['mocha']
+            })
+            .on('end', function () {
+                assert.file([
+                    'grunt/mocha.js',
+                    'grunt/connect.js'
+                ]);
+                assert.fileContent([
+                    ['package.json', /"grunt-mocha"/],
+                    ['package.json', /"grunt-contrib-connect"/],
+                    ['grunt/aliases.js', /'(.*:)?mocha(:.*)?'/],
+                    ['grunt/aliases.js', /'(.*:)?connect(:.*)?'/],
+                    ['grunt/watch.js', /'(.*:)?test(:.*)?'/]
+                ]);
+                done();
+            });
+    });
+
+    it('creates expected files with "jasmine" option', function (done) {
+        generator
+            .withPrompt({
+                configType: 'custom',
+                testing: ['jasmine']
+            })
+            .on('end', function () {
+                assert.file([
+                    'grunt/jasmine.js'
+                ]);
+                assert.fileContent([
+                    ['package.json', /"grunt-contrib-jasmine"/],
+                    ['grunt/aliases.js', /'(.*:)?jasmine(:.*)?'/],
+                    ['grunt/watch.js', /'(.*:)?test(:.*)?'/]
                 ]);
                 done();
             });
@@ -461,7 +551,8 @@ describe('Generator', function () {
                 ]);
                 assert.fileContent([
                     ['package.json', /"grunt-ssi"/],
-                    ['grunt/aliases.js', /'(.*:)?ssi(:.*)?'/]
+                    ['grunt/aliases.js', /'(.*:)?ssi(:.*)?'/],
+                    ['grunt/watch.js', /'(.*:)?ssi(:.*)?'/]
                 ]);
                 done();
             });
@@ -480,7 +571,8 @@ describe('Generator', function () {
                 assert.fileContent([
                     ['package.json', /"grunt-modernizr"/],
                     ['bower.json', /"modernizr"/],
-                    ['grunt/aliases.js', /'(.*:)?modernizr(:.*)?'/]
+                    ['grunt/aliases.js', /'(.*:)?modernizr(:.*)?'/],
+                    ['app/index.html', /modernizr\.js/]
                 ]);
                 done();
             });
@@ -596,7 +688,8 @@ describe('Generator', function () {
                     '.ftppass'
                 ]);
                 assert.fileContent([
-                    ['package.json', /"grunt-ftp-deploy"/]
+                    ['package.json', /"grunt-ftp-deploy"/],
+                    ['.gitignore', /\.ftppass/]
                 ]);
                 done();
             });
