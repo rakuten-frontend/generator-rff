@@ -37,7 +37,6 @@ module.exports = {
             undef: true,
             unused: true,
             strict: true,
-            trailing: true,
             node: true
         },
         // Target JavaScript files
