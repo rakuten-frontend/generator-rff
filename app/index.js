@@ -1,5 +1,3 @@
-/* jshint sub:true */
-
 'use strict';
 
 var yeoman = require('yeoman-generator');
@@ -21,6 +19,7 @@ var Generator = yeoman.generators.Base.extend({
         this.pkg = pkg;
 
         // CLI options
+        // jscs:disable requireDotNotation
         this.force = this.options['force'] || this.options['f'] || false;
         this.skipInstall = this.options['skip-install'] || this.options['s'] || false;
         this.skipWelcomeMessage = this.options['skip-welcome-message'] || false;
@@ -35,6 +34,7 @@ var Generator = yeoman.generators.Base.extend({
                 (configType === 'user' && this.config.existed)) {
             this.configType = configType;
         }
+        // jscs:enable requireDotNotation
     },
 
     prompting: {

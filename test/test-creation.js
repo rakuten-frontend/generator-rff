@@ -1,4 +1,4 @@
-/* global describe, beforeEach, it */
+/* jshint mocha: true */
 'use strict';
 
 var path = require('path');

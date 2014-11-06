@@ -1,4 +1,4 @@
-/* global describe, it */
+/* jshint mocha: true */
 'use strict';
 
 var assert = require('assert');
