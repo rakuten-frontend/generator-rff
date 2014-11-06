@@ -1,8 +1,5 @@
 {
   "preset": "google",
-  "excludeFiles": [
-    "node_modules/**"
-  ],
   "requireParenthesesAroundIIFE": true,
   "requireSpacesInFunctionExpression": {
     "beforeOpeningRoundBrace": true,
