@@ -1,4 +1,4 @@
-# generator-rff [![NPM Version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url]
+# generator-rff [![NPM Version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][deps-image]][deps-url]
 
 > Fully customizable [Yeoman](http://yeoman.io/) generator for scaffolding a front-end web app, developed in Rakuten Front-end Framework project.
 
@@ -104,3 +104,5 @@ Copyright (c) 2014 Rakuten, Inc. Licensed under the [MIT License](LICENSE).
 [npm-url]: https://www.npmjs.org/package/generator-rff
 [travis-image]: https://img.shields.io/travis/rakuten-frontend/generator-rff/master.svg?style=flat
 [travis-url]: https://travis-ci.org/rakuten-frontend/generator-rff
+[deps-image]: http://img.shields.io/david/rakuten-frontend/generator-rff.svg?style=flat
+[deps-url]: https://david-dm.org/rakuten-frontend/generator-rff
