@@ -28,6 +28,27 @@ module.exports = function (grunt) {
             }
         },
 
+        jscs: {
+            options: {
+                config: '.jscsrc'
+            },
+            app: {
+                files: [{
+                    src: ['app/*.js']
+                }]
+            },
+            test: {
+                files: [{
+                    src: ['test/*.js']
+                }]
+            },
+            grunt: {
+                files: [{
+                    src: ['Gruntfile.js']
+                }]
+            }
+        },
+
         mochaTest: {
             test: {
                 options: {
@@ -39,8 +60,13 @@ module.exports = function (grunt) {
 
     });
 
-    grunt.registerTask('test', [
+    grunt.registerTask('lint', [
         'jshint',
+        'jscs'
+    ]);
+
+    grunt.registerTask('test', [
+        'lint',
         'mochaTest'
     ]);
 

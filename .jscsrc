@@ -1,0 +1,19 @@
+{
+  "preset": "google",
+  "excludeFiles": [
+    "node_modules/**"
+  ],
+  "requireParenthesesAroundIIFE": true,
+  "requireSpacesInFunctionExpression": {
+    "beforeOpeningRoundBrace": true,
+    "beforeOpeningCurlyBrace": true
+  },
+  "requireSpacesInAnonymousFunctionExpression": {
+    "beforeOpeningRoundBrace": true,
+    "beforeOpeningCurlyBrace": true
+  },
+  "disallowSpacesInAnonymousFunctionExpression": null,
+  "maximumLineLength": null,
+  "validateLineBreaks": "LF",
+  "validateIndentation": 4
+}
