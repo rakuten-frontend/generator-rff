@@ -167,9 +167,9 @@ var options = [
             {
                 name: 'SSI Support',
                 value: 'ssi',
-                templates: ['grunt/ssi.js'],
+                templates: [],
                 directories: ['app/inc'],
-                packages: {'grunt-ssi': '~0.2.1'}
+                packages: {'browsersync-ssi': 'soenkekluth/browsersync-ssi'}
             }
         ]
     },
