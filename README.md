@@ -2,6 +2,9 @@
 
 > Fully customizable [Yeoman](http://yeoman.io/) generator for scaffolding a front-end web app, developed in Rakuten Front-end Framework project.
 
+## Demo
+[![Demo](video.png)](http://youtu.be/jGzqR6-jAYE)
+
 ## Features
 
 ### Supported Languages
