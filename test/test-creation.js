@@ -54,7 +54,6 @@ describe('Generator', function () {
         'grunt/modernizr.js',
         'grunt/rev.js',
         'grunt/sprite.js',
-        'grunt/ssi.js',
         'grunt/stylus.js',
         'grunt/validation.js',
         'grunt/webfont.js',
@@ -78,6 +77,7 @@ describe('Generator', function () {
         ['grunt/watch.js', /'(.*:)?sass(:.*)?'/]
     ];
     var optionFileContents = [
+        ['package.json', /"browsersync-ssi"/],
         ['package.json', /"grunt-autoprefixer"/],
         ['package.json', /"grunt-build-control"/],
         ['package.json', /"grunt-contrib-coffee"/],
@@ -98,7 +98,6 @@ describe('Generator', function () {
         ['package.json', /"grunt-rev"/],
         ['package.json', /"grunt-sass"/],
         ['package.json', /"grunt-spritesmith"/],
-        ['package.json', /"grunt-ssi"/],
         ['package.json', /"grunt-webfont"/],
         ['package.json', /"imagemin-svgo"/],
         ['bower.json', /"modernizr"/],
@@ -118,7 +117,6 @@ describe('Generator', function () {
         ['grunt/aliases.js', /'(.*:)?modernizr(:.*)?'/],
         ['grunt/aliases.js', /'(.*:)?rev(:.*)?'/],
         ['grunt/aliases.js', /'(.*:)?sprite(:.*)?'/],
-        ['grunt/aliases.js', /'(.*:)?ssi(:.*)?'/],
         ['grunt/aliases.js', /'(.*:)?stylus(:.*)?'/],
         ['grunt/aliases.js', /'(.*:)?validation(:.*)?'/],
         ['grunt/aliases.js', /'(.*:)?webfont(:.*)?'/],
@@ -134,6 +132,7 @@ describe('Generator', function () {
         ['grunt/watch.js', /'(.*:)?test(:.*)?'/],
         ['grunt/watch.js', /'(.*:)?validation(:.*)?'/],
         ['grunt/watch.js', /'(.*:)?webfont(:.*)?'/],
+        ['grunt/browserSync.js', /ssi/],
         ['app/index.html', /sprites\.css/],
         ['app/index.html', /glyphs\.css/],
         ['app/index.html', /modernizr\.js/]
@@ -546,13 +545,11 @@ describe('Generator', function () {
             })
             .on('end', function () {
                 assert.file([
-                    'grunt/ssi.js',
                     'app/inc/'
                 ]);
                 assert.fileContent([
-                    ['package.json', /"grunt-ssi"/],
-                    ['grunt/aliases.js', /'(.*:)?ssi(:.*)?'/],
-                    ['grunt/watch.js', /'(.*:)?ssi(:.*)?'/]
+                    ['package.json', /"browsersync-ssi"/],
+                    ['grunt/browserSync.js', /ssi/]
                 ]);
                 done();
             });
