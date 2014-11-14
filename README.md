@@ -32,6 +32,7 @@
   * W3C HTML Validation
   * CSS Lint
   * JSHint
+  * JSCS
   * Mocha
   * Jasmine
 * **Preview Server**
