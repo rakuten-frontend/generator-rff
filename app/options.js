@@ -140,6 +140,13 @@ var options = [
                 packages: {'grunt-contrib-jshint': '~0.10.0'}
             },
             {
+                name: 'JSCS',
+                value: 'jscs',
+                templates: ['grunt/jscs.js', ['jscsrc', '.jscsrc']],
+                directories: [],
+                packages: {'grunt-jscs': '~0.8.1'}
+            },
+            {
                 name: 'Mocha',
                 value: 'mocha',
                 templates: ['grunt/mocha.js', 'grunt/connect.js'],

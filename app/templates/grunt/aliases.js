@@ -44,6 +44,7 @@ module.exports = {
             if (cfg.validation) { testTasks.push('newer:validation'); }
             if (cfg.csslint)    { testTasks.push('newer:csslint'); }
             if (cfg.jshint)     { testTasks.push('newer:jshint'); }
+            if (cfg.jscs)       { testTasks.push('newer:jscs'); }
             if (cfg.mocha)      { testTasks.push('connect:test', 'mocha'); }
             if (cfg.jasmine)    { testTasks.push('jasmine'); } %>
         if (target !== 'skip-compile') {

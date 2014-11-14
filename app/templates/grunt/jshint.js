@@ -25,15 +25,9 @@ module.exports = {
     // Apply different settings because Grunt is a Node.js based application.
     grunt: {
         options: {
-            camelcase: true,
-            curly: true,
             eqeqeq: true,
-            immed: true,
-            indent: 4,
             latedef: true,
-            newcap: true,
             noarg: true,
-            quotmark: 'single',
             undef: true,
             unused: true,
             strict: true,
