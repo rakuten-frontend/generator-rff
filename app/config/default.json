@@ -11,7 +11,8 @@
     "testing": [
       "validation",
       "csslint",
-      "jshint"
+      "jshint",
+      "jscs"
     ],
     "server": [],
     "libraries": [],

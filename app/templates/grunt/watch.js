@@ -26,12 +26,14 @@ module.exports = {
     html: {
         files: ['<%%= path.html %>/**/*.html'],
         tasks: ['newer:validation']
-    }<% } %><% if (cfg.jshint) { %>,
+    }<% } %><% if (cfg.jshint || cfg.jscs) { %>,
 
-    // JSHint
+    // JavaScript linter
     js: {
-        files: ['<%%= path.js %>/**/*.js'],
-        tasks: ['newer:jshint']
+        files: ['<%%= path.js %>/**/*.js']<% if (cfg.jshint && cfg.jscs) { %>,
+        tasks: ['newer:jshint', 'newer:jscs']<% } else if (cfg.jshint) { %>,
+        tasks: ['newer:jshint']<% } else if (cfg.jscs) { %>,
+        tasks: ['newer:jscs']<% } %>
     }<% } %><% if (cfg.testing) { %>,
 
     // Unit testing

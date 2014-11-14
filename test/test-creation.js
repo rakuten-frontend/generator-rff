@@ -36,6 +36,7 @@ describe('Generator', function () {
     var optionFiles = [
         '.csslintrc',
         '.jshintrc',
+        '.jscsrc',
         '.ftppass',
         '.yo-rc.json',
         'grunt/autoprefixer.js',
@@ -47,6 +48,7 @@ describe('Generator', function () {
         'grunt/htmlmin.js',
         'grunt/jade.js',
         'grunt/jasmine.js',
+        'grunt/jscs.js',
         'grunt/jshint.js',
         'grunt/less.js',
         'grunt/mocha.js',
@@ -90,6 +92,7 @@ describe('Generator', function () {
         ['package.json', /"grunt-contrib-uglify"/],
         ['package.json', /"grunt-ftp-deploy"/],
         ['package.json', /"grunt-html-validation"/],
+        ['package.json', /"grunt-jscs"/],
         ['package.json', /"grunt-mocha"/],
         ['package.json', /"grunt-modernizr"/],
         ['package.json', /"grunt-rev"/],
@@ -110,6 +113,7 @@ describe('Generator', function () {
         ['grunt/aliases.js', /'(.*:)?htmlmin(:.*)?'/],
         ['grunt/aliases.js', /'(.*:)?jade(:.*)?'/],
         ['grunt/aliases.js', /'(.*:)?jasmine(:.*)?'/],
+        ['grunt/aliases.js', /'(.*:)?jscs(:.*)?'/],
         ['grunt/aliases.js', /'(.*:)?jshint(:.*)?'/],
         ['grunt/aliases.js', /'(.*:)?less(:.*)?'/],
         ['grunt/aliases.js', /'(.*:)?mocha(:.*)?'/],
@@ -125,6 +129,7 @@ describe('Generator', function () {
         ['grunt/watch.js', /'(.*:)?csslint(:.*)?'/],
         ['grunt/watch.js', /'(.*:)?coffee(:.*)?'/],
         ['grunt/watch.js', /'(.*:)?jade(:.*)?'/],
+        ['grunt/watch.js', /'(.*:)?jscs(:.*)?'/],
         ['grunt/watch.js', /'(.*:)?jshint(:.*)?'/],
         ['grunt/watch.js', /'(.*:)?less(:.*)?'/],
         ['grunt/watch.js', /'(.*:)?sass(:.*)?'/],
@@ -191,9 +196,11 @@ describe('Generator', function () {
                 assert.file(baseFiles.concat([
                     '.csslintrc',
                     '.jshintrc',
+                    '.jscsrc',
                     'grunt/autoprefixer.js',
                     'grunt/csslint.js',
                     'grunt/htmlmin.js',
+                    'grunt/jscs.js',
                     'grunt/jshint.js',
                     'grunt/rev.js',
                     'grunt/sprite.js',
@@ -354,8 +361,7 @@ describe('Generator', function () {
         generator
             .withPrompt({
                 configType: 'custom',
-                script: 'coffee',
-                testing: ['jshint']
+                script: 'coffee'
             })
             .on('end', function () {
                 assert.file([
@@ -371,8 +377,7 @@ describe('Generator', function () {
                     ['grunt/watch.js', /'(.*:)?coffee(:.*)?'/],
                 ]);
                 assert.noFileContent([
-                    ['.editorconfig', /\[\*\.js\]/],
-                    ['.jshintrc', /"indent"/]
+                    ['.editorconfig', /\[\*\.js\]/]
                 ]);
                 done();
             });
@@ -495,6 +500,26 @@ describe('Generator', function () {
                     ['package.json', /"grunt-contrib-jshint"/],
                     ['grunt/aliases.js', /'(.*:)?jshint(:.*)?'/],
                     ['grunt/watch.js', /'(.*:)?jshint(:.*)?'/]
+                ]);
+                done();
+            });
+    });
+
+    it('creates expected files with "jscs" option', function (done) {
+        generator
+            .withPrompt({
+                configType: 'custom',
+                testing: ['jscs']
+            })
+            .on('end', function () {
+                assert.file([
+                    'grunt/jscs.js',
+                    '.jscsrc'
+                ]);
+                assert.fileContent([
+                    ['package.json', /"grunt-jscs"/],
+                    ['grunt/aliases.js', /'(.*:)?jscs(:.*)?'/],
+                    ['grunt/watch.js', /'(.*:)?jscs(:.*)?'/]
                 ]);
                 done();
             });
