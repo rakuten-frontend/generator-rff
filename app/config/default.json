@@ -2,7 +2,7 @@
   "generator-rff": {
     "name": "",
     "markup": "html",
-    "style": "sass",
+    "style": "css",
     "script": "js",
     "utilities": [
       "autoprefixer",

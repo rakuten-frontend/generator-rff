@@ -24,13 +24,12 @@ describe('Generator', function () {
         'grunt/copy.js',
         'grunt/imagemin.js',
         'grunt/newer.js',
-        'grunt/sass.js',
         'grunt/usemin.js',
         'grunt/useminPrepare.js',
         'grunt/watch.js',
         'grunt/wiredep.js',
         'app/index.html',
-        'app/_sass/',
+        'app/css/',
         'app/js/',
         'app/img/'
     ];
@@ -53,13 +52,14 @@ describe('Generator', function () {
         'grunt/mocha.js',
         'grunt/modernizr.js',
         'grunt/rev.js',
+        'grunt/sass.js',
         'grunt/sprite.js',
         'grunt/ssi.js',
         'grunt/stylus.js',
         'grunt/validation.js',
         'grunt/webfont.js',
         'app/index.jade',
-        'app/css/',
+        'app/_sass/',
         'app/_less/',
         'app/_stylus/',
         'app/_coffee/',
@@ -69,13 +69,9 @@ describe('Generator', function () {
     ];
     var baseFileContents = [
         ['package.json', /"name": "temp"/],
-        ['package.json', /"grunt-contrib-sass"/],
         ['bower.json', /"name": "temp"/],
         ['README.md', /Temp/],
-        ['.gitignore', /\.sass-cache/],
-        ['.editorconfig', /\[\*\.js\]/],
-        ['grunt/aliases.js', /'(.*:)?sass(:.*)?'/],
-        ['grunt/watch.js', /'(.*:)?sass(:.*)?'/]
+        ['.editorconfig', /\[\*\.js\]/]
     ];
     var optionFileContents = [
         ['package.json', /"grunt-autoprefixer"/],
@@ -89,6 +85,7 @@ describe('Generator', function () {
         ['package.json', /"grunt-contrib-jasmine"/],
         ['package.json', /"grunt-contrib-jshint"/],
         ['package.json', /"grunt-contrib-less"/],
+        ['package.json', /"grunt-contrib-sass"/],
         ['package.json', /"grunt-contrib-stylus"/],
         ['package.json', /"grunt-contrib-uglify"/],
         ['package.json', /"grunt-ftp-deploy"/],
@@ -102,6 +99,7 @@ describe('Generator', function () {
         ['package.json', /"grunt-webfont"/],
         ['package.json', /"imagemin-svgo"/],
         ['bower.json', /"modernizr"/],
+        ['.gitignore', /\.sass-cache/],
         ['.gitignore', /validation-status\.json/],
         ['.gitignore', /validation-report\.json/],
         ['.gitignore', /\.ftppass/],
@@ -117,6 +115,7 @@ describe('Generator', function () {
         ['grunt/aliases.js', /'(.*:)?mocha(:.*)?'/],
         ['grunt/aliases.js', /'(.*:)?modernizr(:.*)?'/],
         ['grunt/aliases.js', /'(.*:)?rev(:.*)?'/],
+        ['grunt/aliases.js', /'(.*:)?sass(:.*)?'/],
         ['grunt/aliases.js', /'(.*:)?sprite(:.*)?'/],
         ['grunt/aliases.js', /'(.*:)?ssi(:.*)?'/],
         ['grunt/aliases.js', /'(.*:)?stylus(:.*)?'/],
@@ -128,6 +127,7 @@ describe('Generator', function () {
         ['grunt/watch.js', /'(.*:)?jade(:.*)?'/],
         ['grunt/watch.js', /'(.*:)?jshint(:.*)?'/],
         ['grunt/watch.js', /'(.*:)?less(:.*)?'/],
+        ['grunt/watch.js', /'(.*:)?sass(:.*)?'/],
         ['grunt/watch.js', /'(.*:)?sprites(:.*)?'/],
         ['grunt/watch.js', /'(.*:)?ssi(:.*)?'/],
         ['grunt/watch.js', /'(.*:)?stylus(:.*)?'/],
@@ -250,25 +250,28 @@ describe('Generator', function () {
             });
     });
 
-    it('creates expected files with "css" option', function (done) {
+    it('creates expected files with "sass" option', function (done) {
         generator
             .withPrompt({
                 configType: 'custom',
-                style: 'css'
+                style: 'sass'
             })
             .on('end', function () {
                 assert.file([
-                    'app/css/'
-                ]);
-                assert.noFile([
                     'grunt/sass.js',
                     'app/_sass/'
                 ]);
-                assert.noFileContent([
+                assert.noFile([
+                    'app/css/'
+                ]);
+                assert.fileContent([
                     ['package.json', /"grunt-contrib-sass"/],
                     ['.gitignore', /\.sass-cache/],
                     ['grunt/aliases.js', /'(.*:)?sass(:.*)?'/],
                     ['grunt/watch.js', /'(.*:)?sass(:.*)?'/]
+                ]);
+                assert.noFileContent([
+                    ['package.json', /"grunt-sass"/]
                 ]);
                 done();
             });
