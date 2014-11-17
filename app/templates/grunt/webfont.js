@@ -11,10 +11,9 @@ module.exports = {
     dest: '<%%= path.tmp %>/fonts',
     destCss: '<%%= path.tmp %>/css',
     options: {
-      // 'node' engine is experimental, but works on all platforms.
-      // Set 'fontforge' for the best results.
+      // Set 'node' engine for working on Windows. But it has some issues.
       // <https://github.com/sapegin/grunt-webfont#available-engines>
-      engine: 'node',
+      engine: 'fontforge',
       font: 'glyphs',
       hashes: false,
       stylesheet: 'css',
