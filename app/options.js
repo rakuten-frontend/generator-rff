@@ -46,7 +46,7 @@ var options = [
         value: 'libsass',
         templates: [['grunt/libsass.js', 'grunt/sass.js']],
         directories: ['app/_sass'],
-        packages: {'grunt-sass': '~0.14.2'}
+        packages: {'grunt-sass': '~0.16.1'}
       },
       {
         name: 'Less',
@@ -95,7 +95,7 @@ var options = [
         value: 'autoprefixer',
         templates: ['grunt/autoprefixer.js'],
         directories: [],
-        packages: {'grunt-autoprefixer': '~1.0.1'}
+        packages: {'grunt-autoprefixer': '~2.0.0'}
       },
       {
         name: 'CSS Sprites Generator',
