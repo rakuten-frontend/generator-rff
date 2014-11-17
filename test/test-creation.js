@@ -203,7 +203,6 @@ describe('Generator', function () {
           'grunt/jshint.js',
           'grunt/rev.js',
           'grunt/sprite.js',
-          'grunt/validation.js',
           'app/img/_sprites/'
         ]));
         done();

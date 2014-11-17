@@ -9,7 +9,6 @@
       "sprite"
     ],
     "testing": [
-      "validation",
       "csslint",
       "jshint",
       "jscs"
