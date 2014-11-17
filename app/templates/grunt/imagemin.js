@@ -3,16 +3,12 @@
 
 'use strict';
 
-var fs = require('fs');<% if (cfg.svgo) { %>
-var svgo = require('imagemin-svgo');<% } %>
+var fs = require('fs');
 
 module.exports = {
 
   // Distribution
-  dist: {<% if (cfg.svgo) { %>
-    options: {
-      use: [svgo()]
-    },<% } %>
+  dist: {
     files: [{
       expand: true,
       cwd: '<%%= path.dist %>',

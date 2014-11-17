@@ -99,7 +99,6 @@ describe('Generator', function () {
     ['package.json', /"grunt-spritesmith"/],
     ['package.json', /"grunt-ssi"/],
     ['package.json', /"grunt-webfont"/],
-    ['package.json', /"imagemin-svgo"/],
     ['bower.json', /"modernizr"/],
     ['.gitignore', /\.sass-cache/],
     ['.gitignore', /validation-status\.json/],
@@ -124,6 +123,7 @@ describe('Generator', function () {
     ['grunt/aliases.js', /'(.*:)?stylus(:.*)?'/],
     ['grunt/aliases.js', /'(.*:)?validation(:.*)?'/],
     ['grunt/aliases.js', /'(.*:)?webfont(:.*)?'/],
+    ['grunt/imagemin.js', /svg/],
     ['grunt/watch.js', /'(.*:)?autoprefixer(:.*)?'/],
     ['grunt/watch.js', /'(.*:)?csslint(:.*)?'/],
     ['grunt/watch.js', /'(.*:)?coffee(:.*)?'/],
@@ -657,7 +657,6 @@ describe('Generator', function () {
       })
       .on('end', function () {
         assert.fileContent([
-          ['package.json', /"imagemin-svgo"/],
           ['grunt/imagemin.js', /svg/]
         ]);
         done();

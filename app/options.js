@@ -225,7 +225,7 @@ var options = [
         value: 'svgo',
         templates: [],
         directories: [],
-        packages: {'imagemin-svgo': '~1.0.2'}
+        packages: {}
       },
       {
         name: 'Static Assets Revisioning',
