@@ -1,4 +1,4 @@
-// Minify PNG, JPEG and GIF images
+// Minify images
 // grunt-contrib-imagemin: <https://github.com/gruntjs/grunt-contrib-imagemin>
 
 'use strict';
