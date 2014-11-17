@@ -8,22 +8,22 @@ var svgo = require('imagemin-svgo');<% } %>
 
 module.exports = {
 
-    // Distribution
-    dist: {<% if (cfg.svgo) { %>
-        options: {
-            use: [svgo()]
-        },<% } %>
-        files: [{
-            expand: true,
-            cwd: '<%%= path.dist %>',
-            dest: '<%%= path.dist %>',
-            src: [
-                '**/*.{png,jpg,gif<% if (cfg.svgo) { %>,svg<% } %>}'
-            ],
-            filter: function (filepath) {
-                return fs.readFileSync(filepath).length > 0;
-            }
-        }]
-    }
+  // Distribution
+  dist: {<% if (cfg.svgo) { %>
+    options: {
+      use: [svgo()]
+    },<% } %>
+    files: [{
+      expand: true,
+      cwd: '<%%= path.dist %>',
+      dest: '<%%= path.dist %>',
+      src: [
+        '**/*.{png,jpg,gif<% if (cfg.svgo) { %>,svg<% } %>}'
+      ],
+      filter: function (filepath) {
+        return fs.readFileSync(filepath).length > 0;
+      }
+    }]
+  }
 
 };

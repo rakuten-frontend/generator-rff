@@ -5,22 +5,22 @@
 
 module.exports = {
 
-    // Compile styles
-    compile: {
-        options: {
-            style: 'expanded',
-            loadPath: ['bower_components']
-        },
-        files: [{
-            expand: true,
-            cwd: '<%%= path.styles %>',
-            dest: '<%%= path.css %>',
-            src: [
-                '**/*.{scss,sass}',
-                '!**/_*.{scss,sass}'
-            ],
-            ext: '.css'
-        }]
-    }
+  // Compile styles
+  compile: {
+    options: {
+      style: 'expanded',
+      loadPath: ['bower_components']
+    },
+    files: [{
+      expand: true,
+      cwd: '<%%= path.styles %>',
+      dest: '<%%= path.css %>',
+      src: [
+        '**/*.{scss,sass}',
+        '!**/_*.{scss,sass}'
+      ],
+      ext: '.css'
+    }]
+  }
 
 };

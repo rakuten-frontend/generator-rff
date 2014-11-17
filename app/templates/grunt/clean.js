@@ -5,18 +5,18 @@
 
 module.exports = {
 
-    // Distribution directory
-    dist: {
-        files: [{
-            dot: true,
-            src: [
-                '<%%= path.dist %>/*',
-                '!<%%= path.dist %>/.git*'
-            ]
-        }]
-    },
+  // Distribution directory
+  dist: {
+    files: [{
+      dot: true,
+      src: [
+        '<%%= path.dist %>/*',
+        '!<%%= path.dist %>/.git*'
+      ]
+    }]
+  },
 
-    // Temporary compiled files
-    tmp: ['<%%= path.tmp %>']
+  // Temporary compiled files
+  tmp: ['<%%= path.tmp %>']
 
 };

@@ -5,21 +5,21 @@
 
 module.exports = {
 
-    // Compile styles
-    compile: {
-        options: {
-            compress: false
-        },
-        files: [{
-            expand: true,
-            cwd: '<%%= path.styles %>',
-            dest: '<%%= path.css %>',
-            src: [
-                '**/*.{styl,stylus}',
-                '!**/_*.{styl,stylus}'
-            ],
-            ext: '.css'
-        }]
-    }
+  // Compile styles
+  compile: {
+    options: {
+      compress: false
+    },
+    files: [{
+      expand: true,
+      cwd: '<%%= path.styles %>',
+      dest: '<%%= path.css %>',
+      src: [
+        '**/*.{styl,stylus}',
+        '!**/_*.{styl,stylus}'
+      ],
+      ext: '.css'
+    }]
+  }
 
 };

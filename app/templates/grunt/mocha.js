@@ -5,19 +5,19 @@
 
 module.exports = {
 
-    // Base options
-    options: {
-        reporter: 'Spec',
-        run: true
-    },
+  // Base options
+  options: {
+    reporter: 'Spec',
+    run: true
+  },
 
-    // Test for all specs
-    all: {
-        options: {
-            urls: [
-                'http://localhost:<%%= connect.test.options.port %>/'
-            ]
-        }
+  // Test for all specs
+  all: {
+    options: {
+      urls: [
+        'http://localhost:<%%= connect.test.options.port %>/'
+      ]
     }
+  }
 
 };

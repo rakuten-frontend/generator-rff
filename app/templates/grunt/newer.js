@@ -5,7 +5,7 @@
 
 module.exports = {
 
-    // "grunt-newer" works fine without options.
-    // If you need special configuration, insert it here.
+  // "grunt-newer" works fine without options.
+  // If you need special configuration, insert it here.
 
 };

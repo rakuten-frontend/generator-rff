@@ -8,41 +8,41 @@
 
 module.exports = function (grunt) {
 
-    // Display the execution time.
-    require('time-grunt')(grunt);
+  // Display the execution time.
+  require('time-grunt')(grunt);
 
-    // Initialize with "load-grunt-config".
-    require('load-grunt-config')(grunt, {
+  // Initialize with "load-grunt-config".
+  require('load-grunt-config')(grunt, {
 
-        // Define variables for grunt config here.
-        config: {
-            path: {
-                app:        'app',
-                dist:       'dist',
-                distIgnore: '**/_*/**',     // Excluded directories or files of distribution, e.g. Sass directory.
-                tmp:        '.tmp/dist'<% if (cfg.testing) { %>,
-                test:       'test'<% } %>,
-                markups:    'app'<% if (cfg.ssi) { %><% if (cfg.html) { %>,
-                includes:   'app/inc'<% } else { %>,
-                includes:   '.tmp/dist/inc'<% } %><% } %><% if (cfg.css) { %>,
-                styles:     'app/css'<% } %><% if (cfg.sass || cfg.libsass) { %>,
-                styles:     'app/_sass'<% } %><% if (cfg.less) { %>,
-                styles:     'app/_less'<% } %><% if (cfg.stylus) { %>,
-                styles:     'app/_stylus'<% } %><% if (cfg.js) { %>,
-                scripts:    'app/js'<% } %><% if (cfg.coffee) { %>,
-                scripts:    'app/_coffee'<% } %>,
-                images:     'app/img'<% if (cfg.sprite) { %>,
-                sprites:    'app/img/_sprites'<% } %><% if (cfg.webfont) { %>,
-                glyphs:     'app/img/_glyphs'<% } %><% if (cfg.html) { %>,
-                html:       'app'<% } else { %>,
-                html:       '.tmp/dist'<% } %><% if (cfg.css && !cfg.autoprefixer ) { %>,
-                css:        'app/css'<% } else { %>,
-                css:        '.tmp/dist/css'<% } %><% if (cfg.js) { %>,
-                js:         'app/js'<% } else { %>,
-                js:         '.tmp/dist/js'<% } %>
-            }
-        }
+    // Define variables for grunt config here.
+    config: {
+      path: {
+        app:        'app',
+        dist:       'dist',
+        distIgnore: '**/_*/**',     // Excluded directories or files of distribution, e.g. Sass directory.
+        tmp:        '.tmp/dist'<% if (cfg.testing) { %>,
+        test:       'test'<% } %>,
+        markups:    'app'<% if (cfg.ssi) { %><% if (cfg.html) { %>,
+        includes:   'app/inc'<% } else { %>,
+        includes:   '.tmp/dist/inc'<% } %><% } %><% if (cfg.css) { %>,
+        styles:     'app/css'<% } %><% if (cfg.sass || cfg.libsass) { %>,
+        styles:     'app/_sass'<% } %><% if (cfg.less) { %>,
+        styles:     'app/_less'<% } %><% if (cfg.stylus) { %>,
+        styles:     'app/_stylus'<% } %><% if (cfg.js) { %>,
+        scripts:    'app/js'<% } %><% if (cfg.coffee) { %>,
+        scripts:    'app/_coffee'<% } %>,
+        images:     'app/img'<% if (cfg.sprite) { %>,
+        sprites:    'app/img/_sprites'<% } %><% if (cfg.webfont) { %>,
+        glyphs:     'app/img/_glyphs'<% } %><% if (cfg.html) { %>,
+        html:       'app'<% } else { %>,
+        html:       '.tmp/dist'<% } %><% if (cfg.css && !cfg.autoprefixer ) { %>,
+        css:        'app/css'<% } else { %>,
+        css:        '.tmp/dist/css'<% } %><% if (cfg.js) { %>,
+        js:         'app/js'<% } else { %>,
+        js:         '.tmp/dist/js'<% } %>
+      }
+    }
 
-    });
+  });
 
 };

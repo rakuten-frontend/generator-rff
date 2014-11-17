@@ -6,20 +6,20 @@
 
 module.exports = {
 
-    // Base options
-    options: {
-        root: ['<%%= path.tmp %>', '<%%= path.app %>', '.'],
-        dest: '<%%= path.dist %>',
-        flow: {
-            steps: {
-                css: ['concat'<% if (cfg.cssmin) { %>, 'cssmin'<% } %>],
-                js: ['concat'<% if (cfg.uglify) { %>, 'uglifyjs'<% } %>]
-            },
-            post: {}
-        }
-    },
+  // Base options
+  options: {
+    root: ['<%%= path.tmp %>', '<%%= path.app %>', '.'],
+    dest: '<%%= path.dist %>',
+    flow: {
+      steps: {
+        css: ['concat'<% if (cfg.cssmin) { %>, 'cssmin'<% } %>],
+        js: ['concat'<% if (cfg.uglify) { %>, 'uglifyjs'<% } %>]
+      },
+      post: {}
+    }
+  },
 
-    // Parse settings from target HTML code
-    html: ['<%%= path.dist %>/**/*.html']
+  // Parse settings from target HTML code
+  html: ['<%%= path.dist %>/**/*.html']
 
 };

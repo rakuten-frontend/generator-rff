@@ -13,6 +13,5 @@
   "maximumLineLength": null,
   "requireCapitalizedConstructors": true,
   "requireDotNotation": true,
-  "validateLineBreaks": "LF",
-  "validateIndentation": 4
+  "validateLineBreaks": "LF"
 }

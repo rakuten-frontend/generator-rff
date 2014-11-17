@@ -7,40 +7,40 @@
 
 module.exports = {
 
-    // Dev server
-    app: {
-        options: {
-            server: {
-                baseDir: [
-                    '<%%= path.tmp %>',
-                    '<%%= path.app %>'
-                ],
-                routes: {
-                    '/bower_components': 'bower_components'
-                }
-            },
-            port: 9000,
-            notify: false,
-            watchTask: true
-        },
-        src: [
-            '<%%= path.app %>/**',
-            '<%%= path.tmp %>/**',
-            '!<%%= path.distIgnore %>'
-        ]
-    },
-
-    // Server using distribution files
-    dist: {
-        options: {
-            server: {
-                baseDir: [
-                    '<%%= path.dist %>'
-                ]
-            },
-            port: 9001,
-            notify: false
+  // Dev server
+  app: {
+    options: {
+      server: {
+        baseDir: [
+          '<%%= path.tmp %>',
+          '<%%= path.app %>'
+        ],
+        routes: {
+          '/bower_components': 'bower_components'
         }
+      },
+      port: 9000,
+      notify: false,
+      watchTask: true
+    },
+    src: [
+      '<%%= path.app %>/**',
+      '<%%= path.tmp %>/**',
+      '!<%%= path.distIgnore %>'
+    ]
+  },
+
+  // Server using distribution files
+  dist: {
+    options: {
+      server: {
+        baseDir: [
+          '<%%= path.dist %>'
+        ]
+      },
+      port: 9001,
+      notify: false
     }
+  }
 
 };
