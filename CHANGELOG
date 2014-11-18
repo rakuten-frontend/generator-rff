@@ -1,3 +1,15 @@
+v0.5.0:
+  date: 2014-11-18
+  changes:
+    - Support JSCS.
+    - Arrage JavaScript coding style.:
+      - Strict mode.
+      - 2 spaces for indentation.
+    - Change the default config of generator.:
+      - Select CSS instead of Sass.
+      - Uncheck HTML Validation.
+    - Upgrade grunt plugins.
+    - Improve grunt config scripts.
 v0.4.2:
   date: 2014-11-12
   changes:
@@ -12,12 +24,12 @@ v0.4.0:
   changes:
     - Release as open source.
     - Support more tasks.:
-        - Icon font generator
-        - Modernizr builder
-        - HTML minification
-        - SVG optimization
-        - Deployment to Git repository
-        - Deployment over FTP
+      - Icon font generator
+      - Modernizr builder
+      - HTML minification
+      - SVG optimization
+      - Deployment to Git repository
+      - Deployment over FTP
     - Support Libsass compiler.
     - Make generator more configurable.
     - Add preset menu for quick generate.
