@@ -102,7 +102,7 @@ var options = [
         value: 'sprite',
         templates: ['grunt/sprite.js'],
         directories: ['app/img/_sprites'],
-        packages: {'grunt-spritesmith': '~2.1.1'}
+        packages: {'grunt-spritesmith': '~2.20.0'}
       },
       {
         name: 'Icon Fonts Generator',
