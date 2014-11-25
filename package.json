@@ -1,6 +1,6 @@
 {
   "name": "generator-rff",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "Fully customizable Yeoman generator for scaffolding a front-end web app",
   "author": {
     "name": "Rakuten, Inc."
