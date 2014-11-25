@@ -8,7 +8,8 @@ module.exports = {
   // Compile styles
   compile: {
     options: {
-      compress: false
+      compress: false,
+      paths: ['bower_components']
     },
     files: [{
       expand: true,
