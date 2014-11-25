@@ -1,4 +1,5 @@
 // Run tasks with newer files only
+//
 // grunt-newer: <https://github.com/tschaub/grunt-newer>
 
 'use strict';

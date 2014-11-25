@@ -1,4 +1,5 @@
 // Clean files and folders
+//
 // grunt-contrib-clean: <https://github.com/gruntjs/grunt-contrib-clean>
 
 'use strict';

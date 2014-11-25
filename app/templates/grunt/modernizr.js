@@ -1,11 +1,11 @@
 // Build custom Modernizr
+//
 // grunt-modernizr: <https://github.com/Modernizr/grunt-modernizr>
 
 'use strict';
 
 module.exports = {
 
-  // Distribution
   dist: {
     devFile: 'bower_components/modernizr/modernizr.js',
     outputFile: '<%%= path.dist %>/js/modernizr.js',

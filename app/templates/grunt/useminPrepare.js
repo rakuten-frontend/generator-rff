@@ -1,4 +1,5 @@
-// Preparation for grunt-usemin
+// Prepare for grunt-usemin task
+//
 // This module requires "usemin" task.
 // grunt-usemin: <https://github.com/yeoman/grunt-usemin>
 
@@ -6,9 +7,12 @@
 
 module.exports = {
 
-  // Base options
   options: {
-    root: ['<%%= path.tmp %>', '<%%= path.app %>', '.'],
+    root: [
+      '<%%= path.tmp %>',
+      '<%%= path.app %>',
+      '.'
+    ],
     dest: '<%%= path.dist %>',
     flow: {
       steps: {

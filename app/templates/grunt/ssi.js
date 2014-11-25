@@ -1,11 +1,11 @@
-// Compile HTML with SSI emulation
+// Compiles HTML with SSI into static HTML pages
+//
 // grunt-ssi: <https://github.com/anguspiv/grunt-ssi>
 
 'use strict';
 
 module.exports = {
 
-  // Temporary output for localhost
   compile: {
     options: {
       cache: 'all',

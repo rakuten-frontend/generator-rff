@@ -1,15 +1,16 @@
-// CoffeeScript compiler
+// Compile CoffeeScript files to JavaScript
+//
 // grunt-contrib-coffee: <https://github.com/gruntjs/grunt-contrib-coffee>
 
 'use strict';
 
 module.exports = {
 
-  // Compile scripts
+  options: {
+    bare: true
+  },
+
   compile: {
-    options: {
-      bare: true
-    },
     files: [{
       expand: true,
       cwd: '<%%= path.scripts %>',

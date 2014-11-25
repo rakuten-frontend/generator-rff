@@ -1,16 +1,17 @@
-// Less compiler
+// Compile Less files to CSS
+//
 // grunt-contrib-less: <https://github.com/gruntjs/grunt-contrib-less>
 
 'use strict';
 
 module.exports = {
 
-  // Compile styles
+  options: {
+    paths: ['bower_components'],
+    compress: false
+  },
+
   compile: {
-    options: {
-      paths: ['bower_components'],
-      compress: false
-    },
     files: [{
       expand: true,
       cwd: '<%%= path.styles %>',

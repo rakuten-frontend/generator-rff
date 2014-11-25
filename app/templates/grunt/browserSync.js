@@ -1,7 +1,8 @@
-// BrowserSync server
+// Start BrowserSync server
+//
 // grunt-browser-sync: <https://github.com/shakyShane/grunt-browser-sync>
 // BrowserSync: <http://www.browsersync.io/>
-// BrowserSync options: <http://www.browsersync.io/docs/options/>
+// Options: <http://www.browsersync.io/docs/options/>
 
 'use strict';
 
@@ -30,7 +31,7 @@ module.exports = {
     ]
   },
 
-  // Server using distribution files
+  // Server using dist files
   dist: {
     options: {
       server: {

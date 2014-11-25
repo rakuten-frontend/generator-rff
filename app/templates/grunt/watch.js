@@ -1,4 +1,5 @@
 // Watch updates and run predefined tasks
+//
 // grunt-contrib-watch: <https://github.com/gruntjs/grunt-contrib-watch>
 
 'use strict';
@@ -22,13 +23,13 @@ module.exports = {
     tasks: ['wiredep']
   }<% if (cfg.validation) { %>,
 
-  // HTML validation
+  // Validate HTML
   html: {
     files: ['<%%= path.html %>/**/*.html'],
     tasks: ['newer:validation']
   }<% } %><% if (cfg.jshint || cfg.jscs) { %>,
 
-  // JavaScript linter
+  // Validate JavaScript
   js: {
     files: ['<%%= path.js %>/**/*.js']<% if (cfg.jshint && cfg.jscs) { %>,
     tasks: ['newer:jshint', 'newer:jscs']<% } else if (cfg.jshint) { %>,
@@ -36,13 +37,13 @@ module.exports = {
     tasks: ['newer:jscs']<% } %>
   }<% } %><% if (cfg.testing) { %>,
 
-  // Unit testing
+  // Run unit testing
   test: {
     files: ['test/spec/*.js'],
     tasks: ['test:skip-compile']
   }<% } %><% if (cfg.autoprefixer || cfg.csslint) { %>,
 
-  // Styles
+  // Handle CSS files
   css: {<% if (cfg.css) { %>
     files: ['<%%= path.styles %>/**']<% } else { %>
     files: ['<%%= path.css %>/**']<% } %><% if (cfg.autoprefixer && cfg.csslint) { %>,
@@ -51,13 +52,13 @@ module.exports = {
     tasks: ['newer:csslint']<% } %>
   }<% } %><% if (cfg.sprite) { %>,
 
-  // CSS sprites
+  // Generate CSS sprites
   sprite: {
     files: ['<%%= path.sprites %>/*.png'],
     tasks: ['sprite']
   }<% } %><% if (cfg.webfont) { %>,
 
-  // Web fonts
+  // Generate font icons
   webfont: {
     files: ['<%%= path.glyphs %>/*.svg'],
     tasks: ['webfont']
@@ -93,7 +94,7 @@ module.exports = {
     tasks: ['newer:coffee']
   }<% } %><% if (cfg.ssi && cfg.html) { %>,
 
-  // SSI simulation
+  // Compile HTML with SSI
   ssi: {
     files: ['<%%= path.markups %>/**/*.html'],
     tasks: ['ssi']

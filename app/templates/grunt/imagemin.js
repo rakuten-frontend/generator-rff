@@ -1,4 +1,5 @@
 // Minify images
+//
 // grunt-contrib-imagemin: <https://github.com/gruntjs/grunt-contrib-imagemin>
 
 'use strict';
@@ -7,7 +8,6 @@ var fs = require('fs');
 
 module.exports = {
 
-  // Distribution
   dist: {
     files: [{
       expand: true,

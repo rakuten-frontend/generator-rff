@@ -1,15 +1,16 @@
-// Sass compiler using libsass
+// Compile Sass files to CSS using libsass
+//
 // grunt-sass: <https://github.com/sindresorhus/grunt-sass>
 
 'use strict';
 
 module.exports = {
 
-  // Compile styles
+  options: {
+    includePaths: ['bower_components']
+  },
+
   compile: {
-    options: {
-      includePaths: ['bower_components']
-    },
     files: [{
       expand: true,
       cwd: '<%%= path.styles %>',

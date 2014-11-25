@@ -1,4 +1,5 @@
-// Connect web server
+// Start Connect server
+//
 // grunt-contrib-connect: <https://github.com/gruntjs/grunt-contrib-connect>
 // Connect: <https://github.com/senchalabs/connect>
 

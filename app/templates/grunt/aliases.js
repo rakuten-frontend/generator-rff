@@ -1,4 +1,5 @@
-// Grunt task registration
+// Register Grunt tasks
+//
 // Manage grunt tasks here instead of `grunt.registerTask`.
 // Refer: <https://github.com/firstandthird/load-grunt-config#aliases>
 

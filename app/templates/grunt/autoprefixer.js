@@ -1,4 +1,5 @@
-// CSS vendor-prefix management
+// Parse CSS and add vendor prefixes
+//
 // Autoprefixer: <https://github.com/ai/autoprefixer>
 // grunt-autoprefixer: <https://github.com/nDmitry/grunt-autoprefixer>
 
@@ -6,9 +7,8 @@
 
 module.exports = {
 
-  // Base options
   options: {
-    // Notation: <https://github.com/ai/autoprefixer#browsers>
+    // Targeting notation: <https://github.com/ai/autoprefixer#browsers>
     browsers: [
       'last 2 versions',
       'Explorer >= 8',
@@ -18,7 +18,6 @@ module.exports = {
     ]
   },
 
-  // Compile CSS to CSS
   compile: {
     files: [{
       expand: true<% if (cfg.css) { %>,

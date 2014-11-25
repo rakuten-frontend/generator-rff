@@ -1,5 +1,5 @@
 // Grunt base configuration
-
+//
 // This Gruntfile.js is based on "load-grunt-config" module.
 // Config files are separated and put into `grunt/` directory.
 // load-grant-config: <https://github.com/firstandthird/load-grunt-config>

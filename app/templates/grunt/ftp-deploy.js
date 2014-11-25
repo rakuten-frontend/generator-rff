@@ -1,11 +1,11 @@
-// Deployment over FTP
+// Deploy over FTP
+//
 // grunt-ftp-deploy: <https://github.com/zonak/grunt-ftp-deploy>
 
 'use strict';
 
 module.exports = {
 
-  // Distribution
   dist: {
     auth: {
       host: 'server.com',

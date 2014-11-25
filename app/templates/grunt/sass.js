@@ -1,16 +1,17 @@
-// Sass compiler
+// Compile Sass files to CSS
+//
 // grunt-contrib-sass: <https://github.com/gruntjs/grunt-contrib-sass>
 
 'use strict';
 
 module.exports = {
 
-  // Compile styles
+  options: {
+    style: 'expanded',
+    loadPath: ['bower_components']
+  },
+
   compile: {
-    options: {
-      style: 'expanded',
-      loadPath: ['bower_components']
-    },
     files: [{
       expand: true,
       cwd: '<%%= path.styles %>',

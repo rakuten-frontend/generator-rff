@@ -6,5 +6,5 @@
 node_modules/
 npm-debug.log
 
-# Excluded Files
+# Excluding Files
 temp/

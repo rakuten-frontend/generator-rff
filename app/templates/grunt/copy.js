@@ -1,14 +1,14 @@
 // Copy files and folders
+//
 // grunt-contrib-copy: <https://github.com/gruntjs/grunt-contrib-copy>
 
 'use strict';
 
 module.exports = {
 
-  // Distribution
   dist: {
     files: [
-      // Copy static files.
+      // Static files
       {
         expand: true,
         dot: true,
@@ -23,7 +23,7 @@ module.exports = {
           '!**/*.{css,js}'  // Ignore CSS and JavaScript because they are compiled in usemin task.
         ]
       }<% if (!cfg.html || cfg.sprite || cfg.webfont) { %>,
-      // Copy precompiled resources.
+      // Precompiled files
       {
         expand: true,
         cwd: '<%%= path.tmp %>',

@@ -1,16 +1,17 @@
-// Stylus compiler
+// Compile Stylus files to CSS
+//
 // grunt-contrib-stylus: <https://github.com/gruntjs/grunt-contrib-stylus>
 
 'use strict';
 
 module.exports = {
 
-  // Compile styles
+  options: {
+    compress: false,
+    paths: ['bower_components']
+  },
+
   compile: {
-    options: {
-      compress: false,
-      paths: ['bower_components']
-    },
     files: [{
       expand: true,
       cwd: '<%%= path.styles %>',

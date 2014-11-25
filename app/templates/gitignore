@@ -10,7 +10,7 @@ npm-debug.log
 # Bower
 bower_components/<% if (cfg.sass) { %>
 
-# SASS
+# Sass
 .sass-cache/<% } %><% if (cfg.validation) { %>
 
 # grunt-html-validation
@@ -20,6 +20,6 @@ validation-report.json<% } %><% if (cfg.ftp) { %>
 # grunt-ftp-deploy
 .ftppass<% } %>
 
-# Excluded Files
+# Excluding Files
 dist/
 .tmp/

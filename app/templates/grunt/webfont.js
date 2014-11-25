@@ -1,11 +1,11 @@
-// SVG to webfont converter
+// Convert SVG to webfont
+//
 // grunt-webfont: <https://github.com/sapegin/grunt-webfont>
 
 'use strict';
 
 module.exports = {
 
-  // Generate fonts and styles
   compile: {
     src: '<%%= path.glyphs %>/*.svg',
     dest: '<%%= path.tmp %>/fonts',

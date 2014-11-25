@@ -1,11 +1,11 @@
-// Manage and push built code
+// Manage and push built code using Git
+//
 // grunt-build-control: <https://github.com/robwierzbowski/grunt-build-control>
 
 'use strict';
 
 module.exports = {
 
-  // Base options
   options: {
     dir: '<%%= path.dist %>',
     commit: true,

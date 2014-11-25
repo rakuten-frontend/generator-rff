@@ -1,4 +1,5 @@
-// Optimize CSS/JavaScript and update HTML
+// Optimize CSS/JavaScript files and replace references in HTML
+//
 // This module requires "useminPrepare" task,
 // and depends on "grunt-contrib-concat", "grunt-contrib-cssmin" and "grunt-contrib-uglify".
 // grunt-usemin: <https://github.com/yeoman/grunt-usemin>
@@ -7,18 +8,17 @@
 
 module.exports = {
 
-  // Base options
   options: {
     assetsDirs: [
       '<%%= path.dist %>',
       // Add a tricky setting to prevent relative path issue of grunt-usemin.
-      // Issue: https://github.com/yeoman/grunt-usemin/issues/242
-      // Hotfix: https://github.com/yeoman/yeoman/issues/824#issuecomment-29137057
+      // Issue: <https://github.com/yeoman/grunt-usemin/issues/242>
+      // Hotfix: <https://github.com/yeoman/grunt-usemin/issues/242#issuecomment-37634594>
       '<%%= path.dist %>/img'
     ]
   },
 
-  // Update HTML files
+  // Update references in HTML
   html: {
     files: [{
       src: ['<%%= path.dist %>/**/*.html'],
@@ -26,7 +26,7 @@ module.exports = {
     }]
   },
 
-  // Update CSS files
+  // Update references in CSS
   css: {
     files: [{
       src: ['<%%= path.dist %>/**/*.css'],

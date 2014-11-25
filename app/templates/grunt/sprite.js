@@ -1,11 +1,11 @@
-// CSS sprites generator
+// Generate CSS sprites
+//
 // grunt-spritesmith: <https://github.com/Ensighten/grunt-spritesmith>
 
 'use strict';
 
 module.exports = {
 
-  // Generate stylesheet and sprite image
   compile: {
     src: '<%%= path.sprites %>/*.png',
     destImg: '<%%= path.tmp %>/img/sprites.png',
@@ -14,7 +14,7 @@ module.exports = {
     padding: 2,
     cssOpts: {
       cssClass: function (item) {
-        return '.sprite-' + item.name;  // Prefix for sprite classes.
+        return '.sprite-' + item.name;  // Prefix for sprite classes
       }
     }
   }

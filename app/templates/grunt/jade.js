@@ -1,11 +1,11 @@
-// Jade compiler
+// Compile Jade templates
+//
 // grunt-contrib-jade: <https://github.com/gruntjs/grunt-contrib-jade>
 
 'use strict';
 
 module.exports = {
 
-  // Compile markups
   compile: {
     options: {
       basedir: '<%%= path.markups %>',
