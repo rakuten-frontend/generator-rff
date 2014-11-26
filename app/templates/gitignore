@@ -1,13 +1,13 @@
-# OS/Editor
+# Extensions to ignore
+*.log
+
+# OS or editor files
 .DS_Store
-Thumbs.db
 .idea/
+Thumbs.db
 
-# Node.js
+# Dependency directories
 node_modules/
-npm-debug.log
-
-# Bower
 bower_components/<% if (cfg.sass) { %>
 
 # Sass
@@ -20,6 +20,6 @@ validation-report.json<% } %><% if (cfg.ftp) { %>
 # grunt-ftp-deploy
 .ftppass<% } %>
 
-# Excluding Files
-dist/
+# Excluding files from project
 .tmp/
+dist/

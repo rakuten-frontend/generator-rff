@@ -1,10 +1,4 @@
-# OS/Editor
+*.log
 .DS_Store
-.idea/
-
-# Node.js
 node_modules/
-npm-debug.log
-
-# Excluding Files
 temp/
