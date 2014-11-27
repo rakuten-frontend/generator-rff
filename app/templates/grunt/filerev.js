@@ -1,16 +1,10 @@
 // Manage revision of static assets
 //
-// grunt-rev: <https://github.com/cbas/grunt-rev>
+// grunt-filerev: <https://github.com/yeoman/grunt-filerev>
 
 'use strict';
 
 module.exports = {
-
-  options: {
-    encoding: 'utf8',
-    algorithm: 'md5',
-    length: 8
-  },
 
   dist: {
     files: [{

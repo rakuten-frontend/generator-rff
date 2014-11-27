@@ -75,7 +75,7 @@ module.exports = {
       'cssmin'<% } %><% if (cfg.uglify) { %>,
       'uglify'<% } %><% if (cfg.modernizr) { %>,
       'modernizr'<% } %><% if (cfg.rev) { %>,
-      'rev'<% } %>,
+      'filerev'<% } %>,
       'usemin'<% if (cfg.htmlmin) { %>,
       'htmlmin'<% } %>
     ]);

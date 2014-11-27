@@ -43,6 +43,7 @@ describe('Generator', function () {
     'grunt/coffee.js',
     'grunt/connect.js',
     'grunt/csslint.js',
+    'grunt/filerev.js',
     'grunt/ftp-deploy.js',
     'grunt/htmlmin.js',
     'grunt/jade.js',
@@ -52,7 +53,6 @@ describe('Generator', function () {
     'grunt/less.js',
     'grunt/mocha.js',
     'grunt/modernizr.js',
-    'grunt/rev.js',
     'grunt/sass.js',
     'grunt/sprite.js',
     'grunt/ssi.js',
@@ -88,12 +88,12 @@ describe('Generator', function () {
     ['package.json', /"grunt-contrib-sass"/],
     ['package.json', /"grunt-contrib-stylus"/],
     ['package.json', /"grunt-contrib-uglify"/],
+    ['package.json', /"grunt-filerev"/],
     ['package.json', /"grunt-ftp-deploy"/],
     ['package.json', /"grunt-html-validation"/],
     ['package.json', /"grunt-jscs"/],
     ['package.json', /"grunt-mocha"/],
     ['package.json', /"grunt-modernizr"/],
-    ['package.json', /"grunt-rev"/],
     ['package.json', /"grunt-sass"/],
     ['package.json', /"grunt-spritesmith"/],
     ['package.json', /"grunt-ssi"/],
@@ -107,6 +107,7 @@ describe('Generator', function () {
     ['grunt/aliases.js', /'(.*:)?coffee(:.*)?'/],
     ['grunt/aliases.js', /'(.*:)?connect(:.*)?'/],
     ['grunt/aliases.js', /'(.*:)?csslint(:.*)?'/],
+    ['grunt/aliases.js', /'(.*:)?filerev(:.*)?'/],
     ['grunt/aliases.js', /'(.*:)?htmlmin(:.*)?'/],
     ['grunt/aliases.js', /'(.*:)?jade(:.*)?'/],
     ['grunt/aliases.js', /'(.*:)?jasmine(:.*)?'/],
@@ -115,7 +116,6 @@ describe('Generator', function () {
     ['grunt/aliases.js', /'(.*:)?less(:.*)?'/],
     ['grunt/aliases.js', /'(.*:)?mocha(:.*)?'/],
     ['grunt/aliases.js', /'(.*:)?modernizr(:.*)?'/],
-    ['grunt/aliases.js', /'(.*:)?rev(:.*)?'/],
     ['grunt/aliases.js', /'(.*:)?sass(:.*)?'/],
     ['grunt/aliases.js', /'(.*:)?sprite(:.*)?'/],
     ['grunt/aliases.js', /'(.*:)?ssi(:.*)?'/],
@@ -197,10 +197,10 @@ describe('Generator', function () {
           '.jscsrc',
           'grunt/autoprefixer.js',
           'grunt/csslint.js',
+          'grunt/filerev.js',
           'grunt/htmlmin.js',
           'grunt/jscs.js',
           'grunt/jshint.js',
-          'grunt/rev.js',
           'grunt/sprite.js',
           'app/img/_sprites/'
         ]));
@@ -670,11 +670,11 @@ describe('Generator', function () {
       })
       .on('end', function () {
         assert.file([
-          'grunt/rev.js'
+          'grunt/filerev.js'
         ]);
         assert.fileContent([
-          ['package.json', /"grunt-rev"/],
-          ['grunt/aliases.js', /'(.*:)?rev(:.*)?'/]
+          ['package.json', /"grunt-filerev"/],
+          ['grunt/aliases.js', /'(.*:)?filerev(:.*)?'/]
         ]);
         done();
       });

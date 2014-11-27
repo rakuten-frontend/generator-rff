@@ -230,9 +230,9 @@ var options = [
       {
         name: 'Static Assets Revisioning',
         value: 'rev',
-        templates: ['grunt/rev.js'],
+        templates: ['grunt/filerev.js'],
         directories: [],
-        packages: {'grunt-rev': '^0.1.0'}
+        packages: {'grunt-filerev': '^2.1.2'}
       }
     ]
   },
