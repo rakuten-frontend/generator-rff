@@ -15,7 +15,6 @@ describe('Generator', function () {
     '.gitignore',
     '.gitattributes',
     '.editorconfig',
-    '.npmrc',
     '.bowerrc',
     'Gruntfile.js',
     'grunt/aliases.js',

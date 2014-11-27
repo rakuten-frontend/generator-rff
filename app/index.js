@@ -223,7 +223,6 @@ var Generator = yeoman.generators.Base.extend({
 
     projectfiles: function () {
       this.template('_bower.json', 'bower.json');
-      this.src.copy('npmrc', '.npmrc');
       this.src.copy('bowerrc', '.bowerrc');
       this.src.copy('editorconfig', '.editorconfig');
       this.template('_README.md', 'README.md');
