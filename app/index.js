@@ -223,14 +223,14 @@ var Generator = yeoman.generators.Base.extend({
 
     projectfiles: function () {
       this.template('_bower.json', 'bower.json');
-      this.src.copy('bowerrc', '.bowerrc');
-      this.src.copy('editorconfig', '.editorconfig');
+      this.copy('bowerrc', '.bowerrc');
+      this.copy('editorconfig', '.editorconfig');
       this.template('_README.md', 'README.md');
     },
 
     gitfiles: function () {
       this.template('gitignore', '.gitignore');
-      this.src.copy('gitattributes', '.gitattributes');
+      this.copy('gitattributes', '.gitattributes');
     },
 
     gruntfiles: function () {
@@ -250,12 +250,12 @@ var Generator = yeoman.generators.Base.extend({
     },
 
     app: function () {
-      this.dest.mkdir('app');
-      this.dest.mkdir('app/img');
+      this.mkdir('app');
+      this.mkdir('app/img');
     },
 
     options: function () {
-      var pkgTemplate = this.src.read('_package.json');
+      var pkgTemplate = this.read('_package.json');
       var pkg = JSON.parse(this._.template(pkgTemplate, this));
       var pkgString;
       var devDependencies = {};
@@ -304,7 +304,7 @@ var Generator = yeoman.generators.Base.extend({
       });
       pkg.devDependencies = devDependencies;
       pkgString = JSON.stringify(pkg, null, '  ') + '\n';
-      this.dest.write('package.json', pkgString);
+      this.write('package.json', pkgString);
     }
   },
 
