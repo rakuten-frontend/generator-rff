@@ -311,7 +311,7 @@ var Generator = yeoman.generators.Base.extend({
   end: function () {
     var generator;
 
-    // Invoke child generator for testing framework
+    // Compose with child generator for testing framework
     if (this.cfg.testing) {
       if (this.cfg.mocha) {
         generator = 'mocha';
@@ -319,7 +319,7 @@ var Generator = yeoman.generators.Base.extend({
       else if (this.cfg.jasmine) {
         generator = 'jasmine';
       }
-      this.invoke(generator, {
+      this.composeWith(generator, {
         options: {
           'force': this.force,
           'skip-install': this.skipInstall
