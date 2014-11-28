@@ -8,7 +8,8 @@ module.exports = {
 
   options: {
     style: 'expanded',
-    loadPath: ['bower_components']
+    loadPath: ['bower_components'],
+    sourcemap: 'auto'
   },
 
   compile: {

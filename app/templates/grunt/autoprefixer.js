@@ -15,7 +15,10 @@ module.exports = {
       'Firefox ESR',
       'Android >= 2.3',
       'iOS >= 7'
-    ]
+    ],
+    map: {
+      inline: false
+    }
   },
 
   compile: {

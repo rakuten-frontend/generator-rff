@@ -6,42 +6,47 @@
 
 'use strict';
 
-module.exports = {
+module.exports = function (grunt, options) {
 
-  // Dev server
-  app: {
-    options: {
-      server: {
-        baseDir: [
-          '<%%= path.tmp %>',
-          '<%%= path.app %>'
-        ],
-        routes: {
-          '/bower_components': 'bower_components'
-        }
+  var routes = {};
+  routes['/bower_components'] = 'bower_components';
+  routes['/' + options.path.styles] = options.path.styles;
+  routes['/' + options.path.scripts] = options.path.scripts;
+
+  return {
+    // Dev server
+    app: {
+      options: {
+        server: {
+          baseDir: [
+            '<%%= path.tmp %>',
+            '<%%= path.app %>'
+          ],
+          routes: routes
+        },
+        port: 9000,
+        notify: false,
+        watchTask: true
       },
-      port: 9000,
-      notify: false,
-      watchTask: true
+      src: [
+        '<%%= path.app %>/**',
+        '<%%= path.tmp %>/**',
+        '!<%%= path.distIgnore %>'
+      ]
     },
-    src: [
-      '<%%= path.app %>/**',
-      '<%%= path.tmp %>/**',
-      '!<%%= path.distIgnore %>'
-    ]
-  },
 
-  // Server using dist files
-  dist: {
-    options: {
-      server: {
-        baseDir: [
-          '<%%= path.dist %>'
-        ]
-      },
-      port: 9001,
-      notify: false
+    // Server using dist files
+    dist: {
+      options: {
+        server: {
+          baseDir: [
+            '<%%= path.dist %>'
+          ]
+        },
+        port: 9001,
+        notify: false
+      }
     }
-  }
+  };
 
 };

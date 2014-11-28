@@ -7,7 +7,8 @@
 module.exports = {
 
   options: {
-    includePaths: ['bower_components']
+    includePaths: ['bower_components'],
+    sourceMap: true
   },
 
   compile: {

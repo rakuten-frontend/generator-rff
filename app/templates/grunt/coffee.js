@@ -7,7 +7,8 @@
 module.exports = {
 
   options: {
-    bare: true
+    bare: true,
+    sourceMap: true
   },
 
   compile: {
