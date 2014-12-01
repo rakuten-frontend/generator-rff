@@ -519,6 +519,24 @@ describe('Generator', function () {
       });
   });
 
+  it('creates expected files with "jscs" + "coffee" option', function (done) {
+    generator
+      .withPrompt({
+        configType: 'custom',
+        script: 'coffee',
+        testing: ['jscs']
+      })
+      .on('end', function () {
+        assert.file([
+          '.jscsrc'
+        ]);
+        assert.noFileContent([
+          ['.jscsrc', /"preset"/]
+        ]);
+        done();
+      });
+  });
+
   it('creates expected files with "mocha" option', function (done) {
     generator
       .withPrompt({

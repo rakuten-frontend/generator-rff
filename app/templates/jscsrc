@@ -1,4 +1,4 @@
-{
+{<% if (cfg.js) { %>
   "preset": "google",
   "requireSpacesInFunctionExpression": {
     "beforeOpeningRoundBrace": true,
@@ -9,6 +9,6 @@
     "beforeOpeningCurlyBrace": true
   },
   "disallowSpacesInAnonymousFunctionExpression": null,
-  "maximumLineLength": null,
+  "maximumLineLength": null,<% } %>
   "validateLineBreaks": "LF"
 }
