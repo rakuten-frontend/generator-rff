@@ -53,7 +53,7 @@ var options = [
         value: 'less',
         templates: ['grunt/less.js'],
         directories: ['app/_less'],
-        packages: {'grunt-contrib-less': '^0.11.0'}
+        packages: {'grunt-contrib-less': '^0.12.0'}
       },
       {
         name: 'Stylus',
@@ -144,14 +144,14 @@ var options = [
         value: 'jscs',
         templates: ['grunt/jscs.js', ['jscsrc', '.jscsrc']],
         directories: [],
-        packages: {'grunt-jscs': '^0.8.1'}
+        packages: {'grunt-jscs': '^1.0.0'}
       },
       {
         name: 'Mocha',
         value: 'mocha',
         templates: ['grunt/mocha.js', 'grunt/connect.js'],
         directories: [],
-        packages: {'grunt-mocha': '^0.4.10', 'grunt-contrib-connect': '^0.8.0'}
+        packages: {'grunt-mocha': '^0.4.10', 'grunt-contrib-connect': '^0.9.0'}
       },
       {
         name: 'Jasmine',
