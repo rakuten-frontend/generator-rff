@@ -8,7 +8,9 @@ module.exports = {
 
   options: {
     paths: ['bower_components'],
-    compress: false
+    compress: false,
+    sourceMap: true,
+    sourceMapRootpath: '/'
   },
 
   compile: {
