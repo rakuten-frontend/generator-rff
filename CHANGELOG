@@ -1,3 +1,12 @@
+v0.6.0:
+  date: 2014-12-01
+  changes:
+    - Support source maps for Sass, Less, Autoprefixer and CoffeeScript.
+    - Switch from grunt-rev to grunt-filerev.
+    - Use `^` instead of `~` in npm install.
+    - Relax the JSCS config when CoffeeScript is selected.
+    - Update .gitignore.
+    - Update grunt plugins.
 v0.5.1:
   date: 2014-11-25
   changes:
