@@ -8,9 +8,9 @@ module.exports = {
 
   options: {
     paths: ['bower_components'],
-    compress: false,
+    compress: false<% if (cfg.cssSourceMap) { %>,
     sourceMap: true,
-    sourceMapRootpath: '/'
+    sourceMapRootpath: '/'<% } %>
   },
 
   compile: {

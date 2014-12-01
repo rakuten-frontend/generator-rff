@@ -210,6 +210,10 @@ var Generator = yeoman.generators.Base.extend({
       // Extra config
       this.cfg.slugName = this._.slugify(this.cfg.name);
       this.cfg.testing = this.cfg.mocha || this.cfg.jasmine;
+      this.cfg.cssSourceMap = (this.cfg.css && this.cfg.autoprefixer) ||
+                              this.cfg.sass || this.cfg.libsass ||
+                              (this.cfg.less && (this.cfg.autoprefixer || this.cfg.cssmin));
+      this.cfg.jsSourceMap = this.cfg.coffee;
     }
   },
 

@@ -6,12 +6,12 @@
 
 'use strict';
 
-module.exports = function (grunt, options) {
+module.exports = function (<% if (cfg.cssSourceMap || cfg.jsSourceMap) { %>grunt, options<% } %>) {
 
   var routes = {};
-  routes['/bower_components'] = 'bower_components';
-  routes['/' + options.path.styles] = options.path.styles;
-  routes['/' + options.path.scripts] = options.path.scripts;
+  routes['/bower_components'] = 'bower_components';<% if (cfg.cssSourceMap) { %>
+  routes['/' + options.path.styles] = options.path.styles;<% } %><% if (cfg.jsSourceMap) { %>
+  routes['/' + options.path.scripts] = options.path.scripts;<% } %>
 
   return {
     // Dev server

@@ -15,10 +15,10 @@ module.exports = {
       'Firefox ESR',
       'Android >= 2.3',
       'iOS >= 7'
-    ],
+    ]<% if (cfg.cssSourceMap) { %>,
     map: {
       inline: false
-    }
+    }<% } %>
   },
 
   compile: {
