@@ -102,7 +102,7 @@ After that, we will accept your contribution including issue reports.
 Thank you.
 
 ## License
-Copyright (c) 2014 Rakuten, Inc. Licensed under the [MIT License](LICENSE).
+Copyright (c) 2014-2015 Rakuten, Inc. Licensed under the [MIT License](LICENSE).
 
 [npm-image]: https://img.shields.io/npm/v/generator-rff.svg?style=flat
 [npm-url]: https://www.npmjs.org/package/generator-rff
