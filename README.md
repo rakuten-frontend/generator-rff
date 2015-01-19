@@ -105,7 +105,7 @@ Thank you.
 Copyright (c) 2014-2015 Rakuten, Inc. Licensed under the [MIT License](LICENSE).
 
 [npm-image]: https://img.shields.io/npm/v/generator-rff.svg?style=flat
-[npm-url]: https://www.npmjs.org/package/generator-rff
+[npm-url]: https://www.npmjs.com/package/generator-rff
 [travis-image]: https://img.shields.io/travis/rakuten-frontend/generator-rff/master.svg?style=flat
 [travis-url]: https://travis-ci.org/rakuten-frontend/generator-rff
 [deps-image]: http://img.shields.io/david/rakuten-frontend/generator-rff.svg?style=flat
