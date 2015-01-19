@@ -1,8 +1,8 @@
 // Validate files with JSHint
 //
 // grunt-contrib-jshint: <https://github.com/gruntjs/grunt-contrib-jshint>
-// JSHint: <http://www.jshint.com/>
-// Options: <http://www.jshint.com/docs/options/>
+// JSHint: <http://jshint.com/>
+// Options: <http://jshint.com/docs/options/>
 
 'use strict';
 

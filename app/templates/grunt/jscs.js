@@ -1,8 +1,8 @@
 // Check JavaScript code style with JSCS
 //
 // grunt-jscs: <https://github.com/jscs-dev/grunt-jscs>
-// JSCS: <https://github.com/jscs-dev/node-jscs>
-// Rules: <https://github.com/jscs-dev/node-jscs#rules>
+// JSCS: <http://jscs.info/>
+// Rules: <http://jscs.info/rules.html>
 
 'use strict';
 

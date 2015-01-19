@@ -2,7 +2,7 @@
 //
 // grunt-contrib-csslint: <https://github.com/gruntjs/grunt-contrib-csslint>
 // CSS Lint: <http://csslint.net/>
-// Rules: <https://github.com/stubbornella/csslint/wiki/Rules>
+// Rules: <https://github.com/CSSLint/csslint/wiki/Rules>
 
 'use strict';
 

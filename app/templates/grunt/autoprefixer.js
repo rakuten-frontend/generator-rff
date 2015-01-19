@@ -8,7 +8,7 @@
 module.exports = {
 
   options: {
-    // Targeting notation: <https://github.com/ai/autoprefixer#browsers>
+    // Targeting notation: <https://github.com/ai/browserslist#queries>
     browsers: [
       'last 2 versions',
       'Explorer >= 8',
