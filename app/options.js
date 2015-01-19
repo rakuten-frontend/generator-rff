@@ -18,7 +18,7 @@ var options = [
         value: 'jade',
         templates: ['grunt/jade.js', 'app/index.jade'],
         directories: [],
-        packages: {'grunt-contrib-jade': '^0.13.0'}
+        packages: {'grunt-contrib-jade': '^0.14.0'}
       }
     ]
   },
@@ -46,7 +46,7 @@ var options = [
         value: 'libsass',
         templates: [['grunt/libsass.js', 'grunt/sass.js']],
         directories: ['app/_sass'],
-        packages: {'grunt-sass': '^0.16.1'}
+        packages: {'grunt-sass': '^0.17.0'}
       },
       {
         name: 'Less',
@@ -109,7 +109,7 @@ var options = [
         value: 'webfont',
         templates: ['grunt/webfont.js'],
         directories: ['app/img/_glyphs'],
-        packages: {'grunt-webfont': '^0.4.8'}
+        packages: {'grunt-webfont': '^0.5.1'}
       }
     ]
   },
@@ -130,7 +130,7 @@ var options = [
         value: 'csslint',
         templates: ['grunt/csslint.js', ['csslintrc', '.csslintrc']],
         directories: [],
-        packages: {'grunt-contrib-csslint': '^0.3.1'}
+        packages: {'grunt-contrib-csslint': '^0.4.0'}
       },
       {
         name: 'JSHint',
@@ -211,14 +211,14 @@ var options = [
         value: 'cssmin',
         templates: [],
         directories: [],
-        packages: {'grunt-contrib-cssmin': '^0.10.0'}
+        packages: {'grunt-contrib-cssmin': '^0.11.0'}
       },
       {
         name: 'JavaScript Minification',
         value: 'uglify',
         templates: [],
         directories: [],
-        packages: {'grunt-contrib-uglify': '^0.6.0'}
+        packages: {'grunt-contrib-uglify': '^0.7.0'}
       },
       {
         name: 'SVG Optimization',
@@ -246,7 +246,7 @@ var options = [
         value: 'buildcontrol',
         templates: ['grunt/buildcontrol.js'],
         directories: [],
-        packages: {'grunt-build-control': '^0.1.3'}
+        packages: {'grunt-build-control': '^0.2.2'}
       },
       {
         name: 'Deployment over FTP',
