@@ -1,6 +1,10 @@
-# generator-rff [![NPM Version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][deps-image]][deps-url]
+# generator-rff
 
-> Fully customizable [Yeoman](http://yeoman.io/) generator for scaffolding a front-end web app, developed in Rakuten Front-end Framework project.
+> Fully customizable Yeoman generator for scaffolding a front-end web app.
+
+[![NPM Version][npm-image]][npm-url]
+[![Build Status][travis-image]][travis-url]
+[![Dependency Status][deps-image]][deps-url]
 
 ## Demo
 [![Demo](docs/images/video.png)](http://youtu.be/jGzqR6-jAYE)
@@ -22,7 +26,6 @@
   * CoffeeScript
 
 ### Tasks and Functions
-
 * **Utilities**
   * Wiring up Bower Components (Built-in)
   * CSS Autoprefixer
