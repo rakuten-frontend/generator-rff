@@ -47,7 +47,7 @@ module.exports = {
       if (cfg.csslint)    { testTasks.push('newer:csslint'); }
       if (cfg.jshint)     { testTasks.push('newer:jshint'); }
       if (cfg.jscs)       { testTasks.push('newer:jscs'); }
-      if (cfg.mocha)      { testTasks.push('connect:test', 'mocha'); }
+      if (cfg.mocha)      { testTasks.push('browserSync:test', 'mocha'); }
       if (cfg.jasmine)    { testTasks.push('jasmine'); } %>
     if (target !== 'skip-compile') {
       grunt.task.run([

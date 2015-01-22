@@ -41,7 +41,6 @@ describe('Generator', function () {
     'grunt/autoprefixer.js',
     'grunt/buildcontrol.js',
     'grunt/coffee.js',
-    'grunt/connect.js',
     'grunt/csslint.js',
     'grunt/filerev.js',
     'grunt/ftp-deploy.js',
@@ -77,7 +76,6 @@ describe('Generator', function () {
     ['package.json', /"grunt-autoprefixer"/],
     ['package.json', /"grunt-build-control"/],
     ['package.json', /"grunt-contrib-coffee"/],
-    ['package.json', /"grunt-contrib-connect"/],
     ['package.json', /"grunt-contrib-csslint"/],
     ['package.json', /"grunt-contrib-cssmin"/],
     ['package.json', /"grunt-contrib-htmlmin"/],
@@ -105,7 +103,6 @@ describe('Generator', function () {
     ['.gitignore', /\.ftppass/],
     ['grunt/aliases.js', /'(.*:)?autoprefixer(:.*)?'/],
     ['grunt/aliases.js', /'(.*:)?coffee(:.*)?'/],
-    ['grunt/aliases.js', /'(.*:)?connect(:.*)?'/],
     ['grunt/aliases.js', /'(.*:)?csslint(:.*)?'/],
     ['grunt/aliases.js', /'(.*:)?filerev(:.*)?'/],
     ['grunt/aliases.js', /'(.*:)?htmlmin(:.*)?'/],
@@ -545,14 +542,11 @@ describe('Generator', function () {
       })
       .on('end', function () {
         assert.file([
-          'grunt/mocha.js',
-          'grunt/connect.js'
+          'grunt/mocha.js'
         ]);
         assert.fileContent([
           ['package.json', /"grunt-mocha"/],
-          ['package.json', /"grunt-contrib-connect"/],
           ['grunt/aliases.js', /'(.*:)?mocha(:.*)?'/],
-          ['grunt/aliases.js', /'(.*:)?connect(:.*)?'/],
           ['grunt/watch.js', /'(.*:)?test(:.*)?'/]
         ]);
         done();

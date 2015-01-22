@@ -46,7 +46,25 @@ module.exports = function (<% if (cfg.cssSourceMap || cfg.jsSourceMap) { %>grunt
         port: 9001,
         notify: false
       }
-    }
+    }<% if (cfg.mocha) { %>,
+
+    // Server for testing framework
+    test: {
+      options: {
+        server: {
+          baseDir: [
+            '<%%= path.test %>',
+            '<%%= path.tmp %>',
+            '<%%= path.app %>'
+          ],
+          routes: routes
+        },
+        port: 9002,
+        notify: false,
+        open: false,
+        keepalive: false
+      }
+    }<% } %>
   };
 
 };

@@ -149,9 +149,9 @@ var options = [
       {
         name: 'Mocha',
         value: 'mocha',
-        templates: ['grunt/mocha.js', 'grunt/connect.js'],
+        templates: ['grunt/mocha.js'],
         directories: [],
-        packages: {'grunt-mocha': '^0.4.10', 'grunt-contrib-connect': '^0.9.0'}
+        packages: {'grunt-mocha': '^0.4.10'}
       },
       {
         name: 'Jasmine',

@@ -15,7 +15,7 @@ module.exports = {
   all: {
     options: {
       urls: [
-        'http://localhost:<%%= connect.test.options.port %>/'
+        'http://localhost:<%%= browserSync.test.options.port %>/'
       ]
     }
   }
