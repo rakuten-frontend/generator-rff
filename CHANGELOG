@@ -1,3 +1,10 @@
+v0.6.1:
+  date: 2015-01-22
+  changes:
+    - Use grunt-browser-sync for mocha testing instead of grunt-contrib-connect.
+    - Prevent JSCS error caused by the latest preset.
+    - Update Grunt plugins.
+    - Update URLs in help comment.
 v0.6.0:
   date: 2014-12-01
   changes:
