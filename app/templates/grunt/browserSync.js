@@ -24,6 +24,9 @@ module.exports = function (<% if (cfg.cssSourceMap || cfg.jsSourceMap) { %>grunt
           ],
           routes: routes
         },
+        ui: {
+          port: 9010
+        },
         port: 9000,
         notify: false,
         watchTask: true
@@ -43,6 +46,7 @@ module.exports = function (<% if (cfg.cssSourceMap || cfg.jsSourceMap) { %>grunt
             '<%%= path.dist %>'
           ]
         },
+        ui: false,
         port: 9001,
         notify: false
       }
@@ -59,6 +63,7 @@ module.exports = function (<% if (cfg.cssSourceMap || cfg.jsSourceMap) { %>grunt
           ],
           routes: routes
         },
+        ui: false,
         port: 9002,
         notify: false,
         open: false,
