@@ -9,7 +9,7 @@ module.exports = {
   dist: {
     files: [{
       src: [
-        '<%%= path.dist %>/**/*.{css,js,png,jpg,gif,ico,eot,svg,ttf,woff}'
+        '<%%= path.dist %>/**/*.{css,js,png,jpg,gif,ico,eot,svg,ttf,woff,woff2}'
       ],
       filter: 'isFile'
     }]

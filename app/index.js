@@ -243,6 +243,7 @@ var Generator = yeoman.generators.Base.extend({
       // Built-in features
       this.template('grunt/aliases.js', 'grunt/aliases.js');
       this.template('grunt/wiredep.js', 'grunt/wiredep.js');
+      this.template('grunt/bower.js', 'grunt/bower.js');
       this.template('grunt/browserSync.js', 'grunt/browserSync.js');
       this.template('grunt/clean.js', 'grunt/clean.js');
       this.template('grunt/copy.js', 'grunt/copy.js');

@@ -69,6 +69,7 @@ module.exports = {
     grunt.task.run([
       'clean:dist',
       'copy:dist',
+      'bower',
       'imagemin',
       'useminPrepare',
       'concat'<% if (cfg.cssmin) { %>,
