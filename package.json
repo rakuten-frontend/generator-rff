@@ -36,7 +36,8 @@
   "main": "app/index.js",
   "files": [
     "app",
-    "LICENSE"
+    "LICENSE",
+    "CHANGELOG.md"
   ],
   "dependencies": {
     "lodash": "^3.5.0",
