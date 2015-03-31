@@ -4,9 +4,10 @@
   "engines": {
     "node": ">=0.10.0"
   },
-  "scripts": {
-    "test": "grunt test"<% if (cfg.testing) { %>,
-    "postinstall": "cd test && bower install"<% } %>
+  "scripts": {<% if (cfg.testing) { %>
+    "postinstall": "cd test && bower install",<% } %>
+    "test": "grunt test",
+    "build": "grunt"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
