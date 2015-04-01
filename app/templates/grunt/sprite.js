@@ -8,12 +8,11 @@ module.exports = {
 
   compile: {
     src: '<%%= path.sprites %>/*.png',
-    destImg: '<%%= path.tmp %>/img/sprites.png',
-    destCSS: '<%%= path.tmp %>/css/sprites.css',
-    algorithm: 'binary-tree',
+    dest: '<%%= path.tmp %>/img/sprites.png',
+    destCss: '<%%= path.tmp %>/css/sprites.css',
     padding: 2,
     cssOpts: {
-      cssClass: function (item) {
+      cssSelector: function (item) {
         return '.sprite-' + item.name;  // Prefix for sprite classes
       }
     }
