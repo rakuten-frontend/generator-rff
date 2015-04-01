@@ -41,7 +41,7 @@
   ],
   "dependencies": {
     "lodash": "^3.5.0",
-    "yeoman-generator": "^0.17.1",
+    "yeoman-generator": "^0.18.10",
     "yosay": "^1.0.0"
   },
   "peerDependencies": {
