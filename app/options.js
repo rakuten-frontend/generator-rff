@@ -39,28 +39,28 @@ var options = [
         value: 'sass',
         templates: ['grunt/sass.js'],
         directories: ['app/_sass'],
-        packages: {'grunt-contrib-sass': '^0.8.1'}
+        packages: {'grunt-contrib-sass': '^0.9.2'}
       },
       {
         name: 'Sass (Libsass)',
         value: 'libsass',
         templates: [['grunt/libsass.js', 'grunt/sass.js']],
         directories: ['app/_sass'],
-        packages: {'grunt-sass': '^0.17.0'}
+        packages: {'grunt-sass': '^0.18.1'}
       },
       {
         name: 'Less',
         value: 'less',
         templates: ['grunt/less.js'],
         directories: ['app/_less'],
-        packages: {'grunt-contrib-less': '^0.12.0'}
+        packages: {'grunt-contrib-less': '^1.0.0'}
       },
       {
         name: 'Stylus',
         value: 'stylus',
         templates: ['grunt/stylus.js'],
         directories: ['app/_stylus'],
-        packages: {'grunt-contrib-stylus': '^0.20.0'}
+        packages: {'grunt-contrib-stylus': '^0.21.0'}
       }
     ]
   },
@@ -81,7 +81,7 @@ var options = [
         value: 'coffee',
         templates: ['grunt/coffee.js'],
         directories: ['app/_coffee'],
-        packages: {'grunt-contrib-coffee': '^0.12.0'}
+        packages: {'grunt-contrib-coffee': '^0.13.0'}
       }
     ]
   },
@@ -137,7 +137,7 @@ var options = [
         value: 'jshint',
         templates: ['grunt/jshint.js', ['jshintrc', '.jshintrc']],
         directories: [],
-        packages: {'grunt-contrib-jshint': '^0.10.0'}
+        packages: {'grunt-contrib-jshint': '^0.11.1'}
       },
       {
         name: 'JSCS',
@@ -204,21 +204,21 @@ var options = [
         value: 'htmlmin',
         templates: ['grunt/htmlmin.js'],
         directories: [],
-        packages: {'grunt-contrib-htmlmin': '^0.3.0'}
+        packages: {'grunt-contrib-htmlmin': '^0.4.0'}
       },
       {
         name: 'CSS Minification',
         value: 'cssmin',
         templates: [],
         directories: [],
-        packages: {'grunt-contrib-cssmin': '^0.11.0'}
+        packages: {'grunt-contrib-cssmin': '^0.12.2'}
       },
       {
         name: 'JavaScript Minification',
         value: 'uglify',
         templates: [],
         directories: [],
-        packages: {'grunt-contrib-uglify': '^0.7.0'}
+        packages: {'grunt-contrib-uglify': '^0.8.1'}
       },
       {
         name: 'SVG Optimization',
@@ -246,7 +246,7 @@ var options = [
         value: 'buildcontrol',
         templates: ['grunt/buildcontrol.js'],
         directories: [],
-        packages: {'grunt-build-control': '^0.2.2'}
+        packages: {'grunt-build-control': '^0.3.0'}
       },
       {
         name: 'Deployment over FTP',
