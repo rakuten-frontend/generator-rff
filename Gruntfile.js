@@ -56,28 +56,6 @@ module.exports = function (grunt) {
         },
         src: ['test/*.js']
       }
-    },
-
-    bump: {
-      options: {
-        files: ['package.json'],
-        commit: true,
-        commitMessage: 'Release v%VERSION%',
-        commitFiles: ['-a'],
-        createTag: true,
-        tagName: 'v%VERSION%',
-        tagMessage: 'Release v%VERSION%',
-        push: true,
-        pushTo: 'origin',
-        gitDescribeOptions: '--tags --always --abbrev=1 --dirty=-d',
-        globalReplace: false
-      }
-    },
-
-    'npm-publish': {
-      options: {
-        abortIfDirty: true
-      }
     }
 
   });
@@ -95,13 +73,5 @@ module.exports = function (grunt) {
   grunt.registerTask('default', [
     'test'
   ]);
-
-  grunt.registerTask('release', 'Release package after test and bump.', function (type) {
-    grunt.task.run([
-      'test',
-      'bump:' + (type || 'patch'),
-      'npm-publish'
-    ]);
-  });
 
 };
