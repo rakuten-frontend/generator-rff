@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.7.0 (2015-04-02)
+- Automate copy task for bower package assets using [main-bower-files](https://github.com/ck86/main-bower-files).
+- Update [BrowserSync](http://www.browsersync.io/) to v2.1.1.
+- Update [grunt-spritesmith](https://github.com/Ensighten/grunt-spritesmith) to v4.5.1. (see: [Breaking changes in 3.0.0 and 4.0.0](https://github.com/Ensighten/grunt-spritesmith#breaking-changes-in-300))
+- Update other Grunt plugins.
+- Support Node.js 0.12 and io.js.
+- Add npm-script: `npm run build` to build with Grunt.
+- Tweak preset of package.json and bower.json.
+
 ## 0.6.1 (2015-01-22)
 - Use grunt-browser-sync for mocha testing instead of grunt-contrib-connect.
 - Prevent JSCS error caused by the latest preset.
@@ -20,10 +29,10 @@
 
 ## 0.5.0 (2014-11-18)
 - Support JSCS.
-- Arrage JavaScript coding style.:
+- Arrage JavaScript coding style.
   - Strict mode.
   - 2 spaces for indentation.
-- Change the default config of generator.:
+- Change the default config of generator.
   - Select CSS instead of Sass.
   - Uncheck HTML Validation.
 - Upgrade grunt plugins.
@@ -38,7 +47,7 @@
 
 ## 0.4.0 (2014-10-24)
 - Release as open source.
-- Support more tasks.:
+- Support more tasks.
   - Icon font generator
   - Modernizr builder
   - HTML minification
@@ -100,7 +109,7 @@
 - Use absolute URI reference for all assets.
 
 ## 0.2.0 (2014-03-31)
-- Support more languages.:
+- Support more languages.
   - Jade
   - Less
   - CoffeeScript
