@@ -54,7 +54,7 @@ module.exports = {
         'compile'
       ]);
     }
-    grunt.task.run([<% _.each(testTasks, function (task, index) { %>
+    grunt.task.run([<% testTasks.forEach(function (task, index) { %>
       '<%= task %>'<% if (index !== testTasks.length - 1) { %>,<% }}); %>
     ]);
   },

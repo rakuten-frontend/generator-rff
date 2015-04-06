@@ -157,7 +157,7 @@ describe('Generator', function () {
 
   it('creates expected package files', function (done) {
     generator
-      .withPrompt({
+      .withPrompts({
         name: 'Test Project'
       })
       .on('end', function () {
@@ -172,7 +172,7 @@ describe('Generator', function () {
 
   it('creates expected files in minimum preset', function (done) {
     generator
-      .withPrompt({
+      .withPrompts({
         configType: 'minimum'
       })
       .on('end', function () {
@@ -186,7 +186,7 @@ describe('Generator', function () {
 
   it('creates expected files in standard preset', function (done) {
     generator
-      .withPrompt({
+      .withPrompts({
       })
       .on('end', function () {
         assert.file(baseFiles.concat([
@@ -208,7 +208,7 @@ describe('Generator', function () {
 
   it('creates expected files with "jade" option', function (done) {
     generator
-      .withPrompt({
+      .withPrompts({
         configType: 'custom',
         markup: 'jade'
       })
@@ -236,7 +236,7 @@ describe('Generator', function () {
 
   it('creates expected files with "jade" + assets option', function (done) {
     generator
-      .withPrompt({
+      .withPrompts({
         configType: 'custom',
         markup: 'jade',
         utilities: ['sprite', 'webfont'],
@@ -254,7 +254,7 @@ describe('Generator', function () {
 
   it('creates expected files with "sass" option', function (done) {
     generator
-      .withPrompt({
+      .withPrompts({
         configType: 'custom',
         style: 'sass'
       })
@@ -281,7 +281,7 @@ describe('Generator', function () {
 
   it('creates expected files with "libsass" option', function (done) {
     generator
-      .withPrompt({
+      .withPrompts({
         configType: 'custom',
         style: 'libsass'
       })
@@ -308,7 +308,7 @@ describe('Generator', function () {
 
   it('creates expected files with "less" option', function (done) {
     generator
-      .withPrompt({
+      .withPrompts({
         configType: 'custom',
         style: 'less'
       })
@@ -331,7 +331,7 @@ describe('Generator', function () {
 
   it('creates expected files with "stylus" option', function (done) {
     generator
-      .withPrompt({
+      .withPrompts({
         configType: 'custom',
         style: 'stylus'
       })
@@ -354,7 +354,7 @@ describe('Generator', function () {
 
   it('creates expected files with "coffee" option', function (done) {
     generator
-      .withPrompt({
+      .withPrompts({
         configType: 'custom',
         script: 'coffee'
       })
@@ -377,7 +377,7 @@ describe('Generator', function () {
 
   it('creates expected files with "autoprefixer" option', function (done) {
     generator
-      .withPrompt({
+      .withPrompts({
         configType: 'custom',
         utilities: ['autoprefixer']
       })
@@ -396,7 +396,7 @@ describe('Generator', function () {
 
   it('creates expected files with "sprite" option', function (done) {
     generator
-      .withPrompt({
+      .withPrompts({
         configType: 'custom',
         utilities: ['sprite']
       })
@@ -417,7 +417,7 @@ describe('Generator', function () {
 
   it('creates expected files with "webfont" option', function (done) {
     generator
-      .withPrompt({
+      .withPrompts({
         configType: 'custom',
         utilities: ['webfont']
       })
@@ -438,7 +438,7 @@ describe('Generator', function () {
 
   it('creates expected files with "validation" option', function (done) {
     generator
-      .withPrompt({
+      .withPrompts({
         configType: 'custom',
         testing: ['validation']
       })
@@ -459,7 +459,7 @@ describe('Generator', function () {
 
   it('creates expected files with "csslint" option', function (done) {
     generator
-      .withPrompt({
+      .withPrompts({
         configType: 'custom',
         testing: ['csslint']
       })
@@ -479,7 +479,7 @@ describe('Generator', function () {
 
   it('creates expected files with "jshint" option', function (done) {
     generator
-      .withPrompt({
+      .withPrompts({
         configType: 'custom',
         testing: ['jshint']
       })
@@ -499,7 +499,7 @@ describe('Generator', function () {
 
   it('creates expected files with "jscs" option', function (done) {
     generator
-      .withPrompt({
+      .withPrompts({
         configType: 'custom',
         testing: ['jscs']
       })
@@ -519,7 +519,7 @@ describe('Generator', function () {
 
   it('creates expected files with "jscs" + "coffee" option', function (done) {
     generator
-      .withPrompt({
+      .withPrompts({
         configType: 'custom',
         script: 'coffee',
         testing: ['jscs']
@@ -537,7 +537,7 @@ describe('Generator', function () {
 
   it('creates expected files with "mocha" option', function (done) {
     generator
-      .withPrompt({
+      .withPrompts({
         configType: 'custom',
         testing: ['mocha']
       })
@@ -556,7 +556,7 @@ describe('Generator', function () {
 
   it('creates expected files with "jasmine" option', function (done) {
     generator
-      .withPrompt({
+      .withPrompts({
         configType: 'custom',
         testing: ['jasmine']
       })
@@ -575,7 +575,7 @@ describe('Generator', function () {
 
   it('creates expected files with "ssi" option', function (done) {
     generator
-      .withPrompt({
+      .withPrompts({
         configType: 'custom',
         server: ['ssi']
       })
@@ -595,7 +595,7 @@ describe('Generator', function () {
 
   it('creates expected files with "modernizr" option', function (done) {
     generator
-      .withPrompt({
+      .withPrompts({
         configType: 'custom',
         libraries: ['modernizr']
       })
@@ -615,7 +615,7 @@ describe('Generator', function () {
 
   it('creates expected files with "htmlmin" option', function (done) {
     generator
-      .withPrompt({
+      .withPrompts({
         configType: 'custom',
         optimization: ['htmlmin']
       })
@@ -633,7 +633,7 @@ describe('Generator', function () {
 
   it('creates expected files with "cssmin" option', function (done) {
     generator
-      .withPrompt({
+      .withPrompts({
         configType: 'custom',
         optimization: ['cssmin']
       })
@@ -648,7 +648,7 @@ describe('Generator', function () {
 
   it('creates expected files with "uglify" option', function (done) {
     generator
-      .withPrompt({
+      .withPrompts({
         configType: 'custom',
         optimization: ['uglify']
       })
@@ -663,7 +663,7 @@ describe('Generator', function () {
 
   it('creates expected files with "svgo" option', function (done) {
     generator
-      .withPrompt({
+      .withPrompts({
         configType: 'custom',
         optimization: ['svgo']
       })
@@ -677,7 +677,7 @@ describe('Generator', function () {
 
   it('creates expected files with "rev" option', function (done) {
     generator
-      .withPrompt({
+      .withPrompts({
         configType: 'custom',
         optimization: ['rev']
       })
@@ -695,7 +695,7 @@ describe('Generator', function () {
 
   it('creates expected files with "buildcontrol" option', function (done) {
     generator
-      .withPrompt({
+      .withPrompts({
         configType: 'custom',
         distribution: ['buildcontrol']
       })
@@ -712,7 +712,7 @@ describe('Generator', function () {
 
   it('creates expected files with "ftp" option', function (done) {
     generator
-      .withPrompt({
+      .withPrompts({
         configType: 'custom',
         distribution: ['ftp']
       })
@@ -731,7 +731,7 @@ describe('Generator', function () {
 
   it('creates expected files with "store" option', function (done) {
     generator
-      .withPrompt({
+      .withPrompts({
         configType: 'custom',
         store: true
       })

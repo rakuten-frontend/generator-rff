@@ -3,6 +3,8 @@
 var yeoman = require('yeoman-generator');
 var yosay = require('yosay');
 var _ = require('lodash');
+var _s = require('underscore.string');
+var mkdirp = require('mkdirp');
 var pkg = require('../package.json');
 var options = require('./options.js');
 
@@ -118,7 +120,7 @@ var Generator = yeoman.generators.Base.extend({
           type: 'input',
           name: 'name',
           message: 'Project Name',
-          default: this.settings.name || this._.titleize(this.appname)
+          default: this.settings.name || _s.titleize(this.appname)
         });
       }
 
@@ -208,7 +210,7 @@ var Generator = yeoman.generators.Base.extend({
       }.bind(this));
 
       // Extra config
-      this.cfg.slugName = this._.slugify(this.cfg.name);
+      this.cfg.slugName = _s.slugify(this.cfg.name);
       this.cfg.testing = this.cfg.mocha || this.cfg.jasmine;
       this.cfg.cssSourceMap = (this.cfg.css && this.cfg.autoprefixer) ||
                               this.cfg.sass || this.cfg.libsass ||
@@ -255,13 +257,13 @@ var Generator = yeoman.generators.Base.extend({
     },
 
     app: function () {
-      this.mkdir('app');
-      this.mkdir('app/img');
+      mkdirp.sync('app');
+      mkdirp.sync('app/img');
     },
 
     options: function () {
       var pkgTemplate = this.read('_package.json');
-      var pkg = JSON.parse(this._.template(pkgTemplate, this));
+      var pkg = JSON.parse(_.template(pkgTemplate)(this));
       var pkgString;
       var devDependencies = {};
 
@@ -332,10 +334,12 @@ var Generator = yeoman.generators.Base.extend({
       });
     }
 
-    this.installDependencies({
-      skipInstall: this.skipInstall,
-      skipMessage: this.skipInstallMessage
-    });
+    if (!this.skipInstall) {
+      this.installDependencies({
+        skipMessage: this.skipInstallMessage
+      });
+    }
+
   }
 
 });
