@@ -10,6 +10,9 @@
 
 ### Supported Languages
 * Markdown
+* **Markup for template**
+  * HTML
+  * Jade
 * **Stylesheet**
   * CSS
   * Sass (Ruby)
@@ -94,7 +97,6 @@ $ yo markup-markdown
 
 ## ToDo
 
-* Remove Jade feature.
 * Remove SSI feature.
 
 ## License
