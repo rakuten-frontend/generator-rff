@@ -98,7 +98,7 @@ $ yo markup-markdown
 * Remove SSI feature.
 
 ## License
-Copyright (c) 2014-2015 ogaoga.org. Licensed under the [MIT License](LICENSE).
+Copyright (c) 2015 ogaoga.org. Licensed under the [MIT License](LICENSE).
 
 [npm-image]: https://img.shields.io/npm/v/generator-markup-markdown.svg?style=flat
 [npm-url]: https://www.npmjs.com/package/generator-markup-markdown
