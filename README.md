@@ -102,7 +102,7 @@ Copyright (c) 2015 ogaoga.org. Licensed under the [MIT License](LICENSE).
 
 [npm-image]: https://img.shields.io/npm/v/generator-markup-markdown.svg?style=flat
 [npm-url]: https://www.npmjs.com/package/generator-markup-markdown
-[travis-image]: https://img.shields.io/travis/rakuten-frontend/generator-markup-markdown/master.svg?style=flat
-[travis-url]: https://travis-ci.org/rakuten-frontend/generator-markup-markdown
-[deps-image]: http://img.shields.io/david/rakuten-frontend/generator-markup-markdown.svg?style=flat
-[deps-url]: https://david-dm.org/rakuten-frontend/generator-markup-markdown
+[travis-image]: https://img.shields.io/travis/ogaoga/generator-markup-markdown/master.svg?style=flat
+[travis-url]: https://travis-ci.org/ogaoga/generator-markup-markdown
+[deps-image]: http://img.shields.io/david/ogaoga/generator-markup-markdown.svg?style=flat
+[deps-url]: https://david-dm.org/ogaoga/generator-markup-markdown
