@@ -3,7 +3,7 @@
 var options = [
   {
     name: 'markup',
-    message: 'Markup Language',
+    message: 'Markup Language for template',
     type: 'list',
     choices: [
       {
