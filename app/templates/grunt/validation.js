@@ -19,7 +19,8 @@ module.exports = {
 
   app: {
     src: [
-      '<%%= path.html %>/**/*.html'
+      '<%%= path.html %>/**/*.html'<% if (cfg.ssi) { %>,
+      '!<%%= path.includes %>/**/*.html'<% } %>
     ]
   }
 

@@ -3,7 +3,7 @@
 var options = [
   {
     name: 'markup',
-    message: 'Markup Language for template',
+    message: 'Markup Language',
     type: 'list',
     choices: [
       {
@@ -165,6 +165,20 @@ var options = [
       var duplicateTest = answer && answer.indexOf('mocha') !== -1 && answer.indexOf('jasmine') !== -1;
       return duplicateTest ? 'You can choose only one of Macha or Jasmine.' : true;
     }
+  },
+  {
+    name: 'server',
+    message: 'Preview Server Add-ons',
+    type: 'checkbox',
+    choices: [
+      {
+        name: 'SSI Support',
+        value: 'ssi',
+        templates: ['grunt/ssi.js'],
+        directories: ['app/inc'],
+        packages: {'grunt-ssi': '^0.2.1'}
+      }
+    ]
   },
   {
     name: 'libraries',

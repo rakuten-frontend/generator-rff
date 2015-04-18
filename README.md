@@ -1,16 +1,18 @@
-# generator-markup-markdown
+# generator-rff
 
-> Yeoman generator for Markdown documentation and marking-up template.
+> Fully customizable Yeoman generator for scaffolding a front-end web app.
 
 [![NPM Version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]
 [![Dependency Status][deps-image]][deps-url]
 
+## Demo
+[![Demo](docs/images/video.png)](http://youtu.be/jGzqR6-jAYE)
+
 ## Features
 
 ### Supported Languages
-* Markdown
-* **Markup for template**
+* **Markup**
   * HTML
   * Jade
 * **Stylesheet**
@@ -38,6 +40,7 @@
   * Jasmine
 * **Preview Server**
   * BrowserSync (Built-in)
+  * SSI Support
 * **Support Libraries**
   * Modernizr
 * **Optimization**
@@ -58,10 +61,10 @@ Make sure you have [Node.js](http://nodejs.org/) and [yo](https://github.com/yeo
 $ npm install -g yo
 ```
 
-To install generator-markup-markdown, run:
+To install generator-rff, run:
 
 ```shell
-$ npm install -g generator-markup-markdown
+$ npm install -g generator-rff
 ```
 
 Make a new directory, and cd into it:
@@ -73,7 +76,7 @@ $ mkdir my-new-project && cd $_
 Finally, initiate the generator:
 
 ```shell
-$ yo markup-markdown
+$ yo rff
 ```
 
 ## Generator Options
@@ -95,16 +98,18 @@ $ yo markup-markdown
 * [Grunt](http://gruntjs.com/) : The JavaScript task runner
 * [Bower](http://bower.io/) : Package manager for the web
 
-## ToDo
-
-* Remove SSI feature.
+## Contributing
+Now we are considering our contribution policy in the future development.
+We will decide the policy in the near future.  
+After that, we will accept your contribution including issue reports.
+Thank you.
 
 ## License
-Copyright (c) 2015 ogaoga.org. Licensed under the [MIT License](LICENSE).
+Copyright (c) 2014-2015 Rakuten, Inc. Licensed under the [MIT License](LICENSE).
 
-[npm-image]: https://img.shields.io/npm/v/generator-markup-markdown.svg?style=flat
-[npm-url]: https://www.npmjs.com/package/generator-markup-markdown
-[travis-image]: https://img.shields.io/travis/ogaoga/generator-markup-markdown/master.svg?style=flat
-[travis-url]: https://travis-ci.org/ogaoga/generator-markup-markdown
-[deps-image]: http://img.shields.io/david/ogaoga/generator-markup-markdown.svg?style=flat
-[deps-url]: https://david-dm.org/ogaoga/generator-markup-markdown
+[npm-image]: https://img.shields.io/npm/v/generator-rff.svg?style=flat
+[npm-url]: https://www.npmjs.com/package/generator-rff
+[travis-image]: https://img.shields.io/travis/rakuten-frontend/generator-rff/master.svg?style=flat
+[travis-url]: https://travis-ci.org/rakuten-frontend/generator-rff
+[deps-image]: http://img.shields.io/david/rakuten-frontend/generator-rff.svg?style=flat
+[deps-url]: https://david-dm.org/rakuten-frontend/generator-rff

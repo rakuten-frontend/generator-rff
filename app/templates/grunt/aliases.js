@@ -20,8 +20,7 @@ module.exports = {
     'less'<% } %><% if (cfg.stylus) { %>,
     'stylus'<% } %><% if (cfg.coffee) { %>,
     'newer:coffee'<% } %><% if (cfg.autoprefixer) { %>,
-    'autoprefixer'<% } %>,
-    'markdown'
+    'autoprefixer'<% } %>
   ],
 
   // Start localhost server
@@ -33,7 +32,8 @@ module.exports = {
     }
     else {
       grunt.task.run([
-        'compile',
+        'compile'<% if (cfg.ssi) { %>,
+        'ssi'<% } %>,
         'browserSync:app',
         'watch'
       ]);
@@ -81,12 +81,6 @@ module.exports = {
       'htmlmin'<% } %>
     ]);
   },
-
-  // Generate PDF file from markdown
-  pdf: [
-    'compile',
-    'markdownpdf'
-  ],
 
   // Default `grunt` alias
   default: [

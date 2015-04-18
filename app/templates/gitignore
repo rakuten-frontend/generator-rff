@@ -23,4 +23,3 @@ validation-report.json<% } %><% if (cfg.ftp) { %>
 # Excluding files from project
 .tmp/
 dist/
-pdf/
