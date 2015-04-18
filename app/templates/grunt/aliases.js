@@ -20,7 +20,8 @@ module.exports = {
     'less'<% } %><% if (cfg.stylus) { %>,
     'stylus'<% } %><% if (cfg.coffee) { %>,
     'newer:coffee'<% } %><% if (cfg.autoprefixer) { %>,
-    'autoprefixer'<% } %>
+    'autoprefixer'<% } %>,
+    'markdown'
   ],
 
   // Start localhost server
@@ -80,6 +81,12 @@ module.exports = {
       'htmlmin'<% } %>
     ]);
   },
+
+  // Generate PDF file from markdown
+  pdf: [
+    'compile',
+    'markdownpdf'
+  ],
 
   // Default `grunt` alias
   default: [
