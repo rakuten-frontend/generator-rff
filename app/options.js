@@ -167,20 +167,6 @@ var options = [
     }
   },
   {
-    name: 'server',
-    message: 'Preview Server Add-ons',
-    type: 'checkbox',
-    choices: [
-      {
-        name: 'SSI Support',
-        value: 'ssi',
-        templates: ['grunt/ssi.js'],
-        directories: ['app/inc'],
-        packages: {'grunt-ssi': '^0.2.1'}
-      }
-    ]
-  },
-  {
     name: 'libraries',
     message: 'Libraries',
     type: 'checkbox',

@@ -32,8 +32,7 @@ module.exports = {
     }
     else {
       grunt.task.run([
-        'compile'<% if (cfg.ssi) { %>,
-        'ssi'<% } %>,
+        'compile',
         'browserSync:app',
         'watch'
       ]);

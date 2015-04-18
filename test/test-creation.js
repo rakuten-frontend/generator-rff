@@ -55,7 +55,6 @@ describe('Generator', function () {
     'grunt/modernizr.js',
     'grunt/sass.js',
     'grunt/sprite.js',
-    'grunt/ssi.js',
     'grunt/stylus.js',
     'grunt/validation.js',
     'grunt/webfont.js',
@@ -95,7 +94,6 @@ describe('Generator', function () {
     ['package.json', /"grunt-modernizr"/],
     ['package.json', /"grunt-sass"/],
     ['package.json', /"grunt-spritesmith"/],
-    ['package.json', /"grunt-ssi"/],
     ['package.json', /"grunt-webfont"/],
     ['bower.json', /"modernizr"/],
     ['.gitignore', /\.sass-cache/],
@@ -116,7 +114,6 @@ describe('Generator', function () {
     ['grunt/aliases.js', /'(.*:)?modernizr(:.*)?'/],
     ['grunt/aliases.js', /'(.*:)?sass(:.*)?'/],
     ['grunt/aliases.js', /'(.*:)?sprite(:.*)?'/],
-    ['grunt/aliases.js', /'(.*:)?ssi(:.*)?'/],
     ['grunt/aliases.js', /'(.*:)?stylus(:.*)?'/],
     ['grunt/aliases.js', /'(.*:)?validation(:.*)?'/],
     ['grunt/aliases.js', /'(.*:)?webfont(:.*)?'/],
@@ -130,7 +127,6 @@ describe('Generator', function () {
     ['grunt/watch.js', /'(.*:)?less(:.*)?'/],
     ['grunt/watch.js', /'(.*:)?sass(:.*)?'/],
     ['grunt/watch.js', /'(.*:)?sprites(:.*)?'/],
-    ['grunt/watch.js', /'(.*:)?ssi(:.*)?'/],
     ['grunt/watch.js', /'(.*:)?stylus(:.*)?'/],
     ['grunt/watch.js', /'(.*:)?test(:.*)?'/],
     ['grunt/watch.js', /'(.*:)?validation(:.*)?'/],
@@ -568,26 +564,6 @@ describe('Generator', function () {
           ['package.json', /"grunt-contrib-jasmine"/],
           ['grunt/aliases.js', /'(.*:)?jasmine(:.*)?'/],
           ['grunt/watch.js', /'(.*:)?test(:.*)?'/]
-        ]);
-        done();
-      });
-  });
-
-  it('creates expected files with "ssi" option', function (done) {
-    generator
-      .withPrompts({
-        configType: 'custom',
-        server: ['ssi']
-      })
-      .on('end', function () {
-        assert.file([
-          'grunt/ssi.js',
-          'app/inc/'
-        ]);
-        assert.fileContent([
-          ['package.json', /"grunt-ssi"/],
-          ['grunt/aliases.js', /'(.*:)?ssi(:.*)?'/],
-          ['grunt/watch.js', /'(.*:)?ssi(:.*)?'/]
         ]);
         done();
       });
