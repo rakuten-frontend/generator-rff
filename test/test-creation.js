@@ -119,8 +119,6 @@ describe('Generator', function () {
     ['grunt/aliases.js', /'(.*:)?stylus(:.*)?'/],
     ['grunt/aliases.js', /'(.*:)?validation(:.*)?'/],
     ['grunt/aliases.js', /'(.*:)?webfont(:.*)?'/],
-    ['grunt/aliases.js', /'(.*:)?markdown(:.*)?'/],
-    ['grunt/aliases.js', /'(.*:)?markdownpdf(:.*)?'/],
     ['grunt/imagemin.js', /svg/],
     ['grunt/watch.js', /'(.*:)?autoprefixer(:.*)?'/],
     ['grunt/watch.js', /'(.*:)?csslint(:.*)?'/],
@@ -135,7 +133,6 @@ describe('Generator', function () {
     ['grunt/watch.js', /'(.*:)?test(:.*)?'/],
     ['grunt/watch.js', /'(.*:)?validation(:.*)?'/],
     ['grunt/watch.js', /'(.*:)?webfont(:.*)?'/],
-    ['grunt/watch.js', /'(.*:)?markdown(:.*)?'/],
     ['app/index.html', /sprites\.css/],
     ['app/index.html', /glyphs\.css/],
     ['app/index.html', /modernizr\.js/]
