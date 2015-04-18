@@ -22,9 +22,7 @@ module.exports = function (grunt) {
         distIgnore: '**/_*/**',     // Excluded directories or files of distribution, e.g. Sass directory.
         tmp:        '.tmp/dist'<% if (cfg.testing) { %>,
         test:       'test'<% } %>,
-        markups:    'app'<% if (cfg.ssi) { %><% if (cfg.html) { %>,
-        includes:   'app/inc'<% } else { %>,
-        includes:   '.tmp/dist/inc'<% } %><% } %><% if (cfg.css) { %>,
+        markups:    'app'<% if (cfg.css) { %>,
         styles:     'app/css'<% } %><% if (cfg.sass || cfg.libsass) { %>,
         styles:     'app/_sass'<% } %><% if (cfg.less) { %>,
         styles:     'app/_less'<% } %><% if (cfg.stylus) { %>,
@@ -39,7 +37,9 @@ module.exports = function (grunt) {
         css:        'app/css'<% } else { %>,
         css:        '.tmp/dist/css'<% } %><% if (cfg.js) { %>,
         js:         'app/js'<% } else { %>,
-        js:         '.tmp/dist/js'<% } %>
+        js:         '.tmp/dist/js'<% } %>,
+        template:   'app/_template/template.html',
+        pdf:        'pdf'
       }
     }
 

@@ -20,6 +20,8 @@
     "grunt-newer": "^1.1.0",
     "grunt-usemin": "^3.0.0",
     "grunt-wiredep": "^2.0.0",
+    "grunt-markdown": "^0.7.0",
+    "grunt-markdown-pdf": "^2.1.1",
     "load-grunt-config": "^0.16.0",
     "main-bower-files": "^2.6.2",
     "time-grunt": "^1.0.0"

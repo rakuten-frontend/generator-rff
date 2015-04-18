@@ -1,5 +1,5 @@
 Description:
-  Scaffold a new front-end web app.
+  Scaffold a markdown template.
 
 Generator Options:
   -s, --skip-install
@@ -17,7 +17,7 @@ Generator Options:
     Skips app installation message.
 
 Example:
-  yo rff
+  yo markup-markdown
 
   This will create:
     package.json    # Development packages installed by npm.

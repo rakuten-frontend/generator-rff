@@ -67,7 +67,7 @@ module.exports = {
   // Compile Jade
   jade: {
     files: ['<%%= path.markups %>/**/*.jade'],
-    tasks: ['jade'<% if (cfg.ssi) { %>, 'ssi'<% } %>]
+    tasks: ['jade']
   }<% } %><% if (cfg.sass || cfg.libsass) { %>,
 
   // Compile Sass
@@ -92,12 +92,6 @@ module.exports = {
   coffee: {
     files: ['<%%= path.scripts %>/**'],
     tasks: ['newer:coffee']
-  }<% } %><% if (cfg.ssi && cfg.html) { %>,
-
-  // Compile HTML with SSI
-  ssi: {
-    files: ['<%%= path.markups %>/**/*.html'],
-    tasks: ['ssi']
   }<% } %>
 
 };

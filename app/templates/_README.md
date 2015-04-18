@@ -3,8 +3,7 @@
 ## Structure
 ```
 <%= cfg.slugName %>/
-├── app/                   : Application files<% if (cfg.ssi) { %>
-│   ├── inc/               : SSI partials<% } %><% if (cfg.css) { %>
+├── app/                   : Application files<% if (cfg.css) { %>
 │   ├── css/               : Stylesheets<% } %><% if (cfg.sass || cfg.libsass) { %>
 │   ├── _sass/             : Stylesheets<% } %><% if (cfg.less) { %>
 │   ├── _less/             : Stylesheets<% } %><% if (cfg.stylus) { %>
