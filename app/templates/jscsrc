@@ -10,6 +10,5 @@
   },
   "disallowSpacesInAnonymousFunctionExpression": null,
   "disallowKeywordsOnNewLine": [],
-  "maximumLineLength": null,<% } %>
-  "validateLineBreaks": "LF"
+  "maximumLineLength": null<% } %>
 }

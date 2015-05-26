@@ -13,6 +13,5 @@
   "disallowKeywordsOnNewLine": [],
   "maximumLineLength": null,
   "requireCapitalizedConstructors": true,
-  "requireDotNotation": true,
-  "validateLineBreaks": "LF"
+  "requireDotNotation": true
 }
