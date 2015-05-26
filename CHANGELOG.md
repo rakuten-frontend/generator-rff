@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.7.1 (2015-05-26)
+- Disable JSCS line break validation to prevent error on Windows.
+- Bump yeoman-generator to v0.20.1.
+
 ## 0.7.0 (2015-04-02)
 - Automate copy task for bower package assets using [main-bower-files](https://github.com/ck86/main-bower-files).
 - Update [BrowserSync](http://www.browsersync.io/) to v2.1.1.
