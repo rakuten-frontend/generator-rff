@@ -46,7 +46,7 @@ var options = [
         value: 'libsass',
         templates: [['grunt/libsass.js', 'grunt/sass.js']],
         directories: ['app/_sass'],
-        packages: {'grunt-sass': '^0.18.1'}
+        packages: {'grunt-sass': '^1.0.0'}
       },
       {
         name: 'Less',
