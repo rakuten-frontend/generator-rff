@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.7.2 (2015-05-27)
+- Bump grunt-sass to fix sourcemap issue of Libsass.
+
 ## 0.7.1 (2015-05-26)
 - Disable JSCS line break validation to prevent error on Windows.
 - Bump yeoman-generator to v0.20.1.
