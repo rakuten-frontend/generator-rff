@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.7.4 (2015-12-18)
+- Fix npm-install error when mocha/jasmine option passed.
+
 ## 0.7.3 (2015-12-18)
 - Prevent npm warning about peer dependencies.
 - Test on Node.js 4.2 LTS and the latest stable version.
