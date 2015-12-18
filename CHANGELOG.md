@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.7.3 (2015-12-18)
+- Prevent npm warning about peer dependencies.
+- Test on Node.js 4.2 LTS and the latest stable version.
+
 ## 0.7.2 (2015-05-27)
 - Bump grunt-sass to fix sourcemap issue of Libsass.
 
