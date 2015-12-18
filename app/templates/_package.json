@@ -4,8 +4,7 @@
   "engines": {
     "node": ">=0.10.0"
   },
-  "scripts": {<% if (cfg.testing) { %>
-    "postinstall": "cd test && bower install",<% } %>
+  "scripts": {
     "test": "grunt test",
     "build": "grunt"
   },
