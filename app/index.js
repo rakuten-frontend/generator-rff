@@ -331,6 +331,8 @@ var Generator = yeoman.generators.Base.extend({
           'force': this.force,
           'skip-install': this.skipInstall
         }
+      }, {
+        local: require.resolve('generator-' + generator + '/generators/app')
       });
     }
 

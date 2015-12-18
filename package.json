@@ -33,16 +33,13 @@
     "app"
   ],
   "dependencies": {
+    "generator-jasmine": "^0.2.2",
+    "generator-mocha": "^0.2.0",
     "lodash": "^3.5.0",
     "mkdirp": "^0.5.0",
     "underscore.string": "^3.0.3",
     "yeoman-generator": "^0.20.1",
     "yosay": "^1.0.0"
-  },
-  "peerDependencies": {
-    "yo": ">=1.0.0",
-    "generator-mocha": ">=0.1.0",
-    "generator-jasmine": ">=0.1.0"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
@@ -50,6 +47,7 @@
     "grunt-jscs": "^1.0.0",
     "grunt-mocha-test": "^0.12.1",
     "jshint-stylish": "^1.0.0",
-    "load-grunt-tasks": "^3.1.0"
+    "load-grunt-tasks": "^3.1.0",
+    "mocha": "^2.3.4"
   }
 }
