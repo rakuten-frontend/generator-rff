@@ -42,11 +42,11 @@
     "yosay": "^1.0.0"
   },
   "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-contrib-jshint": "^0.11.0",
-    "grunt-jscs": "^1.0.0",
+    "grunt": "^1.0.1",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-jscs": "^2.8.0",
     "grunt-mocha-test": "^0.12.1",
-    "jshint-stylish": "^1.0.0",
+    "jshint-stylish": "^2.1.0",
     "load-grunt-tasks": "^3.1.0",
     "mocha": "^2.3.4"
   }

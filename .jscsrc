@@ -9,6 +9,7 @@
     "beforeOpeningRoundBrace": true,
     "beforeOpeningCurlyBrace": true
   },
+  "disallowSpacesInFunctionExpression": null,
   "disallowSpacesInAnonymousFunctionExpression": null,
   "disallowKeywordsOnNewLine": [],
   "maximumLineLength": null,
