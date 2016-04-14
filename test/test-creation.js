@@ -2,8 +2,8 @@
 'use strict';
 
 var path = require('path');
-var helpers = require('yeoman-generator').test;
-var assert = require('yeoman-generator').assert;
+var helpers = require('yeoman-test');
+var assert = require('yeoman-assert');
 
 describe('Generator', function () {
 
@@ -142,7 +142,7 @@ describe('Generator', function () {
 
   beforeEach(function () {
     generator = helpers
-      .run(path.join(__dirname, '../app'))
+      .run(path.join(__dirname, '../generators/app'))
       .inDir(path.join(__dirname, 'temp'))
       .withGenerators([
         [helpers.createDummyGenerator(), 'mocha:app'],

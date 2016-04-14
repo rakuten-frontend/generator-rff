@@ -28,9 +28,9 @@
   "scripts": {
     "test": "grunt test --verbose"
   },
-  "main": "app/index.js",
+  "main": "generators/app",
   "files": [
-    "app"
+    "generators"
   ],
   "dependencies": {
     "generator-jasmine": "^0.2.2",
@@ -38,7 +38,7 @@
     "lodash": "^3.5.0",
     "mkdirp": "^0.5.0",
     "underscore.string": "^3.0.3",
-    "yeoman-generator": "^0.20.1",
+    "yeoman-generator": "^0.22.5",
     "yosay": "^1.0.0"
   },
   "devDependencies": {
@@ -48,6 +48,8 @@
     "grunt-mocha-test": "^0.12.1",
     "jshint-stylish": "^2.1.0",
     "load-grunt-tasks": "^3.1.0",
-    "mocha": "^2.3.4"
+    "mocha": "^2.3.4",
+    "yeoman-assert": "^2.1.2",
+    "yeoman-test": "^1.1.0"
   }
 }

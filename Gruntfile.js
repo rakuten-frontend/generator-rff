@@ -11,9 +11,9 @@ module.exports = function (grunt) {
         jshintrc: '.jshintrc',
         reporter: require('jshint-stylish')
       },
-      app: {
+      generators: {
         files: [{
-          src: ['app/*.js']
+          src: ['generators/app/*.js']
         }]
       },
       test: {
@@ -32,9 +32,9 @@ module.exports = function (grunt) {
       options: {
         config: '.jscsrc'
       },
-      app: {
+      generators: {
         files: [{
-          src: ['app/*.js']
+          src: ['generators/app/*.js']
         }]
       },
       test: {

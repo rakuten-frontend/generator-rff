@@ -1,11 +1,11 @@
 'use strict';
 
-var yeoman = require('yeoman-generator');
+var generators = require('yeoman-generator');
 var yosay = require('yosay');
 var _ = require('lodash');
 var _s = require('underscore.string');
 var mkdirp = require('mkdirp');
-var pkg = require('../package.json');
+var pkg = require('../../package.json');
 var options = require('./options.js');
 
 // Default config and presets
@@ -13,7 +13,7 @@ var defaultConfig = require('./config/default.json')[pkg.name];
 var standardPreset = require('./config/standard.json')[pkg.name];
 var minimumPreset = require('./config/minimum.json')[pkg.name];
 
-var Generator = yeoman.generators.Base.extend({
+module.exports = generators.Base.extend({
 
   initializing: function () {
     var configType;
@@ -345,5 +345,3 @@ var Generator = yeoman.generators.Base.extend({
   }
 
 });
-
-module.exports = Generator;
