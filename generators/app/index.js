@@ -143,7 +143,7 @@ module.exports = generators.Base.extend({
               question = _.pick(option, 'name', 'message', 'type', 'validate');
               question.choices = _.map(option.choices, function (choice) {
                 var data = _.pick(choice, 'name', 'value', 'disabled');
-                data.checked = _.contains(this.settings[name], data.value);
+                data.checked = _.includes(this.settings[name], data.value);
                 return data;
               }.bind(this));
               break;
@@ -203,7 +203,7 @@ module.exports = generators.Base.extend({
               this.cfg[value] = value === this.cfg[name];
               break;
             case 'checkbox':
-              this.cfg[value] = _.contains(this.cfg[name], value);
+              this.cfg[value] = _.includes(this.cfg[name], value);
               break;
           }
         }.bind(this));
