@@ -60,7 +60,7 @@ var options = [
         value: 'stylus',
         templates: ['grunt/stylus.js'],
         directories: ['app/_stylus'],
-        packages: {'grunt-contrib-stylus': '^0.21.0'}
+        packages: {'grunt-contrib-stylus': '^1.2.0'}
       }
     ]
   },
@@ -81,7 +81,7 @@ var options = [
         value: 'coffee',
         templates: ['grunt/coffee.js'],
         directories: ['app/_coffee'],
-        packages: {'grunt-contrib-coffee': '^0.13.0'}
+        packages: {'grunt-contrib-coffee': '^1.0.0'}
       }
     ]
   },
@@ -102,14 +102,14 @@ var options = [
         value: 'sprite',
         templates: ['grunt/sprite.js'],
         directories: ['app/img/_sprites'],
-        packages: {'grunt-spritesmith': '^4.5.1'}
+        packages: {'grunt-spritesmith': '^6.3.1'}
       },
       {
         name: 'Icon Fonts Generator',
         value: 'webfont',
         templates: ['grunt/webfont.js'],
         directories: ['app/img/_glyphs'],
-        packages: {'grunt-webfont': '^0.5.1'}
+        packages: {'grunt-webfont': '^1.3.0'}
       }
     ]
   },
@@ -130,35 +130,35 @@ var options = [
         value: 'csslint',
         templates: ['grunt/csslint.js', ['csslintrc', '.csslintrc']],
         directories: [],
-        packages: {'grunt-contrib-csslint': '^0.4.0'}
+        packages: {'grunt-contrib-csslint': '^1.0.0'}
       },
       {
         name: 'JSHint',
         value: 'jshint',
         templates: ['grunt/jshint.js', ['jshintrc', '.jshintrc']],
         directories: [],
-        packages: {'grunt-contrib-jshint': '^0.11.1'}
+        packages: {'grunt-contrib-jshint': '^1.0.0'}
       },
       {
         name: 'JSCS',
         value: 'jscs',
         templates: ['grunt/jscs.js', ['jscsrc', '.jscsrc']],
         directories: [],
-        packages: {'grunt-jscs': '^1.0.0'}
+        packages: {'grunt-jscs': '^2.8.0'}
       },
       {
         name: 'Mocha',
         value: 'mocha',
         templates: ['grunt/mocha.js'],
         directories: [],
-        packages: {'grunt-mocha': '^0.4.10'}
+        packages: {'grunt-mocha': '^1.0.1'}
       },
       {
         name: 'Jasmine',
         value: 'jasmine',
         templates: ['grunt/jasmine.js'],
         directories: [],
-        packages: {'grunt-contrib-jasmine': '^0.8.1'}
+        packages: {'grunt-contrib-jasmine': '^1.0.3'}
       }
     ],
     validate: function (answer) {
@@ -176,7 +176,7 @@ var options = [
         value: 'ssi',
         templates: ['grunt/ssi.js'],
         directories: ['app/inc'],
-        packages: {'grunt-ssi': '^0.2.1'}
+        packages: {'grunt-ssi': 'github:kidwm/grunt-ssi#60a6e49'}
       }
     ]
   },
@@ -190,7 +190,7 @@ var options = [
         value: 'modernizr',
         templates: ['grunt/modernizr.js'],
         directories: [],
-        packages: {'grunt-modernizr': '^0.6.0'}
+        packages: {'grunt-modernizr': '^1.0.2'}
       }
     ]
   },
@@ -204,21 +204,21 @@ var options = [
         value: 'htmlmin',
         templates: ['grunt/htmlmin.js'],
         directories: [],
-        packages: {'grunt-contrib-htmlmin': '^0.4.0'}
+        packages: {'grunt-contrib-htmlmin': '^1.3.0'}
       },
       {
         name: 'CSS Minification',
         value: 'cssmin',
         templates: [],
         directories: [],
-        packages: {'grunt-contrib-cssmin': '^0.12.2'}
+        packages: {'grunt-contrib-cssmin': '^1.0.1'}
       },
       {
         name: 'JavaScript Minification',
         value: 'uglify',
         templates: [],
         directories: [],
-        packages: {'grunt-contrib-uglify': '^0.8.1'}
+        packages: {'grunt-contrib-uglify': '^1.0.1'}
       },
       {
         name: 'SVG Optimization',
@@ -246,7 +246,7 @@ var options = [
         value: 'buildcontrol',
         templates: ['grunt/buildcontrol.js'],
         directories: [],
-        packages: {'grunt-build-control': '^0.3.0'}
+        packages: {'grunt-build-control': '^0.7.0'}
       },
       {
         name: 'Deployment over FTP',
