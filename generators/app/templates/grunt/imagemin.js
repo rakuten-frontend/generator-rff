@@ -4,8 +4,6 @@
 
 'use strict';
 
-var fs = require('fs');
-
 module.exports = {
 
   dist: {
@@ -15,10 +13,7 @@ module.exports = {
       dest: '<%%= path.dist %>',
       src: [
         '**/*.{png,jpg,gif,svg}'
-      ],
-      filter: function (filepath) {
-        return fs.readFileSync(filepath).length > 0;
-      }
+      ]
     }]
   }
 
