@@ -17,8 +17,7 @@
   * Jade
 * **Stylesheet**
   * CSS
-  * Sass (Ruby)
-  * Sass (Libsass)
+  * Sass
   * Less
   * Stylus
 * **Script**

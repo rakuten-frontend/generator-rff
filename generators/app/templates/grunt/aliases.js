@@ -15,7 +15,7 @@ module.exports = {
     'wiredep'<% if (cfg.sprite) { %>,
     'sprite'<% } %><% if (cfg.webfont) { %>,
     'webfont'<% } %><% if (cfg.jade) { %>,
-    'jade'<% } %><% if (cfg.sass || cfg.libsass) { %>,
+    'jade'<% } %><% if (cfg.sass) { %>,
     'sass'<% } %><% if (cfg.less) { %>,
     'less'<% } %><% if (cfg.stylus) { %>,
     'stylus'<% } %><% if (cfg.coffee) { %>,

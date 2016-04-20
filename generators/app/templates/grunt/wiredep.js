@@ -14,8 +14,8 @@ module.exports = {
     // Force absolute URL
     // "../bower_components/xxxx" -> "/bower_components/xxxx"
     ignorePath: /(\.\.\/)*\.\.(?=\/)/
-  }<% if (cfg.sass || cfg.libsass || cfg.less || cfg.stylus) { %>,
-  styles: {<% if (cfg.sass || cfg.libsass) { %>
+  }<% if (cfg.sass || cfg.less || cfg.stylus) { %>,
+  styles: {<% if (cfg.sass) { %>
     src: ['<%%= path.styles %>/**/*.{scss,sass}']<% } %><% if (cfg.less) { %>
     src: ['<%%= path.styles %>/**/*.less']<% } %><% if (cfg.stylus) { %>
     src: ['<%%= path.styles %>/**/*.styl']<% } %>,

@@ -68,7 +68,7 @@ module.exports = {
   jade: {
     files: ['<%%= path.markups %>/**/*.jade'],
     tasks: ['jade'<% if (cfg.ssi) { %>, 'ssi'<% } %>]
-  }<% } %><% if (cfg.sass || cfg.libsass) { %>,
+  }<% } %><% if (cfg.sass) { %>,
 
   // Compile Sass
   sass: {

@@ -8,10 +8,7 @@ Thumbs.db
 
 # Dependency directories
 node_modules/
-bower_components/<% if (cfg.sass) { %>
-
-# Sass
-.sass-cache/<% } %><% if (cfg.validation) { %>
+bower_components/<% if (cfg.validation) { %>
 
 # grunt-html-validation
 validation-status.json

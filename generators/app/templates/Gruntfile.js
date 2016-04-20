@@ -25,7 +25,7 @@ module.exports = function (grunt) {
         markups:    'app'<% if (cfg.ssi) { %><% if (cfg.html) { %>,
         includes:   'app/inc'<% } else { %>,
         includes:   '.tmp/dist/inc'<% } %><% } %><% if (cfg.css) { %>,
-        styles:     'app/css'<% } %><% if (cfg.sass || cfg.libsass) { %>,
+        styles:     'app/css'<% } %><% if (cfg.sass) { %>,
         styles:     'app/_sass'<% } %><% if (cfg.less) { %>,
         styles:     'app/_less'<% } %><% if (cfg.stylus) { %>,
         styles:     'app/_stylus'<% } %><% if (cfg.js) { %>,

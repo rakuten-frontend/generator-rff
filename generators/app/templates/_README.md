@@ -5,7 +5,7 @@
 <%= cfg.slugName %>/
 ├── app/                   : Application files<% if (cfg.ssi) { %>
 │   ├── inc/               : SSI partials<% } %><% if (cfg.css) { %>
-│   ├── css/               : Stylesheets<% } %><% if (cfg.sass || cfg.libsass) { %>
+│   ├── css/               : Stylesheets<% } %><% if (cfg.sass) { %>
 │   ├── _sass/             : Stylesheets<% } %><% if (cfg.less) { %>
 │   ├── _less/             : Stylesheets<% } %><% if (cfg.stylus) { %>
 │   ├── _stylus/           : Stylesheets<% } %><% if (cfg.js) { %>

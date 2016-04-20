@@ -81,7 +81,6 @@ var optionFileContents = [
   ['package.json', /"grunt-contrib-jasmine"/],
   ['package.json', /"grunt-contrib-jshint"/],
   ['package.json', /"grunt-contrib-less"/],
-  ['package.json', /"grunt-contrib-sass"/],
   ['package.json', /"grunt-contrib-stylus"/],
   ['package.json', /"grunt-contrib-uglify"/],
   ['package.json', /"grunt-filerev"/],
@@ -95,7 +94,6 @@ var optionFileContents = [
   ['package.json', /"grunt-ssi"/],
   ['package.json', /"grunt-webfont"/],
   ['bower.json', /"modernizr"/],
-  ['.gitignore', /\.sass-cache/],
   ['.gitignore', /validation-status\.json/],
   ['.gitignore', /validation-report\.json/],
   ['.gitignore', /\.ftppass/],
@@ -269,41 +267,9 @@ describe('Generator', function () {
         'app/css/'
       ]);
       assert.fileContent([
-        ['package.json', /"grunt-contrib-sass"/],
-        ['.gitignore', /\.sass-cache/],
-        ['grunt/aliases.js', /'(.*:)?sass(:.*)?'/],
-        ['grunt/watch.js', /'(.*:)?sass(:.*)?'/]
-      ]);
-      assert.noFileContent([
-        ['package.json', /"grunt-sass"/]
-      ]);
-    });
-  });
-
-  describe('with "libsass" option', function () {
-    before(function (done) {
-      runWithPrompts({
-        configType: 'custom',
-        style: 'libsass'
-      }, done);
-    });
-
-    it('creates expected files', function () {
-      assert.file([
-        'grunt/sass.js',
-        'app/_sass/'
-      ]);
-      assert.noFile([
-        'app/css/'
-      ]);
-      assert.fileContent([
         ['package.json', /"grunt-sass"/],
         ['grunt/aliases.js', /'(.*:)?sass(:.*)?'/],
         ['grunt/watch.js', /'(.*:)?sass(:.*)?'/]
-      ]);
-      assert.noFileContent([
-        ['package.json', /"grunt-contrib-sass"/],
-        ['.gitignore', /\.sass-cache/]
       ]);
     });
   });

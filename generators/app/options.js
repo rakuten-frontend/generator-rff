@@ -35,16 +35,9 @@ var options = [
         packages: {}
       },
       {
-        name: 'Sass (Ruby)',
+        name: 'Sass',
         value: 'sass',
         templates: ['grunt/sass.js'],
-        directories: ['app/_sass'],
-        packages: {'grunt-contrib-sass': '^0.9.2'}
-      },
-      {
-        name: 'Sass (Libsass)',
-        value: 'libsass',
-        templates: [['grunt/libsass.js', 'grunt/sass.js']],
         directories: ['app/_sass'],
         packages: {'grunt-sass': '^1.0.0'}
       },

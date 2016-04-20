@@ -213,7 +213,7 @@ module.exports = generators.Base.extend({
       this.cfg.slugName = _s.slugify(this.cfg.name);
       this.cfg.testing = this.cfg.mocha || this.cfg.jasmine;
       this.cfg.cssSourceMap = (this.cfg.css && this.cfg.autoprefixer) ||
-                              this.cfg.sass || this.cfg.libsass ||
+                              this.cfg.sass ||
                               (this.cfg.less && (this.cfg.autoprefixer || this.cfg.cssmin));
       this.cfg.jsSourceMap = this.cfg.coffee;
     }
