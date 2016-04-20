@@ -17,7 +17,6 @@
       "htmlmin",
       "cssmin",
       "uglify",
-      "svgo",
       "rev"
     ],
     "distribution": []

@@ -117,7 +117,6 @@ var optionFileContents = [
   ['grunt/aliases.js', /'(.*:)?stylus(:.*)?'/],
   ['grunt/aliases.js', /'(.*:)?validation(:.*)?'/],
   ['grunt/aliases.js', /'(.*:)?webfont(:.*)?'/],
-  ['grunt/imagemin.js', /svg/],
   ['grunt/watch.js', /'(.*:)?autoprefixer(:.*)?'/],
   ['grunt/watch.js', /'(.*:)?csslint(:.*)?'/],
   ['grunt/watch.js', /'(.*:)?coffee(:.*)?'/],
@@ -678,21 +677,6 @@ describe('Generator', function () {
       assert.fileContent([
         ['package.json', /"grunt-contrib-uglify"/],
         ['grunt/aliases.js', /'(.*:)?uglify(:.*)?'/]
-      ]);
-    });
-  });
-
-  describe('with "svgo" option', function () {
-    before(function (done) {
-      runWithPrompts({
-        configType: 'custom',
-        optimization: ['svgo']
-      }, done);
-    });
-
-    it('creates expected files', function () {
-      assert.fileContent([
-        ['grunt/imagemin.js', /svg/]
       ]);
     });
   });

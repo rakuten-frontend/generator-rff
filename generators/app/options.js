@@ -221,13 +221,6 @@ var options = [
         packages: {'grunt-contrib-uglify': '^1.0.1'}
       },
       {
-        name: 'SVG Optimization',
-        value: 'svgo',
-        templates: [],
-        directories: [],
-        packages: {}
-      },
-      {
         name: 'Static Assets Revisioning',
         value: 'rev',
         templates: ['grunt/filerev.js'],

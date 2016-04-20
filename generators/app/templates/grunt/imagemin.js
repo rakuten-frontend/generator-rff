@@ -14,7 +14,7 @@ module.exports = {
       cwd: '<%%= path.dist %>',
       dest: '<%%= path.dist %>',
       src: [
-        '**/*.{png,jpg,gif<% if (cfg.svgo) { %>,svg<% } %>}'
+        '**/*.{png,jpg,gif,svg}'
       ],
       filter: function (filepath) {
         return fs.readFileSync(filepath).length > 0;

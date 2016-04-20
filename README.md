@@ -48,7 +48,6 @@
   * HTML Minification
   * CSS Minification
   * JavaScript Minification
-  * SVG Optimization
   * Static Assets Revisioning
 * **Distribution**
   * Deployment to Git Repository
