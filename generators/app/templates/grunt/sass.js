@@ -8,6 +8,7 @@ module.exports = {
 
   options: {
     includePaths: ['bower_components'],
+    outputStyle: 'expanded',
     sourceMap: true
   },
 
