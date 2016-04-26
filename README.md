@@ -54,25 +54,25 @@
 ## Getting started
 Make sure you have [Node.js](https://nodejs.org/) and [yo](https://github.com/yeoman/yo) installed:
 
-```shell
+```sh
 $ npm install -g yo
 ```
 
 To install generator-rff, run:
 
-```shell
+```sh
 $ npm install -g generator-rff
 ```
 
 Make a new directory, and cd into it:
 
-```shell
+```sh
 $ mkdir my-new-project && cd $_
 ```
 
 Finally, initiate the generator:
 
-```shell
+```sh
 $ yo rff
 ```
 
