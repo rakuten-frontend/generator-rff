@@ -20,7 +20,7 @@ module.exports = {
           'last 2 versions',
           'Explorer >= 8',
           'Firefox ESR',
-          'Android >= 2.3',
+          'Android >= 4',
           'iOS >= 7'
         ]
       })
