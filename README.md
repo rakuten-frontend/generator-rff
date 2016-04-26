@@ -10,7 +10,7 @@
 
 ## Features
 
-### Supported Languages
+### Supported languages
 * **Markup**
   * HTML
   * Jade
@@ -23,7 +23,7 @@
   * JavaScript
   * CoffeeScript
 
-### Tasks and Functions
+### Tasks and functions
 * **Utilities**
   * Wiring up Bower Components (Built-in)
   * CSS Autoprefixer
