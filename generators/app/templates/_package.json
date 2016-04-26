@@ -5,8 +5,11 @@
     "node": ">=0.10.0"
   },
   "scripts": {
+    "start": "grunt serve",
     "test": "grunt test",
-    "build": "grunt"
+    "build": "grunt",
+    "serve:dist": "grunt serve:dist",
+    "grunt": "grunt"
   },
   "devDependencies": {
     "grunt": "^0.4.5",

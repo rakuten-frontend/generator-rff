@@ -34,44 +34,42 @@
 * Files begin with `_` aren't compiled by themselves. They work as partials for import. - e.g. `_scaffolding.scss`
 
 ## Getting started
-This project uses [Grunt](http://gruntjs.com/) as task runner, and [Bower](http://bower.io/) as component manager.  
-You have to set them up on your PC, before start coding.
+This project uses [Grunt](http://gruntjs.com/) as task runner, and [Bower](http://bower.io/) as front-end package manager.  
+You have to set them up on your PC, before start development.
 
 ### 1. Install Node.js
-[Download from Node.js official site](http://nodejs.org/), or use your package management software.
+[Download from Node.js website](https://nodejs.org/), or install via package management software.
 
-### 2. Install Grunt and Bower
-Execute the following command.
-If you have installed old Grunt (ver. -0.3) already, run `npm uninstall -g grunt` to uninstall it at first.
+### 2. Install Bower
 
 ```sh
-$ npm install -g grunt-cli bower
+$ npm install -g bower
 ```
 
 ### 3. Install dependencies
-Execute the install command in the root directory of "<%= cfg.slugName %>" repository.
+Run the install command in the project root directory.
 
 ```sh
 $ cd path/to/<%= cfg.slugName %>
 $ npm install && bower install
 ```
 
-After that, you can use `grunt` and `bower` commands in the project root directory.
-
 ## Build tasks
-* `grunt`  
-  Distribute files after testing.
+* **`npm start`**  
+  Start local development server and watch files to compile/lint.  
+  [Cntl + C] to exit.
 
-* `grunt serve`  
-  Start localhost server with BrowserSync.
-  Type [Cntl + C] to exit.
+* **`npm test`**  
+  Run linter<% if (cfg.testing) { %> and unit tests<% } %>.
 
-* `grunt serve:dist`  
-  Start localhost server using distributed files.  
-  This task doesn't contain the build task. Run `grunt` at first as needed.
+* **`npm run build`**  
+  Build app for production.
 
-* `grunt test`  
-  Validate source codes and run unit testing.
+* **`npm run serve:dist`**  
+  Start server with production files.
+
+* **`npm run grunt <task>`**  
+  Run individual Grunt task.
 
 See "grunt/aliases.js" for more details or customizing the tasks.
 
@@ -79,14 +77,13 @@ See "grunt/aliases.js" for more details or customizing the tasks.
 See the [Bower document](http://bower.io/#usage) for details.
 
 ### Install
-
-* `bower install --save <package>`  
+* **`bower install --save <package>`**  
   Install a package.
 
-* `bower install --save <package>#<version>`  
+* **`bower install --save <package>#<version>`**  
   Install a specific version of package.
 
-Installed library will be included in HTML automatically using [grunt-wiredep](https://github.com/stephenplusplus/grunt-wiredep).
+Library will be injected into your HTML by [grunt-wiredep](https://github.com/stephenplusplus/grunt-wiredep).
 You don't need to update the reference manually.
 
 ### Search packages
