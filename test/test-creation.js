@@ -36,7 +36,6 @@ var optionFiles = [
   '.jscsrc',
   '.ftppass',
   '.yo-rc.json',
-  'grunt/autoprefixer.js',
   'grunt/buildcontrol.js',
   'grunt/coffee.js',
   'grunt/csslint.js',
@@ -51,6 +50,7 @@ var optionFiles = [
   'grunt/less.js',
   'grunt/mocha.js',
   'grunt/modernizr.js',
+  'grunt/postcss.js',
   'grunt/sass.js',
   'grunt/sprite.js',
   'grunt/ssi.js',
@@ -71,7 +71,7 @@ var baseFileContents = [
   ['README.md', /Temp/]
 ];
 var optionFileContents = [
-  ['package.json', /"grunt-autoprefixer"/],
+  ['package.json', /"autoprefixer"/],
   ['package.json', /"grunt-build-control"/],
   ['package.json', /"grunt-contrib-coffee"/],
   ['package.json', /"grunt-contrib-csslint"/],
@@ -89,13 +89,13 @@ var optionFileContents = [
   ['package.json', /"grunt-jscs"/],
   ['package.json', /"grunt-mocha"/],
   ['package.json', /"grunt-modernizr"/],
+  ['package.json', /"grunt-postcss"/],
   ['package.json', /"grunt-sass"/],
   ['package.json', /"grunt-spritesmith"/],
   ['package.json', /"grunt-ssi"/],
   ['package.json', /"grunt-webfont"/],
   ['bower.json', /"modernizr"/],
   ['.gitignore', /\.ftppass/],
-  ['grunt/aliases.js', /'(.*:)?autoprefixer(:.*)?'/],
   ['grunt/aliases.js', /'(.*:)?coffee(:.*)?'/],
   ['grunt/aliases.js', /'(.*:)?csslint(:.*)?'/],
   ['grunt/aliases.js', /'(.*:)?filerev(:.*)?'/],
@@ -108,12 +108,12 @@ var optionFileContents = [
   ['grunt/aliases.js', /'(.*:)?less(:.*)?'/],
   ['grunt/aliases.js', /'(.*:)?mocha(:.*)?'/],
   ['grunt/aliases.js', /'(.*:)?modernizr(:.*)?'/],
+  ['grunt/aliases.js', /'(.*:)?postcss(:.*)?'/],
   ['grunt/aliases.js', /'(.*:)?sass(:.*)?'/],
   ['grunt/aliases.js', /'(.*:)?sprite(:.*)?'/],
   ['grunt/aliases.js', /'(.*:)?ssi(:.*)?'/],
   ['grunt/aliases.js', /'(.*:)?stylus(:.*)?'/],
   ['grunt/aliases.js', /'(.*:)?webfont(:.*)?'/],
-  ['grunt/watch.js', /'(.*:)?autoprefixer(:.*)?'/],
   ['grunt/watch.js', /'(.*:)?csslint(:.*)?'/],
   ['grunt/watch.js', /'(.*:)?coffee(:.*)?'/],
   ['grunt/watch.js', /'(.*:)?htmllint(:.*)?'/],
@@ -121,6 +121,7 @@ var optionFileContents = [
   ['grunt/watch.js', /'(.*:)?jscs(:.*)?'/],
   ['grunt/watch.js', /'(.*:)?jshint(:.*)?'/],
   ['grunt/watch.js', /'(.*:)?less(:.*)?'/],
+  ['grunt/watch.js', /'(.*:)?postcss(:.*)?'/],
   ['grunt/watch.js', /'(.*:)?sass(:.*)?'/],
   ['grunt/watch.js', /'(.*:)?sprites(:.*)?'/],
   ['grunt/watch.js', /'(.*:)?ssi(:.*)?'/],
@@ -188,12 +189,12 @@ describe('Generator', function () {
         '.csslintrc',
         '.jshintrc',
         '.jscsrc',
-        'grunt/autoprefixer.js',
         'grunt/csslint.js',
         'grunt/filerev.js',
         'grunt/htmlmin.js',
         'grunt/jscs.js',
         'grunt/jshint.js',
+        'grunt/postcss.js',
         'grunt/sprite.js',
         'app/img/_sprites/'
       ]));
@@ -354,12 +355,13 @@ describe('Generator', function () {
 
     it('creates expected files', function () {
       assert.file([
-        'grunt/autoprefixer.js'
+        'grunt/postcss.js'
       ]);
       assert.fileContent([
-        ['package.json', /"grunt-autoprefixer"/],
-        ['grunt/aliases.js', /'(.*:)?autoprefixer(:.*)?'/],
-        ['grunt/watch.js', /'(.*:)?autoprefixer(:.*)?'/]
+        ['package.json', /"autoprefixer"/],
+        ['package.json', /"grunt-postcss"/],
+        ['grunt/aliases.js', /'(.*:)?postcss(:.*)?'/],
+        ['grunt/watch.js', /'(.*:)?postcss(:.*)?'/]
       ]);
     });
   });

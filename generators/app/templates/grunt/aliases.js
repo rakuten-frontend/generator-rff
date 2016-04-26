@@ -20,7 +20,7 @@ module.exports = {
     'less'<% } %><% if (cfg.stylus) { %>,
     'stylus'<% } %><% if (cfg.coffee) { %>,
     'newer:coffee'<% } %><% if (cfg.autoprefixer) { %>,
-    'autoprefixer'<% } %>
+    'postcss'<% } %>
   ],
 
   // Start localhost server

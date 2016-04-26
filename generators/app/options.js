@@ -86,9 +86,9 @@ var options = [
       {
         name: 'CSS Autoprefixer',
         value: 'autoprefixer',
-        templates: ['grunt/autoprefixer.js'],
+        templates: ['grunt/postcss.js'],
         directories: [],
-        packages: {'grunt-autoprefixer': '^2.0.0'}
+        packages: {'grunt-postcss': '^0.8.0', 'autoprefixer': '^6.3.6'}
       },
       {
         name: 'CSS Sprites Generator',

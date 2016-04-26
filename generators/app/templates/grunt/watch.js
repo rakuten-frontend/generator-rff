@@ -47,8 +47,8 @@ module.exports = {
   css: {<% if (cfg.css) { %>
     files: ['<%%= path.styles %>/**']<% } else { %>
     files: ['<%%= path.css %>/**']<% } %><% if (cfg.autoprefixer && cfg.csslint) { %>,
-    tasks: ['newer:autoprefixer', 'newer:csslint']<% } else if (cfg.autoprefixer) { %>,
-    tasks: ['newer:autoprefixer']<% } else if (cfg.csslint) { %>,
+    tasks: ['newer:postcss', 'newer:csslint']<% } else if (cfg.autoprefixer) { %>,
+    tasks: ['newer:postcss']<% } else if (cfg.csslint) { %>,
     tasks: ['newer:csslint']<% } %>
   }<% } %><% if (cfg.sprite) { %>,
 
