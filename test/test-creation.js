@@ -42,6 +42,7 @@ var optionFiles = [
   'grunt/csslint.js',
   'grunt/filerev.js',
   'grunt/ftp-deploy.js',
+  'grunt/htmllint.js',
   'grunt/htmlmin.js',
   'grunt/jade.js',
   'grunt/jasmine.js',
@@ -54,7 +55,6 @@ var optionFiles = [
   'grunt/sprite.js',
   'grunt/ssi.js',
   'grunt/stylus.js',
-  'grunt/validation.js',
   'grunt/webfont.js',
   'app/index.jade',
   'app/_sass/',
@@ -85,7 +85,7 @@ var optionFileContents = [
   ['package.json', /"grunt-contrib-uglify"/],
   ['package.json', /"grunt-filerev"/],
   ['package.json', /"grunt-ftp-deploy"/],
-  ['package.json', /"grunt-html-validation"/],
+  ['package.json', /"grunt-html"/],
   ['package.json', /"grunt-jscs"/],
   ['package.json', /"grunt-mocha"/],
   ['package.json', /"grunt-modernizr"/],
@@ -94,13 +94,12 @@ var optionFileContents = [
   ['package.json', /"grunt-ssi"/],
   ['package.json', /"grunt-webfont"/],
   ['bower.json', /"modernizr"/],
-  ['.gitignore', /validation-status\.json/],
-  ['.gitignore', /validation-report\.json/],
   ['.gitignore', /\.ftppass/],
   ['grunt/aliases.js', /'(.*:)?autoprefixer(:.*)?'/],
   ['grunt/aliases.js', /'(.*:)?coffee(:.*)?'/],
   ['grunt/aliases.js', /'(.*:)?csslint(:.*)?'/],
   ['grunt/aliases.js', /'(.*:)?filerev(:.*)?'/],
+  ['grunt/aliases.js', /'(.*:)?htmllint(:.*)?'/],
   ['grunt/aliases.js', /'(.*:)?htmlmin(:.*)?'/],
   ['grunt/aliases.js', /'(.*:)?jade(:.*)?'/],
   ['grunt/aliases.js', /'(.*:)?jasmine(:.*)?'/],
@@ -113,11 +112,11 @@ var optionFileContents = [
   ['grunt/aliases.js', /'(.*:)?sprite(:.*)?'/],
   ['grunt/aliases.js', /'(.*:)?ssi(:.*)?'/],
   ['grunt/aliases.js', /'(.*:)?stylus(:.*)?'/],
-  ['grunt/aliases.js', /'(.*:)?validation(:.*)?'/],
   ['grunt/aliases.js', /'(.*:)?webfont(:.*)?'/],
   ['grunt/watch.js', /'(.*:)?autoprefixer(:.*)?'/],
   ['grunt/watch.js', /'(.*:)?csslint(:.*)?'/],
   ['grunt/watch.js', /'(.*:)?coffee(:.*)?'/],
+  ['grunt/watch.js', /'(.*:)?htmllint(:.*)?'/],
   ['grunt/watch.js', /'(.*:)?jade(:.*)?'/],
   ['grunt/watch.js', /'(.*:)?jscs(:.*)?'/],
   ['grunt/watch.js', /'(.*:)?jshint(:.*)?'/],
@@ -127,7 +126,6 @@ var optionFileContents = [
   ['grunt/watch.js', /'(.*:)?ssi(:.*)?'/],
   ['grunt/watch.js', /'(.*:)?stylus(:.*)?'/],
   ['grunt/watch.js', /'(.*:)?test(:.*)?'/],
-  ['grunt/watch.js', /'(.*:)?validation(:.*)?'/],
   ['grunt/watch.js', /'(.*:)?webfont(:.*)?'/],
   ['app/index.html', /sprites\.css/],
   ['app/index.html', /glyphs\.css/],
@@ -410,24 +408,22 @@ describe('Generator', function () {
     });
   });
 
-  describe('with "validation" option', function () {
+  describe('with "htmllint" option', function () {
     before(function (done) {
       runWithPrompts({
         configType: 'custom',
-        testing: ['validation']
+        testing: ['htmllint']
       }, done);
     });
 
     it('creates expected files', function () {
       assert.file([
-        'grunt/validation.js'
+        'grunt/htmllint.js'
       ]);
       assert.fileContent([
-        ['package.json', /"grunt-html-validation"/],
-        ['.gitignore', /validation-status\.json/],
-        ['.gitignore', /validation-report\.json/],
-        ['grunt/aliases.js', /'(.*:)?validation(:.*)?'/],
-        ['grunt/watch.js', /'(.*:)?validation(:.*)?'/]
+        ['package.json', /"grunt-html"/],
+        ['grunt/aliases.js', /'(.*:)?htmllint(:.*)?'/],
+        ['grunt/watch.js', /'(.*:)?htmllint(:.*)?'/]
       ]);
     });
   });

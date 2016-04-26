@@ -31,7 +31,7 @@
   * CSS Sprites Generator
   * Icon Fonts Generator
 * **Testing**
-  * W3C HTML Validation
+  * HTML Validation
   * CSS Lint
   * JSHint
   * JSCS

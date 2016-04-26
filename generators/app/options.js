@@ -112,11 +112,11 @@ var options = [
     type: 'checkbox',
     choices: [
       {
-        name: 'W3C HTML Validation',
-        value: 'validation',
-        templates: ['grunt/validation.js'],
+        name: 'HTML Validation',
+        value: 'htmllint',
+        templates: ['grunt/htmllint.js'],
         directories: [],
-        packages: {'grunt-html-validation': '^0.1.17'}
+        packages: {'grunt-html': '^7.0.0'}
       },
       {
         name: 'CSS Lint',

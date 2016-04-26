@@ -8,11 +8,7 @@ Thumbs.db
 
 # Dependency directories
 node_modules/
-bower_components/<% if (cfg.validation) { %>
-
-# grunt-html-validation
-validation-status.json
-validation-report.json<% } %><% if (cfg.ftp) { %>
+bower_components/<% if (cfg.ftp) { %>
 
 # grunt-ftp-deploy
 .ftppass<% } %>

@@ -43,12 +43,12 @@ module.exports = {
   // Validate and test
   test: function (target) {<%
       var testTasks = [];
-      if (cfg.validation) { testTasks.push('newer:validation'); }
-      if (cfg.csslint)    { testTasks.push('newer:csslint'); }
-      if (cfg.jshint)     { testTasks.push('newer:jshint'); }
-      if (cfg.jscs)       { testTasks.push('newer:jscs'); }
-      if (cfg.mocha)      { testTasks.push('browserSync:test', 'mocha'); }
-      if (cfg.jasmine)    { testTasks.push('jasmine'); } %>
+      if (cfg.htmllint) { testTasks.push('newer:htmllint'); }
+      if (cfg.csslint)  { testTasks.push('newer:csslint'); }
+      if (cfg.jshint)   { testTasks.push('newer:jshint'); }
+      if (cfg.jscs)     { testTasks.push('newer:jscs'); }
+      if (cfg.mocha)    { testTasks.push('browserSync:test', 'mocha'); }
+      if (cfg.jasmine)  { testTasks.push('jasmine'); } %>
     if (target !== 'skip-compile') {
       grunt.task.run([
         'compile'

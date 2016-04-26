@@ -21,12 +21,12 @@ module.exports = {
   bower: {
     files: ['bower.json'],
     tasks: ['wiredep']
-  }<% if (cfg.validation) { %>,
+  }<% if (cfg.htmllint) { %>,
 
   // Validate HTML
   html: {
     files: ['<%%= path.html %>/**/*.html'],
-    tasks: ['newer:validation']
+    tasks: ['newer:htmllint']
   }<% } %><% if (cfg.jshint || cfg.jscs) { %>,
 
   // Validate JavaScript
