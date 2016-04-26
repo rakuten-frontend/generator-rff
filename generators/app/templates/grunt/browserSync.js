@@ -7,7 +7,6 @@
 'use strict';
 
 module.exports = function (<% if (cfg.cssSourceMap || cfg.jsSourceMap) { %>grunt, options<% } %>) {
-
   var routes = {};
   routes['/bower_components'] = 'bower_components';<% if (cfg.cssSourceMap) { %>
   routes['/' + options.path.styles] = options.path.styles;<% } %><% if (cfg.jsSourceMap) { %>
@@ -71,5 +70,4 @@ module.exports = function (<% if (cfg.cssSourceMap || cfg.jsSourceMap) { %>grunt
       }
     }<% } %>
   };
-
 };

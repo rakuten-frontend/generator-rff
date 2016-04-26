@@ -5,7 +5,6 @@
 'use strict';
 
 module.exports = {
-
   options: {
     bare: true,
     sourceMap: true
@@ -22,5 +21,4 @@ module.exports = {
       ext: '.js'
     }]
   }
-
 };

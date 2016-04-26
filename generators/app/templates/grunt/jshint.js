@@ -7,7 +7,6 @@
 'use strict';
 
 module.exports = {
-
   // Application scripts
   app: {
     options: {
@@ -35,5 +34,4 @@ module.exports = {
       'grunt/*.js'
     ]
   }
-
 };

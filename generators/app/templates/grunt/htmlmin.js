@@ -7,7 +7,6 @@
 'use strict';
 
 module.exports = {
-
   dist: {
     options: {
       collapseBooleanAttributes: true,
@@ -33,5 +32,4 @@ module.exports = {
       ]
     }]
   }
-
 };

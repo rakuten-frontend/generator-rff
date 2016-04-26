@@ -7,7 +7,6 @@
 'use strict';
 
 module.exports = {
-
   options: {
     assetsDirs: [
       '<%%= path.dist %>',
@@ -33,5 +32,4 @@ module.exports = {
       filter: 'isFile'
     }]
   }
-
 };

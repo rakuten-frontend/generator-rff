@@ -7,7 +7,6 @@
 'use strict';
 
 module.exports = {
-
   options: {
     config: '.jscsrc'
   },
@@ -26,5 +25,4 @@ module.exports = {
       'grunt/*.js'
     ]
   }
-
 };

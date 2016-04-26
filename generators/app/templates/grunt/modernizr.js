@@ -5,7 +5,6 @@
 'use strict';
 
 module.exports = {
-
   dist: {
     devFile: 'bower_components/modernizr/modernizr.js',
     outputFile: '<%%= path.dist %>/js/modernizr.js',
@@ -17,5 +16,4 @@ module.exports = {
     },
     uglify: true
   }
-
 };

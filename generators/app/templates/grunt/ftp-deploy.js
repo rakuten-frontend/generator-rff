@@ -5,7 +5,6 @@
 'use strict';
 
 module.exports = {
-
   dist: {
     auth: {
       host: 'server.com',
@@ -19,5 +18,4 @@ module.exports = {
       '<%%= path.dist %>/**/Thumbs.db'
     ]
   }
-
 };

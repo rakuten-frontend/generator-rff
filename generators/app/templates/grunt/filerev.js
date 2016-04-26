@@ -5,7 +5,6 @@
 'use strict';
 
 module.exports = {
-
   dist: {
     files: [{
       src: [
@@ -14,5 +13,4 @@ module.exports = {
       filter: 'isFile'
     }]
   }
-
 };

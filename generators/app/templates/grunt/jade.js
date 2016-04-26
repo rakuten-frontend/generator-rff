@@ -5,7 +5,6 @@
 'use strict';
 
 module.exports = {
-
   compile: {
     options: {
       basedir: '<%%= path.markups %>',
@@ -22,5 +21,4 @@ module.exports = {
       ext: '.html'
     }]
   }
-
 };

@@ -8,7 +8,6 @@
 var grunt = require('grunt');
 
 module.exports = {
-
   // Generate precompiled resources
   compile: [
     'clean:tmp',
@@ -88,5 +87,4 @@ module.exports = {
     'test:skip-compile',
     'build:skip-compile'
   ]
-
 };

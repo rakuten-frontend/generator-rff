@@ -1,18 +1,7 @@
-# Extensions to ignore
-*.log
-
-# OS or editor files
 .DS_Store
-.idea/
-Thumbs.db
-
-# Dependency directories
-node_modules/
-bower_components/<% if (cfg.ftp) { %>
-
-# grunt-ftp-deploy
+node_modules
+npm-debug.log
+bower_components<% if (cfg.ftp) { %>
 .ftppass<% } %>
-
-# Excluding files from project
-.tmp/
-dist/
+/.tmp
+/dist

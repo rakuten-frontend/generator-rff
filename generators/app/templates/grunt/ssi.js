@@ -5,7 +5,6 @@
 'use strict';
 
 module.exports = {
-
   compile: {
     options: {
       cache: 'all',
@@ -19,5 +18,4 @@ module.exports = {
       src: ['**/*.html']
     }]
   }
-
 };

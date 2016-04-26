@@ -29,11 +29,11 @@
 └── Gruntfile.js           : Base Grunt config
 ```
 
-### Naming Rules
+### Naming rules
 * Directories begin with `_` aren't copied to "dist" directory. - e.g. `_sass`
 * Files begin with `_` aren't compiled by themselves. They work as partials for import. - e.g. `_scaffolding.scss`
 
-## Getting Started
+## Getting started
 This project uses [Grunt](http://gruntjs.com/) as task runner, and [Bower](http://bower.io/) as component manager.  
 You have to set them up on your PC, before start coding.
 
@@ -44,21 +44,21 @@ You have to set them up on your PC, before start coding.
 Execute the following command.
 If you have installed old Grunt (ver. -0.3) already, run `npm uninstall -g grunt` to uninstall it at first.
 
-```shell
+```sh
 $ npm install -g grunt-cli bower
 ```
 
-### 3. Install Dependencies
+### 3. Install dependencies
 Execute the install command in the root directory of "<%= cfg.slugName %>" repository.
 
-```shell
+```sh
 $ cd path/to/<%= cfg.slugName %>
 $ npm install && bower install
 ```
 
 After that, you can use `grunt` and `bower` commands in the project root directory.
 
-## Build Tasks
+## Build tasks
 * `grunt`  
   Distribute files after testing.
 
@@ -75,10 +75,10 @@ After that, you can use `grunt` and `bower` commands in the project root directo
 
 See "grunt/aliases.js" for more details or customizing the tasks.
 
-## Library Management
+## Library management
 See the [Bower document](http://bower.io/#usage) for details.
 
-### Installation
+### Install
 
 * `bower install --save <package>`  
   Install a package.
@@ -89,7 +89,7 @@ See the [Bower document](http://bower.io/#usage) for details.
 Installed library will be included in HTML automatically using [grunt-wiredep](https://github.com/stephenplusplus/grunt-wiredep).
 You don't need to update the reference manually.
 
-### Search Packages
+### Search packages
 [Bower - Search](http://bower.io/search/)
 
 ----

@@ -14,7 +14,6 @@ var standardPreset = require('./config/standard.json')[pkg.name];
 var minimumPreset = require('./config/minimum.json')[pkg.name];
 
 module.exports = generators.Base.extend({
-
   initializing: function () {
     var configType;
 
@@ -270,7 +269,6 @@ module.exports = generators.Base.extend({
       // Option features
       options.forEach(function (option) {
         option.choices.forEach(function (choice) {
-
           var value = choice.value;
 
           if (!this.cfg[value]) {
@@ -301,7 +299,6 @@ module.exports = generators.Base.extend({
           Object.keys(choice.packages).forEach(function (key) {
             pkg.devDependencies[key] = choice.packages[key];
           });
-
         }.bind(this));
       }.bind(this));
 
@@ -341,7 +338,5 @@ module.exports = generators.Base.extend({
         skipMessage: this.skipInstallMessage
       });
     }
-
   }
-
 });

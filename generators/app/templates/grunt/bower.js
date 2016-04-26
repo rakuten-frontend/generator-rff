@@ -5,7 +5,6 @@
 'use strict';
 
 module.exports = {
-
   fonts: {
     dest: '<%%= path.dist %>/fonts',
     options: {
@@ -21,5 +20,4 @@ module.exports = {
   //     filter: '**/*.png'
   //   }
   // }
-
 };

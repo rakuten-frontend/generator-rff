@@ -7,7 +7,6 @@
 'use strict';
 
 module.exports = {
-
   options: {
     csslintrc: '.csslintrc'
   },
@@ -19,5 +18,4 @@ module.exports = {
       '!<%%= path.tmp %>/css/glyphs.css'<% } %>
     ]
   }
-
 };

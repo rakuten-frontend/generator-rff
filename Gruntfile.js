@@ -1,11 +1,9 @@
 'use strict';
 
 module.exports = function (grunt) {
-
   require('load-grunt-tasks')(grunt);
 
   grunt.initConfig({
-
     jshint: {
       options: {
         jshintrc: '.jshintrc',
@@ -57,7 +55,6 @@ module.exports = function (grunt) {
         src: ['test/*.js']
       }
     }
-
   });
 
   grunt.registerTask('lint', [
@@ -73,5 +70,4 @@ module.exports = function (grunt) {
   grunt.registerTask('default', [
     'test'
   ]);
-
 };

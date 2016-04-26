@@ -6,7 +6,6 @@
 'use strict';
 
 module.exports = {
-
   all: {
     // Insert source files here
     // src: '<%%= path.app %>/**/*.js',
@@ -14,5 +13,4 @@ module.exports = {
       specs: '<%%= path.test %>/spec/**/*.js'
     }
   }
-
 };

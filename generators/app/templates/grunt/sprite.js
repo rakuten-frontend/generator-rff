@@ -5,7 +5,6 @@
 'use strict';
 
 module.exports = {
-
   compile: {
     src: '<%%= path.sprites %>/*.png',
     dest: '<%%= path.tmp %>/img/sprites.png',
@@ -17,5 +16,4 @@ module.exports = {
       }
     }
   }
-
 };

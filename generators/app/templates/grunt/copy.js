@@ -5,7 +5,6 @@
 'use strict';
 
 module.exports = {
-
   dist: {
     files: [
       // Static files
@@ -37,5 +36,4 @@ module.exports = {
       }<% } %>
     ]
   }
-
 };

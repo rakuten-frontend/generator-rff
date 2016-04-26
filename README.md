@@ -1,5 +1,4 @@
 # generator-rff
-
 > Fully customizable Yeoman generator for scaffolding a front-end web app.
 
 [![NPM Version][npm-image]][npm-url]
@@ -52,8 +51,8 @@
   * Deployment to Git Repository
   * Deployment over FTP
 
-## Getting Started
-Make sure you have [Node.js](http://nodejs.org/) and [yo](https://github.com/yeoman/yo) installed:
+## Getting started
+Make sure you have [Node.js](https://nodejs.org/) and [yo](https://github.com/yeoman/yo) installed:
 
 ```shell
 $ npm install -g yo
@@ -77,7 +76,7 @@ Finally, initiate the generator:
 $ yo rff
 ```
 
-## Generator Options
+## Generator options
 * `-s`, `--skip-install`  
   Skips the automatic execution of `bower` and `npm` after scaffolding has finished.
 
@@ -91,7 +90,7 @@ $ yo rff
 * `--skip-install-message`  
   Skips app installation message.
 
-## See Also
+## See also
 * [Yeoman](http://yeoman.io/) : Modern workflows for modern webapps
 * [Grunt](http://gruntjs.com/) : The JavaScript task runner
 * [Bower](http://bower.io/) : Package manager for the web

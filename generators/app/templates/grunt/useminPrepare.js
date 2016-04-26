@@ -6,7 +6,6 @@
 'use strict';
 
 module.exports = {
-
   options: {
     root: [
       '<%%= path.tmp %>',
@@ -25,5 +24,4 @@ module.exports = {
 
   // Parse settings from target HTML code
   html: ['<%%= path.dist %>/**/*.html']
-
 };

@@ -8,7 +8,6 @@
 var autoprefixer = require('autoprefixer');
 
 module.exports = {
-
   options: {<% if (cfg.cssSourceMap) { %>
     map: {
       inline: false
@@ -36,5 +35,4 @@ module.exports = {
       src: '**/*.css'
     }]
   }
-
 };

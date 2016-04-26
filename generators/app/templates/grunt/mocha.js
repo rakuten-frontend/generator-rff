@@ -6,7 +6,6 @@
 'use strict';
 
 module.exports = {
-
   options: {
     reporter: 'Spec',
     run: true
@@ -19,5 +18,4 @@ module.exports = {
       ]
     }
   }
-
 };

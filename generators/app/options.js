@@ -1,6 +1,6 @@
 'use strict';
 
-var options = [
+module.exports = [
   {
     name: 'markup',
     message: 'Markup Language',
@@ -244,5 +244,3 @@ var options = [
     ]
   }
 ];
-
-module.exports = options;

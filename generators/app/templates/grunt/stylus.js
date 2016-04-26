@@ -5,7 +5,6 @@
 'use strict';
 
 module.exports = {
-
   options: {
     compress: false,
     paths: ['bower_components']
@@ -23,5 +22,4 @@ module.exports = {
       ext: '.css'
     }]
   }
-
 };

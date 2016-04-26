@@ -5,7 +5,6 @@
 'use strict';
 
 module.exports = {
-
   // Reload Grunt config
   grunt: {
     files: [
@@ -99,5 +98,4 @@ module.exports = {
     files: ['<%%= path.markups %>/**/*.html'],
     tasks: ['ssi']
   }<% } %>
-
 };

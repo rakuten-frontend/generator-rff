@@ -6,7 +6,6 @@
 'use strict';
 
 module.exports = {
-
   markups: {<% if (cfg.html) { %>
     src: ['<%%= path.markups %>/**/*.html']<% } %><% if (cfg.jade) { %>
     src: ['<%%= path.markups %>/**/*.jade']<% } %><% if (cfg.modernizr) { %>,
@@ -23,5 +22,4 @@ module.exports = {
     // "../bower_components/xxxx" -> "xxxx"
     ignorePath: /(\.\.\/)*bower_components\//
   }<% } %>
-
 };

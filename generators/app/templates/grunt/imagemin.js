@@ -5,7 +5,6 @@
 'use strict';
 
 module.exports = {
-
   dist: {
     files: [{
       expand: true,
@@ -16,5 +15,4 @@ module.exports = {
       ]
     }]
   }
-
 };

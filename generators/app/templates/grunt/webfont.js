@@ -5,7 +5,6 @@
 'use strict';
 
 module.exports = {
-
   compile: {
     src: '<%%= path.glyphs %>/*.svg',
     dest: '<%%= path.tmp %>/fonts',
@@ -24,5 +23,4 @@ module.exports = {
       }
     }
   }
-
 };

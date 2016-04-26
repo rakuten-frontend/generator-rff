@@ -7,13 +7,11 @@
 'use strict';
 
 module.exports = function (grunt) {
-
   // Display the execution time.
   require('time-grunt')(grunt);
 
   // Initialize with "load-grunt-config".
   require('load-grunt-config')(grunt, {
-
     // Define variables for grunt config here.
     config: {
       path: {
@@ -42,10 +40,8 @@ module.exports = function (grunt) {
         js:         '.tmp/dist/js'<% } %>
       }
     }
-
   });
 
   // Load additional plugins.
   grunt.loadNpmTasks('main-bower-files');
-
 };

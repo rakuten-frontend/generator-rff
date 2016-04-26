@@ -5,7 +5,6 @@
 'use strict';
 
 module.exports = {
-
   options: {
     dir: '<%%= path.dist %>',
     commit: true,
@@ -20,5 +19,4 @@ module.exports = {
       // branch: 'gh-pages'
     }
   }
-
 };

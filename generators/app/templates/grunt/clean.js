@@ -5,7 +5,6 @@
 'use strict';
 
 module.exports = {
-
   // Distribution directory
   dist: {
     files: [{
@@ -19,5 +18,4 @@ module.exports = {
 
   // Temporary compiled files
   tmp: ['<%%= path.tmp %>']
-
 };

@@ -5,7 +5,6 @@
 'use strict';
 
 module.exports = {
-
   options: {
     paths: ['bower_components'],
     compress: false<% if (cfg.cssSourceMap) { %>,
@@ -25,5 +24,4 @@ module.exports = {
       ext: '.css'
     }]
   }
-
 };
