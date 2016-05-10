@@ -14,11 +14,11 @@ module.exports = [
         packages: {}
       },
       {
-        name: 'Jade',
-        value: 'jade',
-        templates: ['grunt/jade.js', 'app/index.jade'],
+        name: 'Pug',
+        value: 'pug',
+        templates: ['grunt/pug.js', 'app/index.pug'],
         directories: [],
-        packages: {'grunt-contrib-jade': '^0.14.0'}
+        packages: {'grunt-contrib-pug': '^1.0.0'}
       }
     ]
   },

@@ -1,6 +1,6 @@
-// Compile Jade templates
+// Compile Pug templates
 //
-// grunt-contrib-jade: <https://github.com/gruntjs/grunt-contrib-jade>
+// grunt-contrib-pug: <https://github.com/gruntjs/grunt-contrib-pug>
 
 'use strict';
 
@@ -15,8 +15,8 @@ module.exports = {
       cwd: '<%%= path.markups %>',
       dest: '<%%= path.html %>',
       src: [
-        '**/*.jade',
-        '!**/_*.jade'
+        '**/*.{pug,jade}',
+        '!**/_*.{pug,jade}'
       ],
       ext: '.html'
     }]

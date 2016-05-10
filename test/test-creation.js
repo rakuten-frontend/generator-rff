@@ -43,7 +43,6 @@ var optionFiles = [
   'grunt/ftp-deploy.js',
   'grunt/htmllint.js',
   'grunt/htmlmin.js',
-  'grunt/jade.js',
   'grunt/jasmine.js',
   'grunt/jscs.js',
   'grunt/jshint.js',
@@ -51,12 +50,13 @@ var optionFiles = [
   'grunt/mocha.js',
   'grunt/modernizr.js',
   'grunt/postcss.js',
+  'grunt/pug.js',
   'grunt/sass.js',
   'grunt/sprite.js',
   'grunt/ssi.js',
   'grunt/stylus.js',
   'grunt/webfont.js',
-  'app/index.jade',
+  'app/index.pug',
   'app/_sass/',
   'app/_less/',
   'app/_stylus/',
@@ -77,10 +77,10 @@ var optionFileContents = [
   ['package.json', /"grunt-contrib-csslint"/],
   ['package.json', /"grunt-contrib-cssmin"/],
   ['package.json', /"grunt-contrib-htmlmin"/],
-  ['package.json', /"grunt-contrib-jade"/],
   ['package.json', /"grunt-contrib-jasmine"/],
   ['package.json', /"grunt-contrib-jshint"/],
   ['package.json', /"grunt-contrib-less"/],
+  ['package.json', /"grunt-contrib-pug"/],
   ['package.json', /"grunt-contrib-stylus"/],
   ['package.json', /"grunt-contrib-uglify"/],
   ['package.json', /"grunt-filerev"/],
@@ -101,7 +101,6 @@ var optionFileContents = [
   ['grunt/aliases.js', /'(.*:)?filerev(:.*)?'/],
   ['grunt/aliases.js', /'(.*:)?htmllint(:.*)?'/],
   ['grunt/aliases.js', /'(.*:)?htmlmin(:.*)?'/],
-  ['grunt/aliases.js', /'(.*:)?jade(:.*)?'/],
   ['grunt/aliases.js', /'(.*:)?jasmine(:.*)?'/],
   ['grunt/aliases.js', /'(.*:)?jscs(:.*)?'/],
   ['grunt/aliases.js', /'(.*:)?jshint(:.*)?'/],
@@ -109,6 +108,7 @@ var optionFileContents = [
   ['grunt/aliases.js', /'(.*:)?mocha(:.*)?'/],
   ['grunt/aliases.js', /'(.*:)?modernizr(:.*)?'/],
   ['grunt/aliases.js', /'(.*:)?postcss(:.*)?'/],
+  ['grunt/aliases.js', /'(.*:)?pug(:.*)?'/],
   ['grunt/aliases.js', /'(.*:)?sass(:.*)?'/],
   ['grunt/aliases.js', /'(.*:)?sprite(:.*)?'/],
   ['grunt/aliases.js', /'(.*:)?ssi(:.*)?'/],
@@ -117,11 +117,11 @@ var optionFileContents = [
   ['grunt/watch.js', /'(.*:)?csslint(:.*)?'/],
   ['grunt/watch.js', /'(.*:)?coffee(:.*)?'/],
   ['grunt/watch.js', /'(.*:)?htmllint(:.*)?'/],
-  ['grunt/watch.js', /'(.*:)?jade(:.*)?'/],
   ['grunt/watch.js', /'(.*:)?jscs(:.*)?'/],
   ['grunt/watch.js', /'(.*:)?jshint(:.*)?'/],
   ['grunt/watch.js', /'(.*:)?less(:.*)?'/],
   ['grunt/watch.js', /'(.*:)?postcss(:.*)?'/],
+  ['grunt/watch.js', /'(.*:)?pug(:.*)?'/],
   ['grunt/watch.js', /'(.*:)?sass(:.*)?'/],
   ['grunt/watch.js', /'(.*:)?sprites(:.*)?'/],
   ['grunt/watch.js', /'(.*:)?ssi(:.*)?'/],
@@ -201,40 +201,40 @@ describe('Generator', function () {
     });
   });
 
-  describe('with "jade" option', function () {
+  describe('with "pug" option', function () {
     before(function (done) {
       runWithPrompts({
         configType: 'custom',
-        markup: 'jade'
+        markup: 'pug'
       }, done);
     });
 
     it('creates expected files', function () {
       assert.file([
-        'grunt/jade.js',
-        'app/index.jade'
+        'grunt/pug.js',
+        'app/index.pug'
       ]);
       assert.noFile([
         'app/index.html'
       ]);
       assert.fileContent([
-        ['package.json', /"grunt-contrib-jade"/],
-        ['grunt/aliases.js', /'(.*:)?jade(:.*)?'/],
-        ['grunt/watch.js', /'(.*:)?jade(:.*)?'/]
+        ['package.json', /"grunt-contrib-pug"/],
+        ['grunt/aliases.js', /'(.*:)?pug(:.*)?'/],
+        ['grunt/watch.js', /'(.*:)?pug(:.*)?'/]
       ]);
       assert.noFileContent([
-        ['app/index.jade', /sprites\.css/],
-        ['app/index.jade', /glyphs\.css/],
-        ['app/index.jade', /modernizr\.js/]
+        ['app/index.pug', /sprites\.css/],
+        ['app/index.pug', /glyphs\.css/],
+        ['app/index.pug', /modernizr\.js/]
       ]);
     });
   });
 
-  describe('with "jade" + assets option', function () {
+  describe('with "pug" + assets option', function () {
     before(function (done) {
       runWithPrompts({
         configType: 'custom',
-        markup: 'jade',
+        markup: 'pug',
         utilities: ['sprite', 'webfont'],
         libraries: ['modernizr']
       }, done);
@@ -242,9 +242,9 @@ describe('Generator', function () {
 
     it('creates expected files', function () {
       assert.fileContent([
-        ['app/index.jade', /sprites\.css/],
-        ['app/index.jade', /glyphs\.css/],
-        ['app/index.jade', /modernizr\.js/]
+        ['app/index.pug', /sprites\.css/],
+        ['app/index.pug', /glyphs\.css/],
+        ['app/index.pug', /modernizr\.js/]
       ]);
     });
   });

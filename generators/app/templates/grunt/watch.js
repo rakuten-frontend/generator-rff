@@ -61,12 +61,12 @@ module.exports = {
   webfont: {
     files: ['<%%= path.glyphs %>/*.svg'],
     tasks: ['webfont']
-  }<% } %><% if (cfg.jade) { %>,
+  }<% } %><% if (cfg.pug) { %>,
 
-  // Compile Jade
-  jade: {
-    files: ['<%%= path.markups %>/**/*.jade'],
-    tasks: ['jade'<% if (cfg.ssi) { %>, 'ssi'<% } %>]
+  // Compile Pug
+  pug: {
+    files: ['<%%= path.markups %>/**/*.{pug,jade}'],
+    tasks: ['pug'<% if (cfg.ssi) { %>, 'ssi'<% } %>]
   }<% } %><% if (cfg.sass) { %>,
 
   // Compile Sass

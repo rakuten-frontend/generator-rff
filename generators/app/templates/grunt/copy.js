@@ -16,8 +16,8 @@ module.exports = {
         filter: 'isFile',   // Ignore empty folders.
         src: [
           '**',
-          '!<%%= path.distIgnore %>',<% if (cfg.jade) { %>
-          '!**/*.jade',<% } %>
+          '!<%%= path.distIgnore %>',<% if (cfg.pug) { %>
+          '!**/*.{pug,jade}',<% } %>
           '!**/.DS_Store',
           '!**/*.{css,js}'  // Ignore CSS and JavaScript because they are compiled in usemin task.
         ]

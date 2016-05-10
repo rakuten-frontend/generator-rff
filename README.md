@@ -13,7 +13,7 @@
 ### Supported languages
 * **Markup**
   * HTML
-  * Jade
+  * Pug
 * **Stylesheet**
   * CSS
   * Sass

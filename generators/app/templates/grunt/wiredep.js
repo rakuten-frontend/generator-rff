@@ -7,12 +7,26 @@
 
 module.exports = {
   markups: {<% if (cfg.html) { %>
-    src: ['<%%= path.markups %>/**/*.html']<% } %><% if (cfg.jade) { %>
-    src: ['<%%= path.markups %>/**/*.jade']<% } %><% if (cfg.modernizr) { %>,
-    exclude: ['bower_components/modernizr/modernizr.js']<% } %>,
+    src: ['<%%= path.markups %>/**/*.html']<% } %><% if (cfg.pug) { %>
+    src: ['<%%= path.markups %>/**/*.{pug,jade}']<% } %><% if (cfg.modernizr) { %>,
+    exclude: ['bower_components/modernizr/modernizr.js']<% } %><% if (cfg.pug) { %>,
     // Force absolute URL
     // "../bower_components/xxxx" -> "/bower_components/xxxx"
-    ignorePath: /(\.\.\/)*\.\.(?=\/)/
+    ignorePath: /(\.\.\/)*\.\.(?=\/)/,
+    // Support "*.pug" files
+    fileTypes: {
+      pug: {
+        block: /(([ \t]*)\/\/-?\s*bower:*(\S*))(\n|\r|.)*?(\/\/-?\s*endbower)/gi,
+        detect: {
+          js: /script\(.*src=['"]([^'"]+)/gi,
+          css: /link\(.*href=['"]([^'"]+)/gi
+        },
+        replace: {
+          js: 'script(src=\'{{filePath}}\')',
+          css: 'link(rel=\'stylesheet\', href=\'{{filePath}}\')'
+        }
+      }
+    }<% } %>
   }<% if (cfg.sass || cfg.less || cfg.stylus) { %>,
   styles: {<% if (cfg.sass) { %>
     src: ['<%%= path.styles %>/**/*.{scss,sass}']<% } %><% if (cfg.less) { %>
