@@ -41,7 +41,6 @@ module.exports = generators.Base.extend({
   prompting: {
     // Setup prompting type
     askForType: function () {
-      var done = this.async();
       var questions = [];
       var choices = [
         {
@@ -80,37 +79,35 @@ module.exports = generators.Base.extend({
         });
       }
 
-      this.prompt(questions, function (answers) {
-        if (typeof answers.configType !== 'undefined') {
-          this.configType = answers.configType;
-        }
+      return this.prompt(questions)
+        .then(function (answers) {
+          if (typeof answers.configType !== 'undefined') {
+            this.configType = answers.configType;
+          }
 
-        // Preset for skipping prompt
-        switch (this.configType) {
-          case 'standard':
-            this.preset = standardPreset;
-            break;
-          case 'minimum':
-            this.preset = minimumPreset;
-            break;
-          case 'user':
-            this.preset = this.config.getAll();
-            break;
-          case 'custom':
-            this.preset = {};
-            break;
-        }
+          // Preset for skipping prompt
+          switch (this.configType) {
+            case 'standard':
+              this.preset = standardPreset;
+              break;
+            case 'minimum':
+              this.preset = minimumPreset;
+              break;
+            case 'user':
+              this.preset = this.config.getAll();
+              break;
+            case 'custom':
+              this.preset = {};
+              break;
+          }
 
-        // Initial settings
-        this.settings = _.assign({}, defaultConfig, this.config.getAll());
-
-        done();
-      }.bind(this));
+          // Initial settings
+          this.settings = _.assign({}, defaultConfig, this.config.getAll());
+        }.bind(this));
     },
 
     // Project settings
     askFor: function () {
-      var done = this.async();
       var questions = [];
 
       // Project name
@@ -161,17 +158,16 @@ module.exports = generators.Base.extend({
         });
       }
 
-      this.prompt(questions, function (answers) {
-        // Finalize generator settings
-        this.settings.name = typeof answers.name !== 'undefined' ? answers.name : this.preset.name;
-        this.store = answers.store || false;
-        options.forEach(function (option) {
-          var name = option.name;
-          this.settings[name] = answers[name] || this.preset[name];
+      return this.prompt(questions)
+        .then(function (answers) {
+          // Finalize generator settings
+          this.settings.name = typeof answers.name !== 'undefined' ? answers.name : this.preset.name;
+          this.store = answers.store || false;
+          options.forEach(function (option) {
+            var name = option.name;
+            this.settings[name] = answers[name] || this.preset[name];
+          }.bind(this));
         }.bind(this));
-
-        done();
-      }.bind(this));
     }
   },
 
