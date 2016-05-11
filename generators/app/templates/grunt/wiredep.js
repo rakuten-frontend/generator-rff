@@ -9,10 +9,10 @@ module.exports = {
   markups: {<% if (cfg.html) { %>
     src: ['<%%= path.markups %>/**/*.html']<% } %><% if (cfg.pug) { %>
     src: ['<%%= path.markups %>/**/*.{pug,jade}']<% } %><% if (cfg.modernizr) { %>,
-    exclude: ['bower_components/modernizr/modernizr.js']<% } %><% if (cfg.pug) { %>,
+    exclude: ['bower_components/modernizr/modernizr.js']<% } %>,
     // Force absolute URL
     // "../bower_components/xxxx" -> "/bower_components/xxxx"
-    ignorePath: /(\.\.\/)*\.\.(?=\/)/,
+    ignorePath: /(\.\.\/)*\.\.(?=\/)/<% if (cfg.pug) { %>,
     // Support "*.pug" files
     fileTypes: {
       pug: {
