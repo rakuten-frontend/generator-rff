@@ -2,7 +2,7 @@
   "name": "<%= cfg.slugName %>",
   "private": true,
   "dependencies": {
-    "jquery": "~1.11.1"<% if (cfg.modernizr) { %>,
+    "jquery": "~1.12.3"<% if (cfg.modernizr) { %>,
     "modernizr": "~2.8.3"<% } %>
   }
 }
