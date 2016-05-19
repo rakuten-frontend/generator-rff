@@ -41,7 +41,4 @@ module.exports = function (grunt) {
       }
     }
   });
-
-  // Load additional plugins.
-  grunt.loadNpmTasks('main-bower-files');
 };

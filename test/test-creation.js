@@ -15,7 +15,6 @@ var baseFiles = [
   '.bowerrc',
   'Gruntfile.js',
   'grunt/aliases.js',
-  'grunt/bower.js',
   'grunt/browserSync.js',
   'grunt/clean.js',
   'grunt/copy.js',

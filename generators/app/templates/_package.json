@@ -23,7 +23,6 @@
     "grunt-usemin": "^3.0.0",
     "grunt-wiredep": "^3.0.1",
     "load-grunt-config": "^0.19.1",
-    "main-bower-files": "^2.6.2",
     "time-grunt": "^1.0.0"
   }
 }
