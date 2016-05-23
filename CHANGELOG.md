@@ -1,5 +1,26 @@
 # Changelog
 
+## 1.0.0 (2016-05-23)
+- **Breaking changes**
+  - Update Grunt to v1.0.1. ([#3](https://github.com/rakuten-frontend/generator-rff/issues/3))
+  - Rename Jade to Pug. ([#4](https://github.com/rakuten-frontend/generator-rff/issues/4), [pugjs/pug#2184](https://github.com/pugjs/pug/issues/2184))
+  - Drop Ruby Sass option and use [LibSass](http://sass-lang.com/libsass) as the standard Sass compiler. ([#5](https://github.com/rakuten-frontend/generator-rff/issues/5))
+  - Switch from W3C HTML Validation to [Nu Html Checker](https://validator.github.io/validator/) using grunt-html. ([#9](https://github.com/rakuten-frontend/generator-rff/issues/9), [#10](https://github.com/rakuten-frontend/generator-rff/issues/10))
+  - Remove [main-bower-files](https://github.com/ck86/main-bower-files) because it doesn't work well on the current Bower. ([#11](https://github.com/rakuten-frontend/generator-rff/issues/11))
+- **Features**
+  - Include SVG optimization to built-in feature. ([#7](https://github.com/rakuten-frontend/generator-rff/issues/7))
+  - Use [npm-scripts](https://docs.npmjs.com/misc/scripts) by default and make grunt-cli optional.
+- **Fixes**
+  - Update Grunt plugins to adapt Grunt 1.0.
+  - Install grunt-postcss + autoprefixer instead of deprecated grunt-autoprefixer. ([#8](https://github.com/rakuten-frontend/generator-rff/issues/8))
+  - Refactor Grunt task scripts.
+  - Fix JSCS config to prevent error on the current version.
+- **Others**
+  - Support Node.js v6.
+  - Update yeoman-generator to v0.22.5.
+  - Update generator-mocha to v0.3.0.
+  - Fix test code for the generator.
+
 ## 0.7.4 (2015-12-18)
 - Fix npm-install error when mocha/jasmine option passed.
 
