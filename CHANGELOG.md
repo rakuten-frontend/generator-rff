@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.1 (2016-07-05)
+- Update grunt-jscs to use [JSCS 3.0](https://medium.com/@markelog/jscs-end-of-the-line-bc9bf0b3fdb2#.nzazo55qj).
+- Update grunt-html.
+
 ## 1.0.0 (2016-05-23)
 - **Breaking changes**
   - Update Grunt to v1.0.1. ([#3](https://github.com/rakuten-frontend/generator-rff/issues/3))
