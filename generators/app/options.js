@@ -116,7 +116,7 @@ module.exports = [
         value: 'htmllint',
         templates: ['grunt/htmllint.js'],
         directories: [],
-        packages: {'grunt-html': '^7.0.0'}
+        packages: {'grunt-html': '^8.0.2'}
       },
       {
         name: 'CSS Lint',
@@ -137,7 +137,7 @@ module.exports = [
         value: 'jscs',
         templates: ['grunt/jscs.js', ['jscsrc', '.jscsrc']],
         directories: [],
-        packages: {'grunt-jscs': '^2.8.0'}
+        packages: {'grunt-jscs': '^3.0.1'}
       },
       {
         name: 'Mocha',
